@@ -72,7 +72,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     // 'bootstrap-css-only/css/bootstrap.min.css',
-    // '@assets/css/hs-mega-menu.min.css',
+    '@assets/css/hs-mega-menu.min.css',
     '@assets/css/slick.css',
     '@assets/css/aos.css',
     '@assets/css/theme.css',
