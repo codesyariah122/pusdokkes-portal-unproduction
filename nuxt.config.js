@@ -55,10 +55,7 @@ export default {
       src: 'https://cdn.ampproject.org/v0/amp-ad-0.1.js',
       async: 'true',
       'custom-element': 'amp-ad'
-    },
-    // { src: '/assets/js/jquery.min.js'},
-    // { src: '/assets/js/jquery-migrate.min.js'},
-    // { src: '/assets/js/slick.js'}
+    }
     ]
   },
 
