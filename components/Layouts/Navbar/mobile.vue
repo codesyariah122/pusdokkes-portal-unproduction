@@ -12,7 +12,7 @@
     <!-- Navbar brand -->
     <mdb-navbar-brand>
       <nuxt-link to="/">
-        <img :src="require('~/assets/images/logo/polri.png')" class="img-fluid">
+        <img :src="require('~/assets/images/logo/pusdokkes-polri.png')" class="img-fluid">
       </nuxt-link>
     </mdb-navbar-brand>
     <mdb-navbar-toggler class="mt-3 mb-2">
@@ -42,7 +42,7 @@
       </mdb-nav-item>
       <mdb-dropdown tag="li" class="nav-item">
         <mdb-dropdown-toggle tag="a" navLink slot="toggle" waves-fixed class="no-caret">
-          Tentang Diklat <mdb-icon icon="external-link-alt" />
+          Tentang PUSDOKKES <mdb-icon icon="external-link-alt" />
         </mdb-dropdown-toggle>
         <mdb-dropdown-menu :class="`${$device.isDesktop ? 'mt-4' : ''}`">
           <mdb-dropdown-item v-for="item in links" :key="item.id">
@@ -114,14 +114,14 @@
             <mdb-col col="12" lg="12" xs="12" sm="12" class="mt-2">
               <nuxt-link 
               to="/auth/login"
-              class="my__btn-secondary rounded-pill btn btn-block btn-md shadow-none"
+              class="btn my__btn-secondary btn-sm shadow-none rounded"
               size="md"
               >Masuk</nuxt-link>
             </mdb-col>
             <mdb-col lg="12" xs="12" sm="12" class="mt-2">
               <nuxt-link
               to="/auth/registrasi"
-              class="my__btn-primary rounded-pill btn btn-block btn-md shadow-none"
+              class="btn my__btn-primary btn-sm shadow-none rounded"
               size="md"
               >Daftar</nuxt-link>
             </mdb-col>         

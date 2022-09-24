@@ -11,7 +11,7 @@
     >
     <mdb-navbar-brand>
       <nuxt-link to="/">
-        <img :src="require('~/assets/images/logo/polri.png')">
+        <img :src="require('~/assets/images/logo/pusdokkes-polri.png')">
       </nuxt-link>
     </mdb-navbar-brand>
     <mdb-navbar-toggler>
@@ -41,7 +41,7 @@
           waves-fixed
           class="no-caret"
           >
-          Tentang PPKC <mdb-icon icon="external-link-alt" size="md" />
+          Tentang PUSDOKKES<mdb-icon icon="external-link-alt" size="md" />
         </mdb-dropdown-toggle>
         <mdb-dropdown-menu :class="`${$device.isDesktop ? 'mt-3' : ''}`">
           <mdb-dropdown-item v-for="item in links" :key="item.id">

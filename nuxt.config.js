@@ -1,9 +1,9 @@
 require('dotenv').config()
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
-  mode: 'spa',
-  target: 'static',
+  // ssr: false,
+  // mode: 'spa',
+  // target: 'static',
   loading: {
     color: '#c1801e',
     height: '15px'
@@ -202,12 +202,12 @@ export default {
       author: 'Pusdokkes',
       icon: true,
       canonical: 'https://pusdokkes.halomedika.com/',
-      description: 'Pusat Pengembangan Kesehatan Polri | PUSDOKKES - PORTAL',
+      description: 'Kedokteran Dan Kesehatan - Polri | PUSDOKKES - PORTAL',
       keywords: 'PUSDOKKES PORTAL',
       ogUrl: 'https://pusdokkes.halomedika.com/',
       ogType: 'website',
-      ogSiteName: 'Pusdokkes Portal- Pusat Pengembangan Kesehatan Polri',
-      ogTitle: 'Pusdokkes Portal - Pusat Pengembangan Kesehatan Polri',
+      ogSiteName: 'Pusdokkes Portal- Kedokteran Dan Kesehatan - Polri',
+      ogTitle: 'Pusdokkes Portal - Kedokteran Dan Kesehatan - Polri',
       ogImage: 'icon-512x512.png',
       ogImageWidth: '600',
       ogImageHeight: '400'
@@ -216,7 +216,7 @@ export default {
       lang: 'en',
       name: 'PUSDOKKES PORTAL',
       short_name: 'PUSDOKKES PORTAL',
-      description : "Pusat Pengembangan Kesehatan Polri",
+      description : "Kedokteran Dan Kesehatan - Polri",
       start_url: '/',
       lang: 'en',
       display: 'standalone',

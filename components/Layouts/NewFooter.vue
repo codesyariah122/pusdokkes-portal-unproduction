@@ -6,13 +6,13 @@
 					<div class="col-lg-4 ml-lg-auto mb-5 mb-lg-0">
 						<div>
 							<a href="/" aria-label="Front">
-								<img  :src="require('~/assets/images/logo/logo-polri.png')" alt="Logo" />
+								<img  :src="require('~/assets/images/logo/logo-dokkes.png')" alt="Logo" />
 							</a>
 						</div>
 						<ul class="nav nav-sm nav-x-0 nav-white flex-column">
 							<li class="nav-item">
 								<a class="nav-link media">
-									<b class="text-light">Kepolisian Republik Indonesia</b>
+									<b class="text-light">Kedokteran dan Kesehatan Polri</b>
 								</a>
 							</li>
 							<li class="nav-item">
