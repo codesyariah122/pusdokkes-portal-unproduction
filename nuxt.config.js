@@ -56,9 +56,9 @@ export default {
       async: 'true',
       'custom-element': 'amp-ad'
     },
-    { src: '/assets/js/jquery.min.js'},
-    { src: '/assets/js/jquery-migrate.min.js'},
-    { src: '/assets/js/slick.js'}
+    // { src: '/assets/js/jquery.min.js'},
+    // { src: '/assets/js/jquery-migrate.min.js'},
+    // { src: '/assets/js/slick.js'}
     ]
   },
 
