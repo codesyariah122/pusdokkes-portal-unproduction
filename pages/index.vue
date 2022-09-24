@@ -1,5 +1,5 @@
 <template>
-  <main id="content" role="main" style="margin-top: 75px;">
+  <main id="content" role="main" style="margin-top: 70px;">
     <div id="carouselHome" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">

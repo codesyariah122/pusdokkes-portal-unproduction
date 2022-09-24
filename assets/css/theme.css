@@ -14820,7 +14820,6 @@ button:focus {
 ------------------------------------*/
 @media print {
 
-  header,
   footer,
   .btn {
     display: none;
