@@ -19,6 +19,16 @@
 				event_path: this.$route.path
 			}
 		},
+
+		head(){
+			return {
+				script: [
+				{ src: '/assets/js/hs.slick-carousel.js'},
+				{ src: '/assets/js/carousel.js'},
+				{ src: '/assets/js/web-script.js'}
+				]
+			}
+		},
 		
 		beforeMount(){
 			this.ConfigApiUrl(),
@@ -30,7 +40,6 @@
 		},
 
 		methods: {
-			
 			CheckToken(){
 				this.$store.dispatch('config/checkAuthLogin', 'token')
 			},

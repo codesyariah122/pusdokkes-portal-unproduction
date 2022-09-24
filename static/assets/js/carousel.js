@@ -1,8 +1,8 @@
 $('#carouselHome').carousel({
-    interval: 5000
+    interval: 2000
 });
 $('#carouselPengumuman').carousel({
-    interval: 4000
+    interval: 1000
 });
 $('#modalPengumuman').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget);

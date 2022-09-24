@@ -56,14 +56,6 @@ export default {
       async: 'true',
       'custom-element': 'amp-ad'
     },
-    {
-      src: '/assets/glightbox/glightbox.min.js',
-      type: 'text/javascript'
-    },
-    {
-      src: '/assets/venobox/dev/venobox.min.js',
-      type: 'text/javascript'
-    },
     { src: '/assets/js/jquery.min.js'},
     { src: '/assets/js/jquery-migrate.min.js'},
     { src: '/assets/js/bootstrap.bundle.min.js'},
@@ -73,9 +65,7 @@ export default {
     { src: '/assets/js/hs-mega-menu.min.js'},
     { src: '/assets/js/slick.js'},
     { src: '/assets/js/aos.js'},
-    { src: '/assets/js/hs.core.js'},
-    { src: '/assets/js/hs.slick-carousel.js'},
-    { src: '/assets/js/web-script.js'}
+    { src: '/assets/js/hs.core.js'}
     ]
   },
 
@@ -92,11 +82,11 @@ export default {
     
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-  {src: '~/plugins/format-currency', ssr: false},
-  {src: '~/plugins/format-slug', ssr: false},
-  {src: '~/plugins/mdb-vue', ssr: false},
-  {src: '~/plugins/vue2-leaflet', mode: 'client', ssr: false },
-  { src: '~/plugins/sweetalert', ssr: false},
+    {src: '~/plugins/format-currency', ssr: false},
+    {src: '~/plugins/format-slug', ssr: false},
+    {src: '~/plugins/mdb-vue', ssr: false},
+    {src: '~/plugins/vue2-leaflet', mode: 'client', ssr: false },
+    { src: '~/plugins/sweetalert', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
