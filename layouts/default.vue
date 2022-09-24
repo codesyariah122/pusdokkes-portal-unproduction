@@ -3,7 +3,7 @@
 		<LayoutsNavigation :token="token" :profiles="profiles" :slug="slug" :event_path="event_path"/>
 		<Nuxt/>
 
-		<LayoutsNewFooter/>
+		<LayoutsFooter/>
 
 		<GlobalsToTop/>
 	</div>

@@ -1,62 +1,57 @@
 <template>
   <!-- Footer -->
-  <mdb-footer class="footer__layout font-small">
+  <mdb-footer class="bg-dark footer__layout font-small">
     <mdb-container class="text-left footer__sitemap">
       <mdb-row
         :class="`${$device.isMobile ? 'd-flex justify-content-center' : ''}`"
       >
         <!-- footer branding content -->
-        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5">
+        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5 col-1">
           <img
             :src="brand"
             :style="`${$device.isMobile ? 'width:450px;' : ''}`"
             class="img-fluid"
           />
 
-          <p class="mb-1 mt-3" style="color: #4b5563 !important">
-            Pusat Pengembangan Kesehatan Carolus (PPKC) sebagai Lembaga
-            pelatihan yang mampu memberikan solusi setiap permasalahan di Bidang
-            kesehatan.
+          <p class="mb-1 mt-3">
+            Kedokteran dan Kesehatan Polri.
           </p>
-          <br />
-
-          <address style="color: #4b5563 !important; font-weight: bold">
-            Jl. Salemba Tengah 30-32, Jakarta Pusat 10440
+          <address>
+           Jl. Trunojoyo No. 3 Kebayoran Baru
+           Jakarta Selatan 12110
           </address>
         </mdb-col>
 
-        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5">
+        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5 ml-3">
           <h5
             class="mb-4 font-weight-bold text-uppercase"
-            style="color: #374151 !important"
           >
             Kontak
           </h5>
           <ul class="list-group">
             <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-              <a style="color: #374151 !important" href="tel:+62246580019">
-                Telepon 021-3101870
+              <a href="tel:+62246580019">
+                Telepon (021) 7218142 | (021) 7258869
               </a>
             </li>
             <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-              <a style="color: #374151 !important" href=""> Fax 021-3101870 </a>
+              <a href=""> Fax (021) 7218142 </a>
             </li>
             <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-              <a style="color: #374151 !important" href="tel:+6282111552424">
-                Hotline 021-3904441
+              <a href="tel:+6282111552424">
+                Hotline (021) 7218142
               </a>
             </li>
             <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-              <a style="color: #374151 !important" href="tel:62246593452">
-                Call Center 021-3904441 ext 2437
+              <a href="tel:62246593452">
+                Call Center (021) 7218142
               </a>
             </li>
             <li class="list-group-item bg-transparent border-0 p-0 mb-2">
               <a
-                style="color: #374151 !important"
-                href="mailto:rs@ppkcsultanagung.co.id"
+                href="mailto:pusdokkes@polri.go.id"
               >
-                Email ppkcaroulus@gmail.com
+                Email pusdokkes@polri.go.id
               </a>
             </li>
           </ul>
@@ -65,14 +60,12 @@
         <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5">
           <h5
             class="mb-4 font-weight-bold text-uppercase"
-            style="color: #374151 !important"
           >
             Social Media
           </h5>
           <ul class="list-group">
             <li class="list-group-item bg-transparent border-0 p-0 mb-3">
               <a
-                style="color: #374151 !important"
                 href="https://id-id.facebook.com/people/Pusat-Pengembangan-Kesehatan-Carolus-PPKC/100063841689266/"
               >
                 <img
@@ -82,7 +75,6 @@
             </li>
             <li class="list-group-item bg-transparent border-0 p-0 mb-3">
               <a
-                style="color: #374151 !important"
                 href="http://ppkcarolus.com/"
               >
                 <img
@@ -92,7 +84,6 @@
             </li>
             <li class="list-group-item bg-transparent border-0 p-0 mb-3">
               <a
-                style="color: #374151 !important"
                 href="https://www.instagram.com/ppkc_carolus/?hl=id"
               >
                 <img
@@ -105,7 +96,6 @@
         <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5">
           <h5
             class="mb-4 font-weight-bold text-uppercase"
-            style="color: #374151 !important"
           >
             Menu
           </h5>
@@ -113,15 +103,15 @@
             <div class="col-12 col-md-6">
               <ul class="list-group">
                 <li class="list-group-item bg-transparent border-0 p-0 mb-3">
-                  <a href="/" style="color: #374151 !important"> Home </a>
+                  <a href="/"> Home </a>
                 </li>
                 <li class="list-group-item bg-transparent border-0 p-0 mb-3">
-                  <a href="/events" style="color: #374151 !important">
+                  <a href="/events">
                     Katalog Kelas
                   </a>
                 </li>
                 <li class="list-group-item bg-transparent border-0 p-0 mb-3">
-                  <a href="/auth/registrasi" style="color: #374151 !important">
+                  <a href="/auth/registrasi">
                     Daftar
                   </a>
                 </li>
@@ -130,17 +120,17 @@
             <div class="col-12 col-md-6">
               <ul class="list-group">
                 <li class="list-group-item bg-transparent border-0 p-0 mb-3">
-                  <a href="/auth/login" style="color: #374151 !important">
+                  <a href="/auth/login">
                     Login
                   </a>
                 </li>
                 <li class="list-group-item bg-transparent border-0 p-0 mb-3">
-                  <a href="/ppkc/berita" style="color: #374151 !important">
+                  <a href="/ppkc/berita">
                     Berita
                   </a>
                 </li>
                 <li class="list-group-item bg-transparent border-0 p-0 mb-3">
-                  <a href="/ppkc/testimoni" style="color: #374151 !important">
+                  <a href="/ppkc/testimoni">
                     Testimoni
                   </a>
                 </li>
@@ -153,10 +143,10 @@
               <ul class="list-group">
                 <li class="list-group-item bg-transparent border-0 p-0 mb-3">
                   <a
-                    href="http://ppkcarolus.com/"
-                    style="color: #374151 !important"
+                    href="https://pusdokkes.halomedika.com/"
+                  
                   >
-                    Situs Resmi PPKC Carolus
+                    Situs Resmi PUSDOKKES
                     <mdb-icon icon="external-link-alt" size="sm" />
                   </a>
                 </li>
@@ -177,7 +167,7 @@
     <div class="footer-copyright text-center py-3">
       <mdb-container fluid>
         &copy;Copyright {{ $moment(year).year() }}
-        <a target="_blank" href="https://ppkc-online.com">PPKC Carolus</a>. All
+        <a target="_blank" href="https://pusdokkes.halomedika.com/">PUSDOKKES</a>. All
         Rights Reserved
       </mdb-container>
     </div>
@@ -186,7 +176,7 @@
 </template>
 
 <script>
-import LogoBrand from "~/assets/images/logo/brand.svg";
+import LogoBrand from "~/assets/images/logo/icon.png";
 export default {
   data() {
     return {

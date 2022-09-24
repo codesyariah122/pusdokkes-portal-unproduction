@@ -1,5 +1,5 @@
 <template>
-  <main id="content" role="main" style="margin-top: 70px;">
+  <main id="content" role="main" style="margin-top: 61px;">
     <div id="carouselHome" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -54,65 +54,6 @@
                 <a id="pengumuman" href="https://polri.go.id/assets/images/pengumuman/pengumuman-631559dcb4359.pdf" target="_blank" style="color: white;">PELELANGAN UMUM INTERNASIONAL DENGAN PRAKUALIFIKASI PENGADAAN PERALATAN PENGAMANAN JARINGAN IT SUMBER PEMBIAYAAN PINJAMAN LUAR NEGERI T.A. 2021 TAHAP III</a>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-    <div class="space-2 space-top-2 bg-light border-top border-dark">
-      <div class="container text-left">
-        <div class="row justify-content-md-center">
-          <div class="col-lg-3 col-md-4 mb-3">
-            <a href="http://penerimaan.polri.go.id/" target="_blank">
-              <div class="media align-items-center px-4">
-                <figure class="max-w-8rem mr-3">
-                  <img class="img-fluid" src="https://polri.go.id/webpolri/assets/img/others/icon-penerimaanpolri.png" alt="SVG" />
-                </figure>
-                <div class="media-body">
-                  <h4 class="mb-0">PENERIMAAN POLRI
-                  </h4>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 mb-3">
-            <a href="https://skck.polri.go.id/" target="_blank">
-              <div class="media align-items-center px-4">
-                <figure class="max-w-8rem mr-3">
-                  <img class="img-fluid" src="https://polri.go.id/webpolri/assets/img/others/icon-skck.png" alt="SVG" />
-                </figure>
-                <div class="media-body">
-                  <h4 class="mb-0">SKCK ONLINE
-                  </h4>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 mb-3">
-            <a href="https://korlantas.polri.go.id/category/sim-stnk-keliling/" target="_blank">
-              <div class="media align-items-center px-4">
-                <figure class="max-w-8rem mr-3">
-                  <img class="img-fluid" src="https://polri.go.id/webpolri/assets/img/others/icon-sim2.png" alt="SVG" />
-                </figure>
-                <div class="media-body">
-                  <h4 class="mb-0">LOKASI SIM KELILING</h4>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 mb-3">
-            <a href="https://dumaspresisi.polri.go.id/" target="_blank">
-              <div class="media align-items-center px-4">
-                <figure class="max-w-8rem mr-3">
-                  <img class="img-fluid" src="https://polri.go.id/webpolri/assets/img/others/icon-humas.png" alt="SVG" />
-                </figure>
-                <div class="media-body">
-                  <h4 class="mb-0">KELUHAN LAYANAN POLRI
-                  </h4>
-                </div>
-              </div>
-            </a>
           </div>
         </div>
       </div>

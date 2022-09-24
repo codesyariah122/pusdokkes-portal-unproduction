@@ -5,7 +5,7 @@ export default {
   mode: 'spa',
   target: 'static',
   loading: {
-    color: '#c1801e',
+    color: '#00923f',
     height: '15px'
   },
   generate: {
@@ -75,7 +75,7 @@ export default {
     // '@assets/css/hs-mega-menu.min.css',
     '@assets/css/slick.css',
     '@assets/css/aos.css',
-    '@assets/css/theme.css',
+    // '@assets/css/theme.css',
     'mdbvue/lib/mdbvue.css',
     'mdbvue/lib/css/mdb.min.css'
     ],
