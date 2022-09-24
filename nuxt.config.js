@@ -57,8 +57,8 @@ export default {
       'custom-element': 'amp-ad'
     },
     { src: '/assets/js/jquery.min.js'},
-    { src: '/assets/js/jquery-migrate.min.js'},
-    { src: '/assets/js/bootstrap.bundle.min.js'},
+    // { src: '/assets/js/jquery-migrate.min.js'},
+    // { src: '/assets/js/bootstrap.bundle.min.js'},
     { src: '/assets/js/hs-header.min.js'},
     { src: '/assets/js/hs-go-to.min.js'},
     { src: '/assets/js/hs-unfold.min.js'},
