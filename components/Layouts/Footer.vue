@@ -1,28 +1,28 @@
 <template>
   <!-- Footer -->
-  <mdb-footer class="bg-dark footer__layout font-small">
+  <mdb-footer class="footer__layout font-small bg-dark">
     <mdb-container class="text-left footer__sitemap">
       <mdb-row
         :class="`${$device.isMobile ? 'd-flex justify-content-center' : ''}`"
       >
         <!-- footer branding content -->
-        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5 col-1">
+        <mdb-col col="12" sm="12" md="3" lg="3" class="mt-5 col-1">
           <img
             :src="brand"
             :style="`${$device.isMobile ? 'width:450px;' : ''}`"
             class="img-fluid"
           />
 
-          <p class="mb-1 mt-3">
-            Kedokteran dan Kesehatan Polri.
+          <p class="mb-1 mt-3 mb-5" style="width: 250px;">
+            PUSDOKKES POLRI - Kedokteran Dan Kesehatan
           </p>
           <address>
-           Jl. Trunojoyo No. 3 Kebayoran Baru
+            Jl. Trunojoyo No. 3 Kebayoran Baru
            Jakarta Selatan 12110
           </address>
         </mdb-col>
 
-        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5 ml-3">
+        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5 ml-5">
           <h5
             class="mb-4 font-weight-bold text-uppercase"
           >
@@ -57,7 +57,7 @@
           </ul>
         </mdb-col>
 
-        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5">
+        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5 col-social">
           <h5
             class="mb-4 font-weight-bold text-uppercase"
           >
@@ -93,7 +93,7 @@
             </li>
           </ul>
         </mdb-col>
-        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5">
+        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5 col-menu">
           <h5
             class="mb-4 font-weight-bold text-uppercase"
           >
@@ -166,7 +166,7 @@
     </mdb-container>
     <div class="footer-copyright text-center py-3">
       <mdb-container fluid>
-        &copy;Copyright {{ $moment(year).year() }}
+       &copy;Copyright {{ $moment(year).year() }}
         <a target="_blank" href="https://pusdokkes.halomedika.com/">PUSDOKKES</a>. All
         Rights Reserved
       </mdb-container>

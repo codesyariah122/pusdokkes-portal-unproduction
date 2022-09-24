@@ -1,3 +1,28 @@
+___________________________________________________________
+
+**New update**
+```bash
+NUXT_ENV_WEATHER_KEY=172033330b26104e83475e409303f1d7
+```
+____________________________________________________________
+# ppkc-portal
+
+## update readme
+
+# test branch
+
+<details>
+	<summary>Lihat env config</summary>
+	Adding this line to env file :
+
+```bash
+NUXT_ENV_API_URL=https://your-api-url
+```
+
+</details>
+
+#### Litle Docs
+
 ### Pages
 
 ```

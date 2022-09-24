@@ -11,7 +11,7 @@
     >
     <mdb-navbar-brand>
       <nuxt-link to="/">
-        <img :src="require('~/assets/images/logo/pusdokkes-polri.png')">
+        <img :src="require('~/assets/images/logo/pusdokkes-polri.png')" class="img-fluid">
       </nuxt-link>
     </mdb-navbar-brand>
     <mdb-navbar-toggler>
@@ -31,9 +31,8 @@
             Akses Pelatihan
           </nuxt-link>
         </mdb-nav-item>
-        
-        <mdb-dropdown tag="li" class="nav-item">
-          <mdb-dropdown-toggle 
+        <mdb-dropdown  tag="li" class="nav-item">
+          <mdb-dropdown-toggle
           tag="a"
           navLink
           color="white"
@@ -54,49 +53,51 @@
       
     </mdb-navbar-nav>
   </mdb-container>
+</mdb-dropdown-menu>
+</mdb-dropdown>
 
-  <mdb-dropdown
-  v-if="token.accessToken"
-  tag="li"
-  class="nav-item nav-profile"
-  style="font-size: 31px !important"
-  >
-  <mdb-dropdown-toggle tag="a" navLink slot="toggle">
-    {{profiles.nama}}
-    <b-avatar v-if="profiles.photo != 'https://api.ppkc-online.com/image-profiles/function File() { [native code]}'" variant="primary" :src="profiles.photo"></b-avatar>
-    <b-avatar v-else variant="primary" :text="slug.charAt(0)"></b-avatar>
-
-  </mdb-dropdown-toggle>
-  <mdb-dropdown-menu :class="`${$device.isDesktop ? 'mt-2' : 'mt-3'}`">
-    <mdb-dropdown-item>
-      <nuxt-link
-      :to="{
-        name: 'profile-name',
-        params: { name: $username(slug) },
-      }"
-      class="text-center"
-      >
-      <b-avatar v-if="profiles.photo !== 'https://api.ppkc-online.com/image-profiles/function File() { [native code]}'" variant="primary" :src="profiles.photo" size="1.7rem"></b-avatar>
-      <b-avatar v-else variant="primary" :text="slug.charAt(0)" size="1.7rem"></b-avatar> &nbsp; <b>{{ profiles.nama }}</b>
-    </nuxt-link>
-  </mdb-dropdown-item>
-  <div class="dropdown-divider"></div>
-  <mdb-dropdown-item @click="Logout" class="text-center">
-    <mdb-icon icon="sign-out-alt" /> Logout
-  </mdb-dropdown-item>
+<mdb-dropdown
+v-if="token.accessToken"
+tag="li"
+class="nav-item nav-profile"
+style="font-size: 31px !important"
+>
+<mdb-dropdown-toggle tag="a" navLink slot="toggle">
+  {{profiles.nama}}
+  <b-avatar v-if="profiles.photo != 'https://api.ppkc-online.com/image-profiles/function File() { [native code]}'" variant="primary" :src="profiles.photo"></b-avatar>
+  <b-avatar v-else variant="primary" :text="slug.charAt(0)"></b-avatar>
+  
+</mdb-dropdown-toggle>
+<mdb-dropdown-menu :class="`${$device.isDesktop ? 'mt-2' : 'mt-3'}`">
+  <mdb-dropdown-item>
+    <nuxt-link
+    :to="{
+      name: 'profile-name',
+      params: { name: $username(slug) },
+    }"
+    class="text-center"
+    >
+    <b-avatar v-if="profiles.photo !== 'https://api.ppkc-online.com/image-profiles/function File() { [native code]}'" variant="primary" :src="profiles.photo" size="1.7rem"></b-avatar>
+  <b-avatar v-else variant="primary" :text="slug.charAt(0)" size="1.7rem"></b-avatar> &nbsp; <b>{{ profiles.nama }}</b>
+  </nuxt-link>
+</mdb-dropdown-item>
+<div class="dropdown-divider"></div>
+<mdb-dropdown-item @click="Logout" class="text-center">
+  <mdb-icon icon="sign-out-alt" /> Logout
+</mdb-dropdown-item>
 </mdb-dropdown-menu>
 </mdb-dropdown>
 
 <div v-else tag="li">
   <nuxt-link 
   to="/auth/login"
-  class="btn my__btn-secondary btn-sm shadow-none rounded"
-  size="md"
+  class="btn my__btn-secondary btn-sm shadow-none"
+  size="md" style="border-radius: 5px;"
   >Masuk</nuxt-link>
 
   <nuxt-link
   to="/auth/registrasi"
-  class="btn my__btn-primary btn-sm shadow-none rounded"
+  class="my__btn-primary btn btn-sm shadow-none rounded"
   size="md"
   >Daftar</nuxt-link>
 </div>
@@ -128,17 +129,13 @@
       };
     },
 
+    mounted() {
+      console.log(this.event_id ? this.event_id : "-");
+    },
+
     methods: {
       Logout() {
         this.$emit("logout-profile");
-      },
-
-      onOver() {
-        this.$refs.dropdown.visible = true;
-      },
-
-      onLeave() {
-        this.$refs.dropdown.visible = false;
       },
 
       GoToLogin() {

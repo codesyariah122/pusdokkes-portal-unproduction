@@ -1,11 +1,13 @@
 <template>
 	<div>
-		<LayoutsNavigation :token="token" :profiles="profiles" :slug="slug" :event_path="event_path"/>
+		<LayoutsNavigation :token="token" :profiles="profiles" :slug="slug" :event_id="event_id" :event_path="event_path"/>
 		<Nuxt/>
 
-		<LayoutsFooter/>
+		<LayoutsFooter v-if="$route.name !== 'detail-event-id-slug' || !token.accessToken"/>
 
+		<!-- Scrolling back to top page -->
 		<GlobalsToTop/>
+		<!-- end scroll top -->
 	</div>
 </template>
 
@@ -16,6 +18,7 @@
 			return{
 				profiles: {},
 				slug: '',
+				event_id: localStorage.getItem('event_id'),
 				event_path: this.$route.path
 			}
 		},
@@ -36,10 +39,12 @@
 		},
 
 		mounted(){
+			this.WidgetChat(),
 			this.UserProfileData()
 		},
 
 		methods: {
+			
 			CheckToken(){
 				this.$store.dispatch('config/checkAuthLogin', 'token')
 			},

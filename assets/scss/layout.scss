@@ -80,8 +80,7 @@
 @media (min-width: 992px) {
 	.navbar-brand{
 		img{
-			width: 180px;
-			margin-left: 1.5rem;
+			width: 250px;
 		}
 	}
 	.nav-link {
@@ -93,7 +92,6 @@
 			text-decoration: none;
 		}
 	}
-	
 	.keranjang__dropdown{
 		z-index: 3;
 		margin-left: -25rem;
@@ -165,7 +163,7 @@
 			margin-top: .7rem;
 		}
 	}
-	// .animated-icon2{
-	// 	background-color:$default-black!important;
-	// }
+	.animated-icon2{
+		background-color:$default-black!important;
+	}
 }

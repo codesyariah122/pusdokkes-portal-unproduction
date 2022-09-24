@@ -5,7 +5,7 @@ export default {
   mode: 'spa',
   target: 'static',
   loading: {
-    color: '#00923f',
+    color: '#2f80ed',
     height: '15px'
   },
   generate: {
@@ -27,7 +27,7 @@ export default {
     meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { hid: 'description', name: 'description', content: 'Pusat Pengembangan Kesehatan Carolus | PPKC - Website' },
+    { hid: 'description', name: 'description', content: 'Kedokteran dan Kesehatan Polri | PUSDOKKES - PORTAL' },
     { name: 'format-detection', content: 'telephone=no' },
     { hid: 'og:image', property: 'og:image', content: 'http://ppkcarolus.com/upload/tampak_luar-min.jpg' },
     { httpEquiv: "X-Frame-Options",  content:"deny"}
@@ -57,36 +57,26 @@ export default {
       'custom-element': 'amp-ad'
     },
     { src: '/assets/js/jquery.min.js'},
-    // { src: '/assets/js/jquery-migrate.min.js'},
-    // { src: '/assets/js/bootstrap.bundle.min.js'},
-    { src: '/assets/js/hs-header.min.js'},
-    { src: '/assets/js/hs-go-to.min.js'},
-    { src: '/assets/js/hs-unfold.min.js'},
-    { src: '/assets/js/hs-mega-menu.min.js'},
-    { src: '/assets/js/slick.js'},
-    { src: '/assets/js/aos.js'},
-    { src: '/assets/js/hs.core.js'}
+    { src: '/assets/js/jquery-migrate.min.js'},
+    { src: '/assets/js/slick.js'}
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     // 'bootstrap-css-only/css/bootstrap.min.css',
-    // '@assets/css/hs-mega-menu.min.css',
-    '@assets/css/slick.css',
-    '@assets/css/aos.css',
-    // '@assets/css/theme.css',
     'mdbvue/lib/mdbvue.css',
-    'mdbvue/lib/css/mdb.min.css'
+    'mdbvue/lib/css/mdb.min.css',
+     '@assets/css/theme.css'
     ],
     
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: '~/plugins/format-currency', ssr: false},
-    {src: '~/plugins/format-slug', ssr: false},
-    {src: '~/plugins/mdb-vue', ssr: false},
-    {src: '~/plugins/vue2-leaflet', mode: 'client', ssr: false },
-    { src: '~/plugins/sweetalert', ssr: false}
+  {src: '~/plugins/format-currency', ssr: false},
+  {src: '~/plugins/format-slug', ssr: false},
+  {src: '~/plugins/mdb-vue', ssr: false},
+  {src: '~/plugins/vue2-leaflet', mode: 'client', ssr: false },
+  { src: '~/plugins/sweetalert', ssr: false},
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

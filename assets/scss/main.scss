@@ -43,26 +43,26 @@
 	// 	object-fit: cover;
 	// 	max-width: 100%;
 	// }
-	// .carousel-control-prev-icon,
-	// .carousel-control-next-icon {
-	// 	height: 40px !important;
-	// 	width: 40px !important;
-	// 	margin-top: -.5rem;
-	// 	border-radius:50%;
-	// 	background-color: $color-primary;
-	// 	z-index: 1!important;
-	// }
-	// .carousel-indicators{
-	// 	z-index: 9999;
-	// 	li{
-	// 		width: 10px;
-	// 		height: 10px;
-	// 		background-color: linear-gradient(to top, $color-primary, $bg-second-primary);
-	// 	}
-	// 	.active{
-	// 		background-color: $bg-second-primary !important;	
-	// 	}
-	// }
+	.carousel-control-prev-icon,
+	.carousel-control-next-icon {
+		height: 40px !important;
+		width: 40px !important;
+		margin-top: -.5rem;
+		border-radius:50%;
+		background-color: $color-primary;
+		z-index: 1!important;
+	}
+	.carousel-indicators{
+		z-index: 9999;
+		li{
+			width: 10px;
+			height: 10px;
+			background-color: linear-gradient(to top, $color-primary, $bg-second-primary);
+		}
+		.active{
+			background-color: $bg-second-primary !important;	
+		}
+	}
 	.container{
 		z-index: 1000;
 		max-width: 1000px;
@@ -93,10 +93,10 @@
 		}
 	}
 }
-// .carousel{
-// 	border-radius: 10px;
-// 	overflow: hidden;
-// }
+.carousel{
+	border-radius: 10px;
+	overflow: hidden;
+}
 
 .my__btn-primary{
 	@include button_primary;
@@ -106,10 +106,10 @@
 	.banner{
 		z-index: 1;
 		.jumbotron__home{
-			margin-top: 3.5rem;
+			margin-top: 4rem;
 			margin-bottom: 10rem;
 			width: $bg-jumbo-width;
-			max-height: $bg-jumbo-height;
+			height: 61vh!important;
 			position:relative;
 
 			@include jumbotron_desktop($default);
@@ -118,26 +118,26 @@
 		img{
 			max-width: 100%;
 		}
-		// .carousel-control-prev-icon,
-		// .carousel-control-next-icon {
-		// 	height: 50px !important;
-		// 	width: 50px !important;
-		// 	margin-top: -5rem;
-		// 	border-radius:50%;
-		// 	background-color: $color-primary;
-		// 	z-index: 1!important;
-		// }
-		// .carousel-indicators{
-		// 	z-index: 9999;
-		// 	li{
-		// 		width:20px;
-		// 		height: 20px;
-		// 		background-color: linear-gradient(to top, $color-primary, $bg-second-primary);
-		// 	}
-		// 	.active{
-		// 		background-color: $bg-second-primary !important;	
-		// 	}
-		// }
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			height: 50px !important;
+			width: 50px !important;
+			margin-top: -5rem;
+			border-radius:50%;
+			background-color: $color-primary;
+			z-index: 1!important;
+		}
+		.carousel-indicators{
+			z-index: 9999;
+			li{
+				width:20px;
+				height: 20px;
+				background-color: linear-gradient(to top, $color-primary, $bg-second-primary);
+			}
+			.active{
+				background-color: $bg-second-primary !important;	
+			}
+		}
 
 		.container{
 			h2, p{
@@ -168,10 +168,10 @@
 			}
 		}
 	}
-	// .carousel{
-	// 	border-radius: 10px;
-	// 	overflow: hidden;
-	// }
+	.carousel{
+		border-radius: 0;
+		overflow: hidden;
+	}
 }
 
 // List pelatihan&webinar component&ppkc component
@@ -1041,35 +1041,35 @@
 				font-size:18px;
 				margin-top: 1.3rem;
 				font-weight: 600;
-			}
-			ul li{
-				font-size: 14px;
-				font-weight: 400;
-				line-height: 21.07px;
-				margin-bottom:1.5rem;
-			}
-			a{
-				color: $second-black;
-				&:hover{
-					color: $scroll-bar-color;
+				}
+				ul li{
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 21.07px;
+					margin-bottom:1.5rem;
+				}
+				a{
+					color: $second-black;
+					&:hover{
+						color: $scroll-bar-color;
+					}
+				}
+				.footer__sitemap-apk{
+					margin-top: -1rem;
 				}
 			}
-			.footer__sitemap-apk{
-				margin-top: -1rem;
+
+		}
+
+		.footer-copyright{
+			background-color:$bg-button-gray!important;
+			color: $color-primary!important;
+			a{
+				color: $default-black!important;
+				font-weight: 500;
 			}
 		}
-
 	}
-
-	.footer-copyright{
-		background-color:$bg-button-gray!important;
-		color: $color-primary!important;
-		a{
-			color: $default-black!important;
-			font-weight: 500;
-		}
-	}
-}
 
 	// Desktop
 	@media (min-width: 992px) {
@@ -1096,23 +1096,14 @@
 				}
 				.col-1{
 					color:$default;
-					margin-left: -1rem;
+					margin-left: -2rem;
 					h5{
 						font-size: 18px;
 						font-weight: 700;
 						color:$default;
 						line-height: 28px;
 					}
-					p{
-						margin-top: 1.3rem;
-						font-size:14px;
-						font-weight: 400;
-						line-height: 23px;
-						top:128px;
-						height: 76px;
-						width: 288px;
-						left: 224px;	
-					}
+					
 					address{
 						margin-top: -1rem;
 						width: 100%;
@@ -1123,6 +1114,14 @@
 					img{
 						max-width: 200px!important;
 					}
+				}
+
+				.col-social{
+					margin-left: 1rem;
+				}
+
+				.col-menu{
+					margin-left: -2rem;
 				}
 
 			}
