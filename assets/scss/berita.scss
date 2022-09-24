@@ -1,0 +1,134 @@
+// Detail-slug component
+// Berita detail slug components
+.berita__detail{
+	margin-top: 5rem;
+	.berita__detail-content{
+		height: 100%;
+		.col__berita-1{
+			margin-bottom: 2rem;
+			.card__berita-img{
+				max-width: 250px;
+				object-fit: cover;
+			}
+			img{
+				width: 100vw;
+				position: relative;
+				left: 50%;  
+				margin-left: -50vw;
+			}
+			h2{
+				color: $second-black;
+				font-weight:500;
+			}
+			p{
+				color:$default-gray;
+				font-size: 14px;
+				font-weight: 400;
+				line-height:19.07px;
+				text-align: left;
+				margin-top:1rem;
+				margin-left: 3rem;
+				margin-bottom: 2rem;
+			}
+		}
+		.col__berita-2{
+			width: 100%;
+			.content-desc{
+				color:$default-gray;
+				font-size:15px;
+				font-weight: 400;
+				line-height: 25px;
+				text-align: justify;
+				text-indent: 70px;
+			}
+		}
+	}
+	.berita__detail-option{
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+		.back__link{
+			margin-bottom: 3rem!important;
+		}
+		.share__btn-content{
+			ul{
+				display: flex;
+				justify-content: safe flex-start;
+				align-items: center;
+			}
+			ul li {
+				margin-left: 1rem;
+				list-style: none;
+				.share-btn{
+					margin-top:1rem;
+					margin-left:-1rem;
+				}
+			}
+		}
+
+	}
+}
+
+// Desktop
+@media (min-width: 992px) {
+	.berita__detail{
+		margin-top: 7rem;
+		.berita__detail-content{
+			height: 100%;
+			.col__berita-1{
+				margin-bottom: 2rem;
+				img{
+					width: 100vw;
+					height: auto;
+					position: relative;
+					left: 50%;  
+					margin-left: -50vw;
+				}
+				h2{
+					color: $second-black;
+					font-weight: 700;
+					text-align: justify;
+					margin-bottom: 1rem;
+					margin-left: 3rem;
+				}
+				p{
+					color:$default-gray;
+					font-size: 14px;
+					font-weight: 400;
+					line-height:19.07px;
+					text-align: left;
+					margin-left: 3rem;
+					margin-bottom: 2rem;
+				}
+			}
+			.col__berita-2{
+				width: 100%;
+				.content-desc{
+					color:$default-gray;
+					font-size:14px;
+					font-weight: 500;
+					line-height: 35px;
+					text-indent: 70px;
+					text-align: justify!important;
+					white-space: pre-wrap;
+				}
+			}
+		}
+		.berita__detail-option{
+			margin-top: 5rem;
+			margin-bottom: 5rem;
+			.share__btn-content{
+				ul{
+					display: flex;
+					justify-content: space-between;
+					margin-top:1rem;
+					margin-left:-3rem;
+				}
+				ul li {
+					list-style: none;
+				}
+			}
+			
+		}
+	}
+}
+// End berita detail

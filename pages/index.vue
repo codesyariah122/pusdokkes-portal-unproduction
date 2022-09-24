@@ -1,0 +1,202 @@
+<template>
+  <main id="content" role="main" style="margin-top: 75px;">
+    <div id="carouselHome" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="https://polri.go.id/assets/images/headers/header-default.png">
+          <div class="carousel-caption d-none d-md-block">
+            <span style="color:#fff; background-color: #c1801e; font-size: 2em;">Kepolisian Negara Republik Indonesia</span>
+            <p style="font-size: 3rem;">MELINDUNGI</p>
+            <p style="font-size: 3rem; margin-top: -35px;">MENGAYOMI DAN</p>
+            <p style="font-size: 3rem; margin-top: -35px">MELAYANI MASYARAKAT</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://polri.go.id/assets/images/headers/sdm.jpg">
+          <div class="carousel-caption d-none d-sm-block text-right" style="padding-bottom: 40px">
+            <a href="/dokumen" class="btn btn-primary btn-lg" style="margin-right: 10%;">Lihat Laporan</a>
+          </div>
+          <div class="carousel-caption d-none d-block d-sm-none text-right" style="padding-bottom: 0px;">
+            <a href="/dokumen" class="btn btn-primary btn-xs" >Lihat Laporan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="bg-dark">
+      <div class="row py-2 m-0">
+        <div class="col-3 d-none d-sm-block text-right small" style="color:#FFD700; font-size: 15px;">
+          <b>PENGUMUMAN</b>
+        </div>
+        <div class="col-md-7 col-xs-12 text-light small">
+          <div id="carouselPengumuman" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item overflow-information active" style="font-size: 15px;">
+                <a id="pengumuman" href="https://polri.go.id/assets/images/pengumuman/pengumuman-632b1171a0d63.pdf" target="_blank" style="color: white;">SAKIP REN AKSI SSDM POLRI TAHUN 2022</a>
+              </div>
+              <div class="carousel-item overflow-information " style="font-size: 15px;">
+                <a id="pengumuman" href="https://polri.go.id/assets/images/pengumuman/pengumuman-632b1140db164.pdf" target="_blank" style="color: white;">SAKIP RENJA SSDM POLRI TAHUN 2022</a>
+              </div>
+              <div class="carousel-item overflow-information " style="font-size: 15px;">
+                <a id="pengumuman" href="https://polri.go.id/assets/images/pengumuman/pengumuman-632b112c4a607.pdf" target="_blank" style="color: white;">SAKIP PK SSDM 2022</a>
+              </div>
+              <div class="carousel-item overflow-information " style="font-size: 15px;">
+                <a id="pengumuman" href="https://polri.go.id/assets/images/pengumuman/pengumuman-632b10c7878e8.pdf" target="_blank" style="color: white;">SAKIP MANUAL IKU SSDM POLRI</a>
+              </div>
+              <div class="carousel-item overflow-information " style="font-size: 15px;">
+                <a id="pengumuman" href="https://polri.go.id/assets/images/pengumuman/pengumuman-632b10b18aa41.pdf" target="_blank" style="color: white;">SAKIP BUKU RENSTRA SSDM POLRI TAHUN 2020-2024</a>
+              </div>
+              <div class="carousel-item overflow-information " style="font-size: 15px;">
+                <a id="pengumuman" href="https://polri.go.id/assets/images/pengumuman/pengumuman-6316a8332bcd3.pdf" target="_blank" style="color: white;">PELELANGAN UMUM INTERNASIONAL DENGAN PRAKUALIFIKASI PENGADAAN SARANA PRASARANA KOMUNIKASI WILAYAH PERBATASAN DAN PULAU TERLUAR</a>
+              </div>
+              <div class="carousel-item overflow-information " style="font-size: 15px;">
+                <a id="pengumuman" href="https://polri.go.id/assets/images/pengumuman/pengumuman-631559dcb4359.pdf" target="_blank" style="color: white;">PELELANGAN UMUM INTERNASIONAL DENGAN PRAKUALIFIKASI PENGADAAN PERALATAN PENGAMANAN JARINGAN IT SUMBER PEMBIAYAAN PINJAMAN LUAR NEGERI T.A. 2021 TAHAP III</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="space-2 space-top-2 bg-light border-top border-dark">
+      <div class="container text-left">
+        <div class="row justify-content-md-center">
+          <div class="col-lg-3 col-md-4 mb-3">
+            <a href="http://penerimaan.polri.go.id/" target="_blank">
+              <div class="media align-items-center px-4">
+                <figure class="max-w-8rem mr-3">
+                  <img class="img-fluid" src="https://polri.go.id/webpolri/assets/img/others/icon-penerimaanpolri.png" alt="SVG" />
+                </figure>
+                <div class="media-body">
+                  <h4 class="mb-0">PENERIMAAN POLRI
+                  </h4>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-3">
+            <a href="https://skck.polri.go.id/" target="_blank">
+              <div class="media align-items-center px-4">
+                <figure class="max-w-8rem mr-3">
+                  <img class="img-fluid" src="https://polri.go.id/webpolri/assets/img/others/icon-skck.png" alt="SVG" />
+                </figure>
+                <div class="media-body">
+                  <h4 class="mb-0">SKCK ONLINE
+                  </h4>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-3">
+            <a href="https://korlantas.polri.go.id/category/sim-stnk-keliling/" target="_blank">
+              <div class="media align-items-center px-4">
+                <figure class="max-w-8rem mr-3">
+                  <img class="img-fluid" src="https://polri.go.id/webpolri/assets/img/others/icon-sim2.png" alt="SVG" />
+                </figure>
+                <div class="media-body">
+                  <h4 class="mb-0">LOKASI SIM KELILING</h4>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-3">
+            <a href="https://dumaspresisi.polri.go.id/" target="_blank">
+              <div class="media align-items-center px-4">
+                <figure class="max-w-8rem mr-3">
+                  <img class="img-fluid" src="https://polri.go.id/webpolri/assets/img/others/icon-humas.png" alt="SVG" />
+                </figure>
+                <div class="media-body">
+                  <h4 class="mb-0">KELUHAN LAYANAN POLRI
+                  </h4>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</template>
+
+<script>
+
+export default {
+  name: "IndexPage",
+  layout: "default",
+
+  data() {
+    return {
+      items: [],
+      events: [],
+      testimonis: [],
+      news: [],
+      listToShow: 2,
+    };
+  },
+
+  async asyncData({ $axios }) {
+    const lists = await $axios.$get("/web/home");
+    return {
+      lists,
+    };
+  },
+  beforeMount() {
+    this.CheckToken();
+  },
+  mounted() {
+    this.CarouselItem();
+  },
+
+  methods: {
+    scrollTo() {
+      const element = document.querySelector("#testimoni-list");
+      element.scrollIntoView();
+    },
+    CheckToken() {
+      this.$store.dispatch("config/checkAuthLogin", "token");
+    },
+
+    CarouselItem() {
+      this.items = [
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner1.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner2.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner3.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner4.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner5.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner6.jpeg",
+        },
+        {
+          img: true,
+          src: "https://api.ppkc-online.com/image-banner/banner7.jpeg",
+        },
+      ];
+    },
+  },
+
+  computed: {
+    token() {
+      return this.$store.getters["config/ConfigCheckLogin"];
+    },
+  },
+};
+</script>

@@ -1,0 +1,13 @@
+// Global font from google font 
+// @import moving to nuxt.config.js at line link
+html,
+body {
+  overflow-x:hidden;
+  // font-family: 'Open Sans';
+  font-family: 'Poppins', sans-serif;
+}
+
+body.swal2-shown > [aria-hidden="true"]{
+  transition: 0.1s filter;
+  filter: blur(10px);
+}
