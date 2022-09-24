@@ -70,7 +70,7 @@
               >
                 <img
                   :src="require('~/assets/icons/socials/facebook.svg')"
-                />&nbsp;PPKC carolus
+                />&nbsp;pusdokkes_polri
               </a>
             </li>
             <li class="list-group-item bg-transparent border-0 p-0 mb-3">
@@ -79,7 +79,7 @@
               >
                 <img
                   :src="require('~/assets/icons/socials/twitter.svg')"
-                />&nbsp;@ppkc_carolus
+                />&nbsp;@pusdokkes_polri
               </a>
             </li>
             <li class="list-group-item bg-transparent border-0 p-0 mb-3">
@@ -88,7 +88,7 @@
               >
                 <img
                   :src="require('~/assets/icons/socials/instagram.svg')"
-                />&nbsp;@ppkc_carolus
+                />&nbsp;@pusdokkes_polri
               </a>
             </li>
           </ul>

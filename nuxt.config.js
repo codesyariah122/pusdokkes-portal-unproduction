@@ -5,7 +5,7 @@ export default {
   mode: 'spa',
   target: 'static',
   loading: {
-    color: '#2f80ed',
+    color: '#00923f',
     height: '15px'
   },
   generate: {
@@ -55,7 +55,12 @@ export default {
       src: 'https://cdn.ampproject.org/v0/amp-ad-0.1.js',
       async: 'true',
       'custom-element': 'amp-ad'
-    }
+    },
+
+    { src: '/assets/js/jquery.min.js'},
+    { src: '/assets/js/bootstrap.bundle.min.js'},
+    { src: '/assets/js/slick.js'},
+    { src: '/assets/js/hs.core.js'}
     ]
   },
 
@@ -64,7 +69,8 @@ export default {
     // 'bootstrap-css-only/css/bootstrap.min.css',
     'mdbvue/lib/mdbvue.css',
     'mdbvue/lib/css/mdb.min.css',
-     '@assets/css/theme.css'
+    '@assets/css/slick.css',
+    '@assets/css/theme.css',
     ],
     
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

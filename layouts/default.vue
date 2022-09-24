@@ -26,12 +26,9 @@
 		head(){
 			return {
 				script: [
-				{ src: '/assets/js/jquery.min.js'},
-			    // { src: '/assets/js/jquery-migrate.min.js'},
-			    { src: '/assets/js/slick.js'},
 				{ src: '/assets/js/hs.slick-carousel.js'},
+				{ src: '/assets/js/web-script.js'},
 				{ src: '/assets/js/carousel.js'},
-				{ src: '/assets/js/web-script.js'}
 				]
 			}
 		},
@@ -42,7 +39,6 @@
 		},
 
 		mounted(){
-			this.WidgetChat(),
 			this.UserProfileData()
 		},
 
