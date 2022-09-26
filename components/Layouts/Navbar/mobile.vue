@@ -137,7 +137,7 @@
 
 <script>
   export default {
-    props: ["token", "profiles", "slug"],
+    props: ["token", "profiles", "slug", "event_id", "event_path"],
     data() {
       return {
         links: [
@@ -151,14 +151,47 @@
         { id: 4, name: "Fasilitas", link: "/ppkc/fasilitas" },
         { id: 5, name: "Testimoni", link: "/ppkc/testimoni" },
         { id: 6, name: "Fasilitator", link: "/ppkc/fasilitator" },
-        { id: 7, name: "Yayasan & Direksi", link: "/ppkc/yayasan-direksi" }
-        ]
-      }
+        { id: 7, name: "Yayasan & Direksi", link: "/ppkc/yayasan-direksi" },
+        ],
+      };
+    },
+
+    mounted() {
+      console.log(this.event_id ? this.event_id : "-");
     },
 
     methods: {
       Logout() {
         this.$emit("logout-profile");
+      },
+
+      GoToLogin() {
+        if (this.event_id === this.$route.params.id) {
+          const data = {
+            event_id: this.event_id,
+            event_path: this.event_path,
+          };
+          this.SetEventLogin(data);
+        } else {
+          this.$router.push({ name: "auth-login" });
+        }
+      },
+
+      GoToRegistrasi() {
+        this.$router.push({ name: "auth-registrasi" });
+      },
+
+      SetEventLogin(data) {
+        this.$store.dispatch("config/setEventToLogin", JSON.stringify(data));
+        this.$router.push({
+          name: "auth-login",
+        });
+      },
+    },
+
+    computed: {
+      set_event() {
+        return this.$store.getters["config/ConfigSetEventLogin"];
       },
     },
   };

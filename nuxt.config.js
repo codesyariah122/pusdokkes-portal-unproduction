@@ -97,6 +97,7 @@ export default {
     scss: [
     '~assets/scss/variables.scss',
     '~assets/scss/mixins.scss',
+    '~assets/scss/extend.scss',
     '~assets/scss/layout.scss',
     '~assets/scss/global.scss',
     '~assets/scss/main.scss',
@@ -108,7 +109,8 @@ export default {
     '~assets/scss/event-test.scss',
     '~assets/scss/docs-event.scss',
     '~assets/scss/keranjang.scss',
-    '~assets/scss/pembayaran.scss'
+    '~assets/scss/pembayaran.scss',
+    '~assets/scss/trending.scss'
     ]
   },
 

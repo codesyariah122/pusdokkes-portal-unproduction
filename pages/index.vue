@@ -62,9 +62,7 @@
     <mdb-container>
       <mdb-row class="justify-content-center mt-5">
         <mdb-col lg="12" sm="12" xs="12">
-          <h1>
-            Isi Content
-          </h1>
+          <HomepageTrending/>
         </mdb-col>
       </mdb-row>
     </mdb-container>
@@ -73,18 +71,12 @@
 </template>
 
 <script>
-//Image base on assets directory
-import HeroImage from "~/assets/images/homepage/hero-image.svg";
-import HeroImageMobile from "~/assets/images/homepage/banner.svg";
-import NewHeroImage from "~/assets/images/homepage/new-hero-3.svg";
-
 export default {
   name: "IndexPage",
   layout: "default",
 
   data() {
     return {
-      bg_image: this.$device.isMobile ? HeroImageMobile : HeroImage,
       items: [],
       events: [],
       testimonis: [],
