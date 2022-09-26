@@ -95,6 +95,7 @@ export default {
 
   styleResources: {
     scss: [
+    '~assets/scss/color.scss',
     '~assets/scss/variables.scss',
     '~assets/scss/mixins.scss',
     '~assets/scss/extend.scss',
@@ -110,7 +111,8 @@ export default {
     '~assets/scss/docs-event.scss',
     '~assets/scss/keranjang.scss',
     '~assets/scss/pembayaran.scss',
-    '~assets/scss/trending.scss'
+    '~assets/scss/trending.scss',
+    '~assets/scss/wecky.scss'
     ]
   },
 
