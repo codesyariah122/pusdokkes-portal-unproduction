@@ -58,9 +58,12 @@ export default {
     },
 
     { src: '/assets/js/jquery.min.js'},
+    { src: '/assets/js/modernizr-3.5.0.min.js'},
     { src: '/assets/js/bootstrap.bundle.min.js'},
+    { src: '/assets/js/jquery.ticker.js'},
     { src: '/assets/js/slick.js'},
-    { src: '/assets/js/hs.core.js'}
+    { src: '/assets/js/hs.core.js'},
+    { src: '/assets/js/animated.headline.js'}
     ]
   },
 
@@ -69,6 +72,7 @@ export default {
     // 'bootstrap-css-only/css/bootstrap.min.css',
     'mdbvue/lib/mdbvue.css',
     'mdbvue/lib/css/mdb.min.css',
+    '@assets/css/animate.min.css',
     '@assets/css/slick.css',
     '@assets/css/theme.css',
     ],
@@ -112,7 +116,8 @@ export default {
     '~assets/scss/keranjang.scss',
     '~assets/scss/pembayaran.scss',
     '~assets/scss/trending.scss',
-    '~assets/scss/wecky.scss'
+    '~assets/scss/wecky.scss',
+    '~assets/scss/whats-new.scss'
     ]
   },
 

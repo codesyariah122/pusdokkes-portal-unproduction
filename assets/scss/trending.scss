@@ -182,6 +182,12 @@
     }
     .trending-animated {
         padding-top: 4px;
+        ul li{
+            list-style: none;
+        }
+        .news-item{
+            margin-left: 2rem;
+        }
     }
     strong{
         color:#fff;

@@ -22,7 +22,7 @@
           </address>
         </mdb-col>
 
-        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5 ml-5">
+        <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5 ml-5 col-kontak">
           <h5
             class="mb-4 font-weight-bold text-uppercase"
           >
@@ -64,7 +64,7 @@
             Social Media
           </h5>
           <ul class="list-group">
-            <li class="list-group-item bg-transparent border-0 p-0 mb-3">
+            <li class="list-group-item bg-transparent border-0 p-0 mb-5">
               <a
                 href="https://id-id.facebook.com/people/Pusat-Pengembangan-Kesehatan-Carolus-PPKC/100063841689266/"
               >
@@ -93,6 +93,7 @@
             </li>
           </ul>
         </mdb-col>
+
         <mdb-col col="12" sm="12" md="6" lg="3" class="mt-5 col-menu">
           <h5
             class="mb-4 font-weight-bold text-uppercase"

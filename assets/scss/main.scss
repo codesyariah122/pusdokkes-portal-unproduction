@@ -43,26 +43,26 @@
 	// 	object-fit: cover;
 	// 	max-width: 100%;
 	// }
-	.carousel-control-prev-icon,
-	.carousel-control-next-icon {
-		height: 40px !important;
-		width: 40px !important;
-		margin-top: -.5rem;
-		border-radius:50%;
-		background-color: $color-primary;
-		z-index: 1!important;
-	}
-	.carousel-indicators{
-		z-index: 9999;
-		li{
-			width: 10px;
-			height: 10px;
-			background-color: linear-gradient(to top, $color-primary, $bg-second-primary);
-		}
-		.active{
-			background-color: $bg-second-primary !important;	
-		}
-	}
+	// .carousel-control-prev-icon,
+	// .carousel-control-next-icon {
+	// 	height: 40px !important;
+	// 	width: 40px !important;
+	// 	margin-top: -.5rem;
+	// 	border-radius:50%;
+	// 	background-color: $color-primary;
+	// 	z-index: 1!important;
+	// }
+	// .carousel-indicators{
+	// 	z-index: 9999;
+	// 	li{
+	// 		width: 10px;
+	// 		height: 10px;
+	// 		background-color: linear-gradient(to top, $color-primary, $bg-second-primary);
+	// 	}
+	// 	.active{
+	// 		background-color: $bg-second-primary !important;	
+	// 	}
+	// }
 	.container{
 		z-index: 1000;
 		max-width: 1000px;
@@ -1098,14 +1098,37 @@
 					font-weight: 600!important;
 					line-height: 21px;
 				}
+				a{
+					&:hover{
+						color: $default-gray;
+					}
+				}
+			}
+
+			.col-kontak{
+				a{
+					&:hover{
+						color: $color-primary;
+					}
+				}
 			}
 
 			.col-social{
 				margin-left: 1rem;
+				a{
+					&:hover{
+						color: $default-gray;
+					}
+				}
 			}
 
 			.col-menu{
 				margin-left: -2rem;
+				a{
+					&:hover{
+						color: $default-gray;
+					}
+				}
 			}
 
 		}
