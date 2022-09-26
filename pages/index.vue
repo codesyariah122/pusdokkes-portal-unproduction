@@ -64,6 +64,10 @@
         <mdb-col lg="12" sm="12" xs="12">
           <HomepageTrending/>
         </mdb-col>
+
+        <mdb-col lg="12" sm="12" xs="12" class="mt-5">
+          <HomepageWeeklyTop/>
+        </mdb-col>
       </mdb-row>
     </mdb-container>
 

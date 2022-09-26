@@ -2,7 +2,11 @@
   <mdb-card class="card__registrasi">
     <mdb-card-body class="form__auth">
       <!-- Material form login -->
-      <img :src="require('~/assets/images/logo/brand.svg')" width="250" />
+      <mdb-container>
+        <mdb-row class="justify-content-center mb-3">
+          <img :src="require('~/assets/images/logo/pusdokkes-polri.png')" width="250" />
+        </mdb-row>
+      </mdb-container>
       <!-- Material form login -->
       <form @submit.prevent="RegistrasiProfile" class="mt-3">
         
