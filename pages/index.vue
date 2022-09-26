@@ -1,5 +1,5 @@
 <template>
-  <main id="content" role="main" style="margin-top: 61px;">
+  <main id="content" role="main" :style="`${$device.isDesktop ? 'margin-top: 61px;' : 'margin-top:57px;'}`">
     <div id="carouselHome" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">

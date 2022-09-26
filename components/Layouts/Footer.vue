@@ -9,11 +9,11 @@
         <mdb-col col="12" sm="12" md="3" lg="3" class="mt-5 col-1">
           <img
             :src="brand"
-            :style="`${$device.isMobile ? 'width:450px;' : ''}`"
+            :style="`${$device.isMobile ? 'width:150px;' : 'width: 150px;'}`"
             class="img-fluid"
           />
 
-          <p class="mb-1 mt-3 mb-5" style="width: 250px;">
+          <p class="mb-1 mt-3 mb-5" style="width: 200px;">
             PUSDOKKES POLRI - Kedokteran Dan Kesehatan
           </p>
           <address>

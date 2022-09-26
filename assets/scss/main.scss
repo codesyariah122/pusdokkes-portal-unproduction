@@ -93,10 +93,10 @@
 		}
 	}
 }
-.carousel{
-	border-radius: 10px;
-	overflow: hidden;
-}
+// .carousel{
+// 	border-radius: 10px;
+// 	overflow: hidden;
+// }
 
 .my__btn-primary{
 	@include button_primary;
@@ -990,152 +990,136 @@
 .footer__layout{
 	background-color: $second-default;
 	.footer__sitemap{
-		margin-top: -1.5rem;
-		height: 100%;
-		
+		height: auto;
+		margin-bottom: 2rem;
+		margin-top:2rem;
+		h5{
+			font-size: 16px;
+			margin-left: .1rem;
+			font-weight:600;
+			color:$default;
+			margin-bottom: .9rem;
+		}
+		ul li{
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 19.07px;
+			width: 250px;
+			margin-bottom: 1rem!important;
+		}
 		.col-1{
-			margin-left: 3rem;
-			margin-top: 1.5rem!important;
-			color:$default-gray;
+			color:$default;
+			margin-left: -2rem;
 			h5{
-				font-size: 14px;
-				font-weight: 600;
-				color:$second-black;
+				font-size: 18px;
+				font-weight: 700;
+				color:$default;
 				line-height: 28px;
 			}
 
-			p{
-				margin-top: 1.3rem;
-				font-size:14px;
-				font-weight: 400;
-				line-height: 23px;	
+			img{
+				margin-left: 2rem;
 			}
+
+			p{
+				color: $default;
+				margin-left: 2.3rem;
+			}
+
 			address{
-				margin-top: -.5rem;
+				margin-top: -1rem;
+				margin-left: 2.3rem;
+				width: 80%;
 				font-size:14px;
 				font-weight: 600!important;
 				line-height: 21px;
-				width: 80%;
+				color: $default;
 			}
-
-			img{
-				max-width: 270px!important;
-			}
+			
 		}
 
-		.col-2{
-			width: 100%!important;
-			color:$default-gray;
-			margin-left: -5rem;
-			margin-top: -1rem;
-			.social-media{
+		.col-social{
+			margin-left: 2rem;
+		}
+
+		.col-menu{
+			margin-left: 2rem;
+		}
+
+	}
+
+	.footer-copyright{
+		background-color:$default-black!important;
+		color: $color-primary!important;
+		margin-left: -1rem;
+		a{
+			color: $default!important;
+			font-weight: 500;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.footer__layout{
+		background-color: $second-default;
+		margin-top: 0!important;
+		.footer__sitemap{
+			height: auto;
+			margin-bottom: 2rem;
+			margin-top:2rem;
+			h5{
+				font-size: 16px;
+				margin-left: .1rem;
+				font-weight:600;
+				color:$default;
+				margin-bottom: .9rem;
+			}
+			ul li{
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 19.07px;
+				width: 250px;
+				margin-bottom: 1rem!important;
+			}
+			.col-1{
+				color:$default;
+				margin-left: -3rem;
+				h5{
+					font-size: 18px;
+					font-weight: 700;
+					color:$default;
+					line-height: 28px;
+				}
+
+				address{
+					margin-top: -1rem;
+					width: 100%;
+					font-size:14px;
+					font-weight: 600!important;
+					line-height: 21px;
+				}
+			}
+
+			.col-social{
 				margin-left: 1rem;
 			}
 
-			.link-menu{
-				margin-left: 1rem;
-			}
-			h5{
-				color:$second-black;
-				margin-bottom: .9rem;
-				font-size:18px;
-				margin-top: 1.3rem;
-				font-weight: 600;
-				}
-				ul li{
-					font-size: 14px;
-					font-weight: 400;
-					line-height: 21.07px;
-					margin-bottom:1.5rem;
-				}
-				a{
-					color: $second-black;
-					&:hover{
-						color: $scroll-bar-color;
-					}
-				}
-				.footer__sitemap-apk{
-					margin-top: -1rem;
-				}
+			.col-menu{
+				margin-left: -2rem;
 			}
 
 		}
 
 		.footer-copyright{
-			background-color:$bg-button-gray!important;
+			background-color:$default-black!important;
 			color: $color-primary!important;
 			a{
-				color: $default-black!important;
+				color: $default!important;
 				font-weight: 500;
 			}
 		}
 	}
-
-	// Desktop
-	@media (min-width: 992px) {
-		.footer__layout{
-			background-color: $second-default;
-			margin-top: 0!important;
-			.footer__sitemap{
-				height: auto;
-				margin-bottom: 2rem;
-				margin-top:2rem;
-				h5{
-					font-size: 16px;
-					margin-left: .1rem;
-					font-weight:600;
-					color:$default;
-					margin-bottom: .9rem;
-				}
-				ul li{
-					font-size: 14px;
-					font-weight: 400;
-					line-height: 19.07px;
-					width: 250px;
-					margin-bottom: 1rem!important;
-				}
-				.col-1{
-					color:$default;
-					margin-left: -2rem;
-					h5{
-						font-size: 18px;
-						font-weight: 700;
-						color:$default;
-						line-height: 28px;
-					}
-					
-					address{
-						margin-top: -1rem;
-						width: 100%;
-						font-size:14px;
-						font-weight: 600!important;
-						line-height: 21px;
-					}
-					img{
-						max-width: 200px!important;
-					}
-				}
-
-				.col-social{
-					margin-left: 1rem;
-				}
-
-				.col-menu{
-					margin-left: -2rem;
-				}
-
-			}
-
-			.footer-copyright{
-				background-color:$default-black!important;
-				color: $color-primary!important;
-				a{
-					color: $default!important;
-					font-weight: 500;
-				}
-			}
-		}
-	}
+}
 
 
 	/* One Click Scrool Top Button*/
