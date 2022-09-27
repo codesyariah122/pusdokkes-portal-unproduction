@@ -1,0 +1,36 @@
+.pages__web{
+	.pages__context{
+		width: 50%;
+	}
+	.pages__image{
+		width: 50%;
+	}
+}
+@media (min-width: 992px) {
+	.pages__web{
+		.pages__header{
+			font-weight: 800;
+			margin-bottom: 2.3rem;
+		}
+		.pages__context{
+			h2{
+				margin-left: -.5rem;
+			}
+			h5{
+				font-weight: 700;
+			}
+			.content-desc{
+				width: 50%;
+			}
+			width: 50%;
+			font-size: 14px;
+		}
+		.pages__image{
+			width: 50%;
+			margin-top: 2rem;
+			img{
+				max-width: 350px;
+			}
+		}
+	}
+}

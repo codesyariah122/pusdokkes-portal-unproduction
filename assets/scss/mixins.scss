@@ -5,7 +5,7 @@
 // Navigation
 @mixin navbar_desktop{
 	text-transform: capitalize;
-	font-size:14px;
+	font-size:16px;
 	font-weight: 500;
 	line-height: 21.79px;
 }
@@ -60,6 +60,7 @@
 	
 	.container__jumbotron{
 		@include container_jumbotron;
+		margin-top: -5rem;
 	}
 	.display-6{
 		color:$second-black;
@@ -86,8 +87,8 @@
 	color:$default;
 	font-weight: 500;
 	font-size:14px;
-	height: 35px;
-	padding: 5px;
+	// height: 35px;
+	// padding: 5px;
 	letter-spacing: 1.3px;
 	text-transform: uppercase;
 	letter-spacing: 1.3px;

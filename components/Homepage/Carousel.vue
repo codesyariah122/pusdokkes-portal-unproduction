@@ -2,22 +2,12 @@
 	<div>
 		<div id="carouselHome" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img class="d-block w-100" src="https://polri.go.id/assets/images/headers/header-default.png">
+				<div v-for="item in items" :class="`carousel-item ${item.id === 1 ? 'active' : ''}`">
+					<img class="d-block w-100" :src="item.foto_url">
 					<div class="carousel-caption d-none d-md-block">
-						<span style="color:#fff; background-color: #c1801e; font-size: 2em;">Kepolisian Negara Republik Indonesia</span>
-						<p style="font-size: 3rem;">MELINDUNGI</p>
-						<p style="font-size: 3rem; margin-top: -35px;">MENGAYOMI DAN</p>
-						<p style="font-size: 3rem; margin-top: -35px">MELAYANI MASYARAKAT</p>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100" src="https://polri.go.id/assets/images/headers/sdm.jpg">
-					<div class="carousel-caption d-none d-sm-block text-right" style="padding-bottom: 40px">
-						<a href="/dokumen" class="btn btn-primary btn-lg" style="margin-right: 10%;">Lihat Laporan</a>
-					</div>
-					<div class="carousel-caption d-none d-block d-sm-none text-right" style="padding-bottom: 0px;">
-						<a href="/dokumen" class="btn btn-primary btn-xs" >Lihat Laporan</a>
+						<span style="color:#fff; background-color: #c1801e; font-size: 2em;">
+							{{item.deskripsi}}
+						</span>
 					</div>
 				</div>
 			</div>
@@ -60,3 +50,29 @@
 		</div>
 	</div>
 </template>
+
+<script>
+	export default {
+		data(){
+			return {
+				items: []
+			}
+		},
+
+		mounted(){
+			this.carouselItem()
+		},
+
+		methods: {
+			carouselItem(){
+				const base_url = process.env.NUXT_ENV_API_URL
+				this.$axios.get(`${base_url}/web/slider?start=0`)
+				.then(({data}) => {
+					console.log(data)
+					this.items = data.list_data
+				})
+				.catch(err => console.error(err.response))
+			}
+		}
+	}
+</script>

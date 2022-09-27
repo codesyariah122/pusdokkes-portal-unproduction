@@ -12,12 +12,12 @@
       <mdb-row class="row visi-misi__content">
         <mdb-col class="mb-5" sm="8" md="8" lg="8">
           <h1>Visi</h1>
-          <p v-if="context.visi">{{ context.visi }}</p>
+          <p v-if="content.visi">{{ content.visi }}</p>
           <br />
           <h1>Misi</h1>
-          <ol v-if="context.misi">
-            <li v-for="n in context.misi.length" v-if="n % 2 == 1">
-              {{ context.misi[n] }}
+          <ol v-if="content.misi">
+            <li v-for="n in content.misi.length-1" v-if="n >! content.misi.length">
+              {{ content.misi[n] }}
             </li>
           </ol>
         </mdb-col>
@@ -34,10 +34,10 @@
     data() {
       return {
         bg_image: BgImage,
-        context: {
-          visi: [],
-          misi: [],
-        },
+        content: {
+          visi: null,
+          misi: null
+        }
       };
     },
 
@@ -46,7 +46,7 @@
     },
 
     mounted() {
-      this.ContextData();
+      this.visimisiContent();
     },
 
     methods: {
@@ -54,19 +54,16 @@
         const url = process.env.NUXT_ENV_API_URL;
         this.$store.dispatch("config/storeConfigApiUrl", url);
       },
-      ContextData() {
-        FetchData(`${this.api_url}/web/home`)
-        .then((res) => {
-          this.context.visi = res.visi_misi.visi;
-          // console.log(res.visi_misi.misi.split(".").length)
-          const split = res.visi_misi.misi.split(
-            ".",
-            res.visi_misi.misi.split(".").length - 1
-            );
-          this.context.misi = [...split];
+      visimisiContent(){
+        this.$axios.get(`${this.api_url}/web/visimisi`)
+        .then(({data}) => {
+          this.content.visi = data.result.visi
+          this.content.misi = data.result.misi
+          const split = data.result.misi.split(".", data.result.misi.length-1)
+          this.content.misi = [...split]
         })
-        .catch((err) => console.error(err));
-      },
+        .catch(err => console.error(err))
+      }
     },
 
     computed: {

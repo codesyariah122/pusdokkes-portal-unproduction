@@ -63,8 +63,8 @@ export default {
   data() {
     return {
       berita__list_style: this.$device.isDesktop
-        ? "margin-top: 8rem;"
-        : "margin-top: 6rem;",
+        ? "margin-top: 8rem;margin-bottom: 5rem;"
+        : "margin-top: 6rem;margin-bottom: 5rem;",
       id: this.$route.params.id,
       path: this.$route.name,
       berita: null,

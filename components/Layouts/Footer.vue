@@ -66,29 +66,29 @@
           <ul class="list-group">
             <li class="list-group-item bg-transparent border-0 p-0 mb-5">
               <a
-                href="https://id-id.facebook.com/people/Pusat-Pengembangan-Kesehatan-Carolus-PPKC/100063841689266/"
+                href="https://m.facebook.com/Biddokpol-Pusdokkes-Polri-417470129066923/"
               >
                 <img
                   :src="require('~/assets/icons/socials/facebook.svg')"
-                />&nbsp;pusdokkes_polri
+                />&nbsp;pusdokkespolri
               </a>
             </li>
             <li class="list-group-item bg-transparent border-0 p-0 mb-3">
               <a
-                href="http://ppkcarolus.com/"
+                href="https://twitter.com/pusdokkes"
               >
                 <img
                   :src="require('~/assets/icons/socials/twitter.svg')"
-                />&nbsp;@pusdokkes_polri
+                />&nbsp;@pusdokkes
               </a>
             </li>
             <li class="list-group-item bg-transparent border-0 p-0 mb-3">
               <a
-                href="https://www.instagram.com/ppkc_carolus/?hl=id"
+                href="https://www.instagram.com/pusdokkespolri/?hl=id"
               >
                 <img
                   :src="require('~/assets/icons/socials/instagram.svg')"
-                />&nbsp;@pusdokkes_polri
+                />&nbsp;@pusdokkespolri
               </a>
             </li>
           </ul>

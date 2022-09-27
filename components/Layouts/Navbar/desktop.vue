@@ -15,22 +15,11 @@
       </nuxt-link>
     </mdb-navbar-brand>
     <mdb-navbar-toggler>
-      <mdb-navbar-nav right style="margin-left: 1.5rem;">
+      <mdb-navbar-nav right style="margin-right: 2rem;">
         <mdb-nav-item active waves-fixed>
           <nuxt-link to="/" tag="li" navLink > Home </nuxt-link>
         </mdb-nav-item>
-        <mdb-nav-item waves-fixed>
-          <nuxt-link to="/events" tag="li" navLink > Katalog Kelas </nuxt-link>
-        </mdb-nav-item>
-        <mdb-nav-item v-if="!token.accessToken" waves-fixed>
-          <nuxt-link to="/agendapelatihan" tag="li" navLink > Agenda Pelatihan </nuxt-link>
-        </mdb-nav-item>
 
-        <mdb-nav-item v-if="token.accessToken" waves-fixed>
-          <nuxt-link tag="li" navLink  :to="`/profile/${$username(slug)}/events`">
-            Akses Pelatihan
-          </nuxt-link>
-        </mdb-nav-item>
         <mdb-dropdown  tag="li" class="nav-item">
           <mdb-dropdown-toggle
           tag="a"
@@ -40,7 +29,7 @@
           waves-fixed
           class="no-caret"
           >
-          Tentang PUSDOKKES<mdb-icon icon="external-link-alt" size="md" />
+          Tentang Kami <mdb-icon icon="angle-down" size="sm" />
         </mdb-dropdown-toggle>
         <mdb-dropdown-menu :class="`${$device.isDesktop ? 'mt-3' : ''}`">
           <mdb-dropdown-item v-for="item in links" :key="item.id">
@@ -50,6 +39,66 @@
           </mdb-dropdown-item>
         </mdb-dropdown-menu>
       </mdb-dropdown>
+
+         <mdb-dropdown  tag="li" class="nav-item">
+          <mdb-dropdown-toggle
+          tag="a"
+          navLink
+          color="white"
+          slot="toggle"
+          waves-fixed
+          class="no-caret"
+          >
+          Layanan <mdb-icon icon="angle-down" size="sm" />
+        </mdb-dropdown-toggle>
+        <mdb-dropdown-menu :class="`${$device.isDesktop ? 'mt-3' : ''}`">
+          <mdb-dropdown-item v-for="item in services" :key="item.id">
+            <nuxt-link :to="item.link">
+              {{ item.name }}
+            </nuxt-link>
+          </mdb-dropdown-item>
+        </mdb-dropdown-menu>
+      </mdb-dropdown>
+
+        <mdb-dropdown  tag="li" class="nav-item">
+          <mdb-dropdown-toggle
+          tag="a"
+          navLink
+          color="white"
+          slot="toggle"
+          waves-fixed
+          class="no-caret"
+          >
+          Faskes  <mdb-icon icon="angle-down" size="sm" />
+        </mdb-dropdown-toggle>
+        <mdb-dropdown-menu :class="`${$device.isDesktop ? 'mt-3' : ''}`">
+          <mdb-dropdown-item v-for="item in hospitals" :key="item.id">
+            <nuxt-link :to="item.link">
+              {{ item.name }}
+            </nuxt-link>
+          </mdb-dropdown-item>
+        </mdb-dropdown-menu>
+      </mdb-dropdown>
+
+
+      <mdb-nav-item active waves-fixed>
+        <nuxt-link to="/" tag="li" navLink > Berita </nuxt-link>
+      </mdb-nav-item>
+
+      <mdb-nav-item active waves-fixed>
+        <nuxt-link to="/" tag="li" navLink > Gallery </nuxt-link>
+      </mdb-nav-item>
+        
+
+        <mdb-nav-item v-if="token.accessToken" waves-fixed>
+          <nuxt-link tag="li" navLink  :to="`/profile/${$username(slug)}/events`">
+            Akses Pelatihan
+          </nuxt-link>
+        </mdb-nav-item>
+
+      <mdb-nav-item waves-fixed>
+        <nuxt-link to="/pusdokkes/pengaduan" tag="li" navLink > Pengaduan </nuxt-link>
+      </mdb-nav-item>
       
     </mdb-navbar-nav>
   </mdb-container>
@@ -91,15 +140,8 @@ style="font-size: 31px !important"
 <div v-else tag="li">
   <nuxt-link 
   to="/auth/login"
-  class="btn my__btn-secondary btn-sm shadow-none"
-  size="md" style="border-radius: 5px;"
-  >Masuk</nuxt-link>
-
-  <nuxt-link
-  to="/auth/registrasi"
-  class="my__btn-primary btn btn-sm shadow-none rounded"
-  size="md"
-  >Daftar</nuxt-link>
+  class="btn my__btn-primary btn-block btn-md" style="border-radius: 5px;"
+  >Login</nuxt-link>
 </div>
 </mdb-navbar-toggler>
 </mdb-navbar>
@@ -114,18 +156,24 @@ style="font-size: 31px !important"
     data() {
       return {
         links: [
-        { id: 1, name: "Sejarah", link: "/ppkc/sejarah" },
-        { id: 2, name: "Visi & Misi", link: "/ppkc/visi-misi" },
-        {
-          id: 3,
-          name: "Struktur Organisasi",
-          link: "/ppkc/struktur-organisasi",
-        },
-        { id: 4, name: "Fasilitas", link: "/ppkc/fasilitas" },
-        { id: 5, name: "Testimoni", link: "/ppkc/testimoni" },
-        { id: 6, name: "Fasilitator", link: "/ppkc/fasilitator" },
-        { id: 7, name: "Yayasan & Direksi", link: "/ppkc/yayasan-direksi" },
+        { id: 1, name: 'Pesan Kapusdokkes', link: '/pusdokkes/pesan-kapusdokkes'},
+        { id: 2, name: 'Program Prioritas', link: '/pusdokkes/program-prioritas'},
+        { id: 3, name: 'Kapusdokkes Dari Masa Ke Masa', link: '/pusdokkes/history-kapusdokkes'},
+        { id: 4, name: "Sejarah Dokkes", link: "/pusdokkes/sejarah" },
+        { id: 5, name: "Visi & Misi", link: "/pusdokkes/visi-misi" },
+        { id: 6, name: "Struktur Organisasi", link: "/pusdokkes/struktur-organisasi" },
+        { id: 7, name: "Satker Pusdokkes", link: "/pusdokkes/satker-pusdokkes" },
+        { id: 8, name: "Bidokkes Polda", link: "/pusdokkes/testimoni" },
+        { id: 9, name: "Mitra Pusdokkes", link: "/pusdokkes/fasilitator" }
         ],
+        services: [
+          { id: 1, name: 'Rikes Anggota', link: '/pusdokkes/rikes'},
+          { id: 2, name: 'Surat Rekomendasi Bebas Narkoba', link: '/pusdokkes/surat-rekomendasi'}
+        ],
+        hospitals: [
+          { id:1, name: 'Rumkit Bhayangkara', link: ''},
+          { id:2, name: 'FKTP (Klinik) Polri', link: ''}
+        ]
       };
     },
 

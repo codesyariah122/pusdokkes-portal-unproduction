@@ -23,11 +23,11 @@ export default {
     },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Pusdokkes - Portal',
+    title: 'PUSDOKKES POLRI',
     meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { hid: 'description', name: 'description', content: 'Kedokteran dan Kesehatan Polri | PUSDOKKES - PORTAL' },
+    { hid: 'description', name: 'description', content: 'Kedokteran dan Kesehatan Polri | PUSDOKKES POLRI' },
     { name: 'format-detection', content: 'telephone=no' },
     { hid: 'og:image', property: 'og:image', content: 'http://ppkcarolus.com/upload/tampak_luar-min.jpg' },
     { httpEquiv: "X-Frame-Options",  content:"deny"}
@@ -44,7 +44,9 @@ export default {
       href: 'https://fonts.googleapis.com/css?family=Open+Sans'
     },
     { rel: 'stylesheet', type: 'text/css', href: '/assets/glightbox/glightbox.min.css'},
-    { rel: 'stylesheet', type: 'text/css', href: '/assets/venobox/dev/venobox.min.css'}
+    { rel: 'stylesheet', type: 'text/css', href: '/assets/venobox/dev/venobox.min.css'},
+    { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'},
+    { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.0/css/lightgallery.min.css'}
     ],
     script: [
     {
@@ -56,6 +58,14 @@ export default {
       async: 'true',
       'custom-element': 'amp-ad'
     },
+    {
+      src: '/assets/glightbox/glightbox.min.js',
+      type: 'text/javascript'
+    },
+    {
+      src: '/assets/venobox/dev/venobox.min.js',
+      type: 'text/javascript'
+    },
 
     { src: '/assets/js/jquery.min.js'},
     { src: '/assets/js/modernizr-3.5.0.min.js'},
@@ -63,7 +73,9 @@ export default {
     { src: '/assets/js/jquery.ticker.js'},
     { src: '/assets/js/slick.js'},
     { src: '/assets/js/hs.core.js'},
-    { src: '/assets/js/animated.headline.js'}
+    { src: '/assets/js/animated.headline.js'},
+    { src: 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js'},
+    { src: 'https://res.cloudinary.com/dxfq3iotg/raw/upload/v1556817331/lightgallery-all.min.js'}
     ]
   },
 
@@ -74,7 +86,7 @@ export default {
     'mdbvue/lib/css/mdb.min.css',
     '@assets/css/animate.min.css',
     '@assets/css/slick.css',
-    '@assets/css/theme.css',
+    // '@assets/css/theme.css',
     ],
     
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -106,6 +118,7 @@ export default {
     '~assets/scss/layout.scss',
     '~assets/scss/global.scss',
     '~assets/scss/main.scss',
+    '~assets/scss/pages.scss',
     '~assets/scss/event.scss',
     '~assets/scss/berita.scss',
     '~assets/scss/auth.scss',
@@ -200,16 +213,16 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     meta: {
-      title: 'PUSDOKKES PORTAL',
+      title: 'PUSDOKKES POLRI',
       author: 'Pusdokkes',
       icon: true,
       canonical: 'https://pusdokkes.halomedika.com/',
-      description: 'Kedokteran Dan Kesehatan - Polri | PUSDOKKES - PORTAL',
+      description: 'Pusat Kedokteran dan Kesehatan - POLRI | PUSDOKKES POLRI',
       keywords: 'PUSDOKKES PORTAL',
       ogUrl: 'https://pusdokkes.halomedika.com/',
       ogType: 'website',
-      ogSiteName: 'Pusdokkes Portal- Kedokteran Dan Kesehatan - Polri',
-      ogTitle: 'Pusdokkes Portal - Kedokteran Dan Kesehatan - Polri',
+      ogSiteName: 'Pusdokkes Portal- Pusat Kedokteran dan Kesehatan - POLRI',
+      ogTitle: 'Pusdokkes Portal - Pusat Kedokteran dan Kesehatan - POLRI',
       ogImage: 'icon-512x512.png',
       ogImageWidth: '600',
       ogImageHeight: '400'
@@ -218,7 +231,7 @@ export default {
       lang: 'en',
       name: 'PUSDOKKES PORTAL',
       short_name: 'PUSDOKKES PORTAL',
-      description : "Kedokteran Dan Kesehatan - Polri",
+      description : "Pusat Kedokteran dan Kesehatan - POLRI",
       start_url: '/',
       lang: 'en',
       display: 'standalone',
