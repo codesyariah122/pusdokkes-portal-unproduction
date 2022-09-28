@@ -29,7 +29,7 @@
 					<div class="col-lg-6">
 						<div class="video-caption">
 							<div class="top-caption">
-								<span class="color1">Politics</span>
+								<span class="color1">Youtube Channel</span>
 							</div>
 							<div class="bottom-caption">
 								<h2>Welcome To The Pusdokkes Channel</h2>
