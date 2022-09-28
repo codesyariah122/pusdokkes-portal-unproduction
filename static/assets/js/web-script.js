@@ -1,8 +1,8 @@
 $(document).on("ready", function() {
-   $(".js-slick-carousel").each(function() {
-    var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
-    console.log(slickCarousel)
- })
+ $(".js-slick-carousel").each(function() {
+  var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+  console.log(slickCarousel)
+})
 })
 
 $('.weekly-news-active').slick({
@@ -23,26 +23,70 @@ $('.weekly-news-active').slick({
      slidesToScroll: 3,
      infinite: true,
      dots: false,
-  }
-},
-{
+   }
+ },
+ {
    breakpoint: 991,
    settings: {
      slidesToShow: 1,
      slidesToScroll: 1
-  }
-},
-{
+   }
+ },
+ {
    breakpoint: 480,
    settings: {
      slidesToShow: 1,
      slidesToScroll: 1
-  }
-}
+   }
+ }
 
-]
+ ]
+});
+
+$('.video-items-active').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor:'.testmonial-nav'
+});
+$('.testmonial-nav').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  asNavFor: '.video-items-active',
+  dots: false,
+  prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>',
+  nextArrow: '<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>',
+  centerMode: true,
+  focusOnSelect: true,
+  centerPadding:0,
+  responsive: [
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 3,
+      infinite: true,
+      dots: false,
+    }
+  },
+  {
+    breakpoint: 991,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }
+  ]
+
 });
 
 $(function () {
-   $('#js-news').ticker();
+ $('#js-news').ticker();
 });

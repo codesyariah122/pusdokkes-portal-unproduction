@@ -23,16 +23,16 @@
       </mdb-row>
     </mdb-container>
     <mdb-container v-else>
-      <mdb-row class="row justify-content-end">
+      <mdb-row class="row justify-content-center">
         <mdb-col lg="7" sm="10" class="pages__context">
           <h2 style="font-weight: 700;">
             Sejarah Pusdokkes Polri
           </h2>
-          <div class="content-desc" v-html="contents.description"></div>
+          <div class="content-desc text-justify" v-html="contents.description" :style="`${$device.isDesktop ? 'width: 550px;' : ''}`"></div>
         </mdb-col>
 
         <mdb-col lg="5" sm="12" class="pages__image">
-          <img :src="contents.foto" class="img-fluid z-depth-1">
+          <img :src="contents.foto" class="img-fluid" />
         </mdb-col>
       </mdb-row>
     </mdb-container>

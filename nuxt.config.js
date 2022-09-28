@@ -86,6 +86,7 @@ export default {
     'mdbvue/lib/css/mdb.min.css',
     '@assets/css/animate.min.css',
     '@assets/css/slick.css',
+    '@assets/css/flaticon.css'
     // '@assets/css/theme.css',
     ],
     
@@ -130,7 +131,8 @@ export default {
     '~assets/scss/pembayaran.scss',
     '~assets/scss/trending.scss',
     '~assets/scss/wecky.scss',
-    '~assets/scss/whats-new.scss'
+    '~assets/scss/whats-new.scss',
+    '~assets/scss/youtube.scss'
     ]
   },
 

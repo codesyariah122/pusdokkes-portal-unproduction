@@ -20,7 +20,6 @@
         <h3 :style="`${$device.isMobile ? 'font-size: 12px;' : ''}`">{{item.caption}}</h3>
       </b-carousel-slide>
   </b-carousel>
-
 </div>
 </template>
 
@@ -47,7 +46,7 @@
         this.$axios.get(`${base_url}/web/slider?start=0`)
         .then(({data}) => {
           data.list_data.map(d => {
-            this.items.push({img: true, src: d.foto_url, label: "first media", caption: d.deskripsi})
+            this.items.push({img: true, src: d.foto_url, caption: d.deskripsi})
           })
         })
         .catch(err => console.error(err.response))
