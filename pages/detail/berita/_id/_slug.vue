@@ -1,5 +1,5 @@
 <template>
-  <div class="berita__detail" :style="berita__list_style">
+  <div class="berita__detail-content" :style="berita__list_style">
     <mdb-container>
       <!-- header -->
       <mdb-row class="row justify-content-center">
@@ -28,13 +28,13 @@
         </mdb-col>
 
         <mdb-col
-          lg="12"
+          lg="10"
           xs="12"
           sm="12"
           class="col__berita-2"
-          style="margin-top: 16px"
+          style="margin-top: 16px;"
         >
-          <div class="content-desc" v-html="lists.berita.konten"></div>
+          <div class="content-desc" v-html="lists.berita.html"></div>
         </mdb-col>
 
         <mdb-col lg="12" xs="12" sm="12" class="mt-5">
@@ -120,5 +120,15 @@ export default {
   border-radius: 3px;
   border: 1px solid lightgray;
   object-fit: contain;
+}
+
+.content-desc >>> img{
+  width: 800px;
+}
+
+.content-desc >>> p {
+  font-size: 16px;
+  line-height: 31px;
+  word-spacing: 2px;
 }
 </style>
