@@ -293,13 +293,20 @@
 @media (min-width: 992px) {
 	.card__list{
 		.header__ppkc-list-page{
-			margin-top:10rem;
-			margin-left: 1.5rem;
+			margin-top:5rem;
+			margin-left: 1rem;
 			h2{
 				color: $second-black;
 				font-size:21px;
 				font-weight: 700;
 				line-height: 23px;
+			}
+			p{
+				font-size:16px;
+				font-weight: 400;
+				line-height: 35px;
+				margin-top: .5rem;
+				text-align: justify;
 			}
 			.ppkc__col-1{
 				margin-top: 1rem;

@@ -1,12 +1,12 @@
 <template>
 	<div>
-		<PusdokkesPesanPusdokkes/>
+		<PusdokkesGalleryPusdokkes/>
 	</div>
 </template>
 
 <script>
 	export default {
-		name: 'pesan-kapusdokkes',
+		name: 'pusdokkes-gallery',
 		layout: 'default'
 	}
 </script>

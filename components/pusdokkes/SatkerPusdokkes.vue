@@ -28,7 +28,7 @@
                     </h5>
                     <p>{{ item.alamat }}</p>
                     <p v-if="item.telp">{{ item.telp }}</p>
-                    <a :href="item.website" target="_blank"
+                    <a v-if="item.website" :href="item.website" target="_blank"
                       ><div class="d-flex align-items-center">
                         <i class="fa fa-external-link-alt"></i>
                         <p class="ml-2 mt-2">{{ item.website }}</p>

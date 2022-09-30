@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BeritapageListBerita
+    <PusdokkesBerita
       :path="path"
       :lists="lists"
       :loading="loading"

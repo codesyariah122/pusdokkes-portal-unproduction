@@ -1,0 +1,17 @@
+@media (min-width: 992px) {
+	.gallery__pages{
+		h2{
+			color: $second-black;
+				font-size:21px;
+				font-weight: 700;
+				line-height: 23px;
+		}
+		p{
+			font-size:16px;
+			font-weight: 400;
+			line-height: 35px;
+			margin-top: .5rem;
+			text-align: justify;
+		}
+	}
+}

@@ -1,5 +1,12 @@
 <template>
 	<div>
-		<pusdokkesProgrammPrioritas/>
+		<PusdokkesProgrammPrioritas/>
 	</div>
 </template>
+
+<script>
+	export default {
+		name: 'program-prioritas',
+		layout: 'default'
+	}
+</script>

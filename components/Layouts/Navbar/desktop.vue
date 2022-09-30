@@ -86,7 +86,7 @@
       </mdb-nav-item>
 
       <mdb-nav-item active waves-fixed>
-        <nuxt-link to="/" tag="li" navLink > Gallery </nuxt-link>
+        <nuxt-link to="/pusdokkes/gallery" tag="li" navLink > Gallery </nuxt-link>
       </mdb-nav-item>
         
 

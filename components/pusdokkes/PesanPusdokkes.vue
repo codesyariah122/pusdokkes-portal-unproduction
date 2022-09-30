@@ -8,13 +8,11 @@
 <template>
   <div class="pages__web" :style="berita__list_style">
     <mdb-container v-if="loading">
-      <mdb-row class="row justify-content-center">
+      <mdb-row class="row justify-content-center mt-3">
         <mdb-col lg="7" sm="10">
-          <b-card>
-            <b-skeleton animation="wave" width="85%"></b-skeleton>
-            <b-skeleton animation="wave" width="55%"></b-skeleton>
-            <b-skeleton animation="wave" width="70%"></b-skeleton>
-          </b-card>
+          <b-skeleton animation="wave" width="85%"></b-skeleton>
+          <b-skeleton animation="wave" width="55%"></b-skeleton>
+          <b-skeleton animation="wave" width="70%"></b-skeleton>
         </mdb-col>
         <mdb-col lg="5" sm="12">
           <b-skeleton-img></b-skeleton-img>
@@ -37,52 +35,52 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      loading: null,
-      result: {},
-      berita__list_style: this.$device.isDesktop
+  export default {
+    data() {
+      return {
+        loading: null,
+        result: {},
+        berita__list_style: this.$device.isDesktop
         ? "margin-top: 8rem;margin-bottom: 5rem;"
         : "margin-top: 6rem; margin-bottom: 5rem;",
-      deskripsi: null,
-    };
-  },
-
-  mounted() {
-    this.ConfigApiUrl(), this.pesanPusdokkes();
-  },
-
-  methods: {
-    ConfigApiUrl() {
-      const api_url = process.env.NUXT_ENV_API_URL;
-      this.$store.dispatch("config/storeConfigApiUrl", api_url);
+        deskripsi: null,
+      };
     },
 
-    pesanPusdokkes() {
-      this.loading = true;
-      this.$axios
+    mounted() {
+      this.ConfigApiUrl(), this.pesanPusdokkes();
+    },
+
+    methods: {
+      ConfigApiUrl() {
+        const api_url = process.env.NUXT_ENV_API_URL;
+        this.$store.dispatch("config/storeConfigApiUrl", api_url);
+      },
+
+      pesanPusdokkes() {
+        this.loading = true;
+        this.$axios
         .get(`${this.api_url}/web/pesankapusdokkes`)
         .then(({ data }) => {
           this.result = data.result;
           const split = data.result.description.split(
             ".",
             data.result.description.length - 1
-          );
+            );
           this.deskripsi = [...split];
           setTimeout(() => {
             this.loading = false;
           }, 1500);
         })
         .catch((err) => console.error(err));
+      },
     },
-  },
-  computed: {
-    api_url() {
-      return this.$store.getters["config/ConfigApiUrl"];
+    computed: {
+      api_url() {
+        return this.$store.getters["config/ConfigApiUrl"];
+      },
     },
-  },
-};
+  };
 </script>
 
 <style scoped>

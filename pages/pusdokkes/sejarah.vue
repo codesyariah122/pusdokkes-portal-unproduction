@@ -1,13 +1,13 @@
 <!-- Component base on directory /components/ppkc -->
 <template>
 	<div>
-		<pusdokkesSejarah :path="path"/>
+		<PusdokkesSejarahPusdokkes :path="path"/>
 	</div>
 </template>
 
 <script>
 	export default{
-		name: 'pusdokkes-testimoni',
+		name: 'pusdokkes-sejarah',
 		layout: 'default',
 
 		data(){
