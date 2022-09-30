@@ -219,7 +219,7 @@
           </div>
 
           <div class="trand-right-single section-tittle">
-            <a style="background :#00923f!important; color: #fff; font-size: 14px;" :class="`btn btn-block ${$device.isDesktop ? 'btn-md' : 'btn-sm'} rounded`" href="https://www.instagram.com/pusdokkespolri/?hl=id" target="_blank">
+            <a style="background :#00923f!important; color: #fff; font-size: 14px;" :class="`btn btn-block ${$device.isDesktop ? 'btn-sm' : 'btn-sm'} rounded`" href="https://www.instagram.com/pusdokkespolri/?hl=id" target="_blank">
               <img
               :src="require('~/assets/icons/socials/instagram.svg')"
               /> Follow Me On Instagram
@@ -249,7 +249,7 @@
                     </a>
                   </div>
                 </div>
-                <div v-if="feedIndex <= feeds.length || feeds.length > feedToShow" class="col-sm-12 col-md-12 mt-2">
+                <div v-if="feeds.length > feedToShow" class="col-sm-12 col-md-12 mt-2">
                   <b-button @click="feedToShow += feeds.length" style="background :#00923f!important; color: #fff; font-size: 14px;" class="btn rounded-pill btn-sm btn-block">
                     Lebih Banyak
                   </b-button>

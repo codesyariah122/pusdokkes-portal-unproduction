@@ -14,7 +14,7 @@
           />
 
           <p class="mb-1 mt-3 mb-5" style="width: 200px;">
-            PUSDOKKES POLRI - Kedokteran Dan Kesehatan
+            PUSDOKKES POLRI - Pusat Kedokteran Dan Kesehatan Polisi Republik Indonesia
           </p>
           <address>
             Jl. Trunojoyo No. 3 Kebayoran Baru

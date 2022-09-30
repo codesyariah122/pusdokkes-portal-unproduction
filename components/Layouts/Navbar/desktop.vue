@@ -183,8 +183,8 @@ export default {
           name: "Satker Pusdokkes",
           link: "/pusdokkes/satker-pusdokkes",
         },
-        { id: 8, name: "Bidokkes Polda", link: "/pusdokkes/testimoni" },
-        { id: 9, name: "Mitra Pusdokkes", link: "/pusdokkes/fasilitator" },
+        { id: 8, name: "Bidokkes Polda", link: "/pusdokkes/bidokkes" },
+        { id: 9, name: "Mitra Pusdokkes", link: "/pusdokkes/mitra-pusdokkes" },
       ],
       services: [
         { id: 1, name: "Rikes Anggota", link: "/pusdokkes/rikes" },

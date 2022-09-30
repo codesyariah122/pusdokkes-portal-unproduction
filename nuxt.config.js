@@ -43,12 +43,12 @@ export default {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css?family=Open+Sans'
     },
-    { rel: 'stylesheet', type: 'text/css', href: '/assets/glightbox/glightbox.min.css'},
-    { rel: 'stylesheet', type: 'text/css', href: '/assets/venobox/dev/venobox.min.css'},
     { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'},
-    { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.0/css/lightgallery.min.css'}
+    { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.0/css/lightgallery.min.css'},
+    { rel: 'stylesheet', type: 'text/css', href: '/swiper/swiper-bundle.min.css'}
     ],
     script: [
+    { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js' },
     {
       src: 'https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver',
       body: true
@@ -58,16 +58,6 @@ export default {
       async: 'true',
       'custom-element': 'amp-ad'
     },
-    {
-      src: '/assets/glightbox/glightbox.min.js',
-      type: 'text/javascript'
-    },
-    {
-      src: '/assets/venobox/dev/venobox.min.js',
-      type: 'text/javascript'
-    },
-
-    { src: '/assets/js/jquery.min.js'},
     { src: '/assets/js/modernizr-3.5.0.min.js'},
     { src: '/assets/js/bootstrap.bundle.min.js'},
     { src: '/assets/js/jquery.ticker.js'},
@@ -237,8 +227,8 @@ export default {
       start_url: '/',
       lang: 'en',
       display: 'standalone',
-      theme_color: '#2f80ed',
-      background_color: '#4f46e5',
+      theme_color: '#00923f',
+      background_color: '#00923f',
       icons: [
       {
         "src": "/icon-48x48.png",

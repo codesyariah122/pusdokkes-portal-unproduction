@@ -19,7 +19,8 @@
                       class="pb-2"
                       :src="item.foto_url"
                       alt=""
-                      height="100"
+                      height="50"
+                      width="80"
                     />
                   </div>
                   <div class="col-lg-10">

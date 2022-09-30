@@ -8,7 +8,7 @@
           </mdb-col>
           <mdb-col lg="12" xs="12" sm="12">
             <span style="color: #666666 !important; font-size: 14px">
-              Ikuti seputar kegiatan dan berita dari PUSDOKKES
+              Ikuti seputar kegiatan dan berita dari PUSDOKKES - POLRI
             </span>
           </mdb-col>
         </mdb-row>

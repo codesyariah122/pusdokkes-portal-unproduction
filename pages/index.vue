@@ -20,10 +20,10 @@
           <HomepageGallery/>
         </mdb-col>
 
-        <mdb-col lg="12" sm="12" xs="12" class="mt-5 mb-5">
+        <!-- <mdb-col lg="12" sm="12" xs="12" class="mt-5 mb-5">
           <HomepageYoutubeChannel/>
         </mdb-col>
-
+ -->
       </mdb-row>
     </mdb-container>
 
