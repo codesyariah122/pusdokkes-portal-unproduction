@@ -123,7 +123,8 @@ export default {
     '~assets/scss/wecky.scss',
     '~assets/scss/whats-new.scss',
     '~assets/scss/youtube.scss',
-    '~assets/scss/gallery-pages.scss'
+    '~assets/scss/gallery-pages.scss',
+    '~assets/scss/gallery-images.scss'
     ]
   },
 
