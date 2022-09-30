@@ -34,7 +34,7 @@ export default {
   },
 
   methods: {
-    async ListKapusdokkes() {
+    ListKapusdokkes() {
       this.loading = true;
       this.error = false;
       const url = `${this.api_url}/web/kapusdokkes?start=${this.lists.length}`;

@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div
       ref="fasilitator_square"
       class="card__list"
@@ -11,7 +10,7 @@
             <h2 style="font-weight: 700">Kapusdokkes dari Masa ke Masa</h2>
           </mdb-col>
         </mdb-row>
-        <!-- delay looping data with loader spinner -->
+
 
         <div class="row text-center text-md-left" style="margin-top: 64px">
           <!-- Grid column -->
@@ -71,7 +70,6 @@
         </mdb-row>
       </mdb-container>
     </div>
-  </div>
 </template>
 
 <script>
@@ -81,9 +79,8 @@ export default {
     return {
       currentPage: 1,
 
-      berita__list_style:
-        this.$router.path == "berita" && this.$device.isDeskktop
-          ? "margin-top: 15rem;"
+      berita__list_style: this.$device.isDesktop
+          ? "margin-top: 7rem;"
           : "margin-top: 5rem;",
     };
   },
@@ -103,7 +100,7 @@ export default {
           if (
             this.$refs.fasilitator_square.getBoundingClientRect().bottom <= 450
           ) {
-            this.$emit("load-more-fasilitator");
+            this.LoadFasilitator()
           }
         }
       };

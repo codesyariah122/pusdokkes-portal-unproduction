@@ -1,5 +1,12 @@
 <template>
-  <div  class="banner">
+  <div v-if="loading" class="banner mt-3">
+    <b-row>
+      <b-col cols="12" class="mt-3">
+        <b-skeleton-img no-aspect height="350px"></b-skeleton-img>
+      </b-col>
+    </b-row>
+  </div>
+  <div v-else class="banner">
     <b-carousel
     id="carousel-1"
     v-model="slide"
@@ -29,6 +36,7 @@
     props: ['token'],
     data(){
       return {
+        loading: null,
         items: [],
         captions: [],
         slide: 0,
@@ -42,6 +50,7 @@
 
     methods: {
       carouselItem(){
+        this.loading = true
         const base_url = process.env.NUXT_ENV_API_URL
         this.$axios.get(`${base_url}/web/slider?start=0`)
         .then(({data}) => {
@@ -50,6 +59,11 @@
           })
         })
         .catch(err => console.error(err.response))
+        .finally(() => {
+          setTimeout(() => {
+            this.loading = false
+          }, 1500)
+        })
       },
       onSlideStart(slide) {
         this.sliding = true

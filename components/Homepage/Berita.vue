@@ -297,11 +297,13 @@
         this.$axios.get(`${base_url}/web/berita/page?start=0`)
         .then(({data}) => {
           this.news = data.list_data
+        })
+        .catch(err => console.error(err.response))
+        .finally(() => {
           setTimeout(() => {
             this.loading = false
           }, 1500)
         })
-        .catch(err => console.error(err.response))
       },
 
       feedContents(){
