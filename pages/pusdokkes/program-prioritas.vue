@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<PusdokkesProgrammPrioritas/>
+		<PusdokkesProgramPrioritas/>
 	</div>
 </template>
 

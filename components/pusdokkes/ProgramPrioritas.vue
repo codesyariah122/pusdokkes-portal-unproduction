@@ -3,7 +3,6 @@
   white-space: pre-wrap;
   font-size: 16px;
   line-height: 31px;
-  text-align: justify;
 }
 </style>
 <template>
@@ -22,9 +21,8 @@
     </mdb-container>
     <mdb-container v-else>
       <mdb-row v-if="$device.isDesktop" class="row justify-content-center">
-        <mdb-col lg="7" sm="12" class="pages__context">
-          <h2 style="font-weight: 700">Pesan Kapusdokkes</h2>
-          <br />
+        <mdb-col lg="7" sm="10" class="pages__context">
+          <h2 style="font-weight: 700">Program Prioritas</h2>
           <div class="body-berita" v-html="result.description"></div>
         </mdb-col>
         <mdb-col lg="5" sm="12" class="pages__image">
@@ -33,11 +31,11 @@
       </mdb-row>
 
       <mdb-row v-else>
-        <mdb-col sm="12" class="pages__image">
-          <h2>Pesan Kapusdokkes</h2>
-          <img :src="result.foto_url" class="img-fluid z-depth-1" />
+        <mdb-col lg="5" sm="12" class="pages__image">
+          <h2 style="font-weight: 700">Program Prioritas</h2>
+          <img :src="result.foto_url" class="img-fluid z-depth-1 mt-2" />
         </mdb-col>
-        <mdb-col sm="12" class="pages__context">
+        <mdb-col lg="7" sm="10" class="pages__context mt-3">
           <div class="body-berita" v-html="result.description"></div>
         </mdb-col>
       </mdb-row>
@@ -49,12 +47,12 @@
   export default {
     data() {
       return {
-        loading: null,
         result: {},
         berita__list_style: this.$device.isDesktop
         ? "margin-top: 8rem;margin-bottom: 5rem;"
         : "margin-top: 6rem; margin-bottom: 5rem;",
         deskripsi: null,
+        loading: null,
       };
     },
 
@@ -71,7 +69,7 @@
       pesanPusdokkes() {
         this.loading = true;
         this.$axios
-        .get(`${this.api_url}/web/pesankapusdokkes`)
+        .get(`${this.api_url}/web/programprioritas`)
         .then(({ data }) => {
           this.result = data.result;
           const split = data.result.description.split(
@@ -93,10 +91,3 @@
     },
   };
 </script>
-
-<style scoped>
-.body-berita {
-  white-space: pre-wrap;
-  font-size: 16px;
-}
-</style>

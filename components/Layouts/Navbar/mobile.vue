@@ -179,7 +179,7 @@
       return {
         links: [
         { id: 1, name: 'Pesan Kapusdokkes', link: '/pusdokkes/pesan-kapusdokkes'},
-        { id: 2, name: 'Program Prioritas', link: '/pusdokkes/program-priorita'},
+        { id: 2, name: 'Program Prioritas', link: '/pusdokkes/program-prioritas'},
         { id: 3, name: 'Kapusdokkes Dari Masa Ke Masa', link: '/pusdokkes/history-kapusdokkes'},
         { id: 4, name: "Sejarah Dokkes", link: "/pusdokkes/sejarah" },
         { id: 5, name: "Visi & Misi", link: "/pusdokkes/visi-misi" },

@@ -27,7 +27,7 @@
       backface-visibility: hidden;
     }
     video{
-      height: 500px;
+      height: 400px;
       width: 300px;
       cursor: pointer;
       opacity: 1;

@@ -20,18 +20,32 @@
       </mdb-row>
     </mdb-container>
     <mdb-container v-else>
-      <mdb-row class="row justify-content-end">
+      <mdb-row v-if="$device.isDesktop" class="row justify-content-end">
         <mdb-col lg="7" sm="10" class="pages__context">
           <h2 style="font-weight: 700">Visi & Misi</h2>
-          <h5>Visi</h5>
+          <h5> <strong>Visi</strong> </h5>
           <p class="content-desc" v-html="contents.visi"></p>
-          <br />
-          <h5>Misi</h5>
+
+          <h5> <strong>Misi</strong> </h5>
           <div class="content-desc" v-html="contents.misi"></div>
         </mdb-col>
 
         <mdb-col lg="5" sm="12" class="pages__image">
           <img :src="contents.foto" class="img-fluid z-depth-1" />
+        </mdb-col>
+      </mdb-row>
+
+      <mdb-row v-else>
+        <mdb-col lg="5" sm="12" class="pages__image">
+          <h2 style="font-weight: 700">Visi & Misi</h2>
+          <img :src="contents.foto" class="img-fluid z-depth-1 mt-2" />
+        </mdb-col>
+        <mdb-col lg="7" sm="10" class="pages__context mt-3">
+          <h5> <strong>Visi</strong> </h5>
+          <p class="content-desc" v-html="contents.visi"></p>
+
+          <h5> <strong>Misi</strong> </h5>
+          <div class="content-desc" v-html="contents.misi"></div>
         </mdb-col>
       </mdb-row>
     </mdb-container>

@@ -69,7 +69,7 @@
         opacity: 0;
         position: absolute;
         left: 15px;
-        height: 300px!important;
+        height: 340px!important;
         bottom: 0;
         z-index: 3;
         right: 15px;
