@@ -27,8 +27,6 @@
       </mdb-row>
     </mdb-container>
 
-    <!-- <HomepageVisiMisi/> -->
-
   </main>
 </template>
 

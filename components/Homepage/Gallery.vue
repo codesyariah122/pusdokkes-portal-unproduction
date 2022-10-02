@@ -75,7 +75,6 @@
                 this.$axios.get(`${this.api_url}/web/galeri?start=${page}`)
                 .then(({data}) => {
                     this.galleries = data.list_data
-                    console.log(data.list_data)
                     data.list_data.map(d => this.images.push(d.alamat))
                 })
                 .catch(err => console.error(err))
