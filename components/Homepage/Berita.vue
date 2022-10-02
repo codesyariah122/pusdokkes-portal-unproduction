@@ -169,7 +169,13 @@
               <div class="trend-top-img">
                 <img :src="item.foto_url" alt="">
                 <div class="trend-top-cap mt-2">
-                  <h2><a href="details.html">{{item.judul}}</a></h2>
+                  <h2><nuxt-link :to="{
+                      name: `detail-berita-id-slug`,
+                      params: {
+                        id: item.id,
+                        slug: $slug(item.judul),
+                      },
+                    }">{{item.judul}}</nuxt-link></h2>
                   <p class="text-white">
                     {{$moment(item.created_at).format("LL")}}
                   </p>
@@ -198,7 +204,7 @@
                 </div>
               </div>
             </div>
-            <div class="row justify-content-center mb-5" :style="`${$device.isDesktop || feeds.length > feedToShow ? 'margin-top: 10rem;' : 'margin-top: 1rem;'}`">
+            <div class="row justify-content-center mb-5" :style="`${$device.isMobile ? 'margin-top: 1rem;margin-bottom: 2rem;' : 'margin-top: 10rem;'}`">
               <div class="col-lg-8 col-sm-12">
                 <nuxt-link to="/pusdokkes/berita" class="btn my__btn-primary btn-md btn-block  rounded-pill shadow-none">Lihat Semua Berita</nuxt-link>
               </div>
@@ -226,12 +232,12 @@
           <div  class="trand-right-single d-flex">
             <div class="trand-right-img" :style="`${$device.isMobile ? 'margin-left: -.3rem;' : ''}`">
               <div v-if="loading" class="row instagram__feed">
-                <div  v-for="n in feeds.length" class="col-md-4 col-sm-4 mb-2 col-feed">
+                <div  v-for="n in feeds.length" class="col-md-4 col-sm-4 mb-3 col-feed">
                   <b-skeleton-img></b-skeleton-img>
                 </div>
               </div>
               <div v-else class="row instagram__feed">
-                <div v-if="feedIndex <= feeds.length" v-for="feedIndex in feedToShow" class="col-md-4 col-sm-2 mb-2 col-feed">
+                <div v-if="feedIndex <= feeds.length" v-for="feedIndex in feedToShow" class="col-md-4 col-sm-2 mb-3 col-feed">
                   <img v-if="feeds[feedIndex-1].type === 'image'" :src="feeds[feedIndex-1].images" class="img-thumbnail">
                   <video v-else :src="feeds[feedIndex-1].images"></video>
                   <div class="middle">

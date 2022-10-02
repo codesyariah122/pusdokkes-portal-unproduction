@@ -13,101 +13,101 @@
 
           <div id="slideshow">
             <img
-              class="image"
-              v-for="(image, i) in lists.list_image"
-              :src="image"
-              :key="i"
-              @click="index = i"
+            class="image"
+            v-for="(image, i) in lists.list_image"
+            :src="image"
+            :key="i"
+            @click="index = i"
             />
             <vue-gallery-slideshow
-              :images="lists.list_image"
-              :index="index"
-              @close="index = null"
+            :images="lists.list_image"
+            :index="index"
+            @close="index = null"
             ></vue-gallery-slideshow>
           </div>
         </mdb-col>
 
         <mdb-col
-          lg="10"
-          xs="12"
-          sm="12"
-          class="col__berita-2"
-          style="margin-top: 16px;"
+        lg="10"
+        xs="12"
+        sm="12"
+        class="col__berita-2"
+        style="margin-top: 16px;"
         >
-          <div class="content-desc" v-html="lists.berita.html"></div>
-        </mdb-col>
+        <div class="content-desc" v-html="lists.berita.html"></div>
+      </mdb-col>
 
-        <mdb-col lg="12" xs="12" sm="12" class="mt-5">
-          <b-dropdown-divider class="line"></b-dropdown-divider>
-        </mdb-col>
-      </mdb-row>
+      <mdb-col lg="12" xs="12" sm="12" class="mt-5">
+        <b-dropdown-divider class="line"></b-dropdown-divider>
+      </mdb-col>
+    </mdb-row>
 
-      <!-- Content second -->
-      <!-- <GlobalsOptionSlug :next="next" /> -->
-    </mdb-container>
-  </div>
+    <!-- Content second -->
+    <!-- <GlobalsOptionSlug :next="next" /> -->
+  </mdb-container>
+</div>
 </template>
 
 <script>
-import { SampleNews } from "@/helpers";
-import VueGallerySlideshow from "vue-gallery-slideshow";
+  import { SampleNews } from "@/helpers";
+  import VueGallerySlideshow from "vue-gallery-slideshow";
 
-export default {
-  name: "detail-berita-id-slug",
-  layout: "default",
+  export default {
+    name: "detail-berita-id-slug",
+    layout: "default",
 
-  components: {
-    VueGallerySlideshow,
-  },
+    components: {
+      VueGallerySlideshow,
+    },
 
-  data() {
-    return {
-      berita__list_style: this.$device.isDesktop
+    data() {
+      return {
+        berita__list_style: this.$device.isDesktop
         ? "margin-top: 8rem;margin-bottom: 5rem;"
         : "margin-top: 6rem;margin-bottom: 5rem;",
-      id: this.$route.params.id,
-      path: this.$route.name,
-      berita: null,
-      id_berita: this.$route.params.id,
-      detail: {},
-      images: [],
-      index: null,
-    };
-  },
-
-  async asyncData({ $axios, params }) {
-    const lists = await $axios.$get(`/web/berita/${params.id}`);
-    console.log(lists);
-    const next_id = parseInt(params.id) + 1;
-    const next = await $axios.$get(`/web/berita/${next_id}`);
-    console.log(next);
-    return {
-      lists,
-      next,
-    };
-  },
-
-  beforeMount() {
-    this.ConfigApiUrl();
-  },
-
-  methods: {
-    ConfigApiUrl() {
-      const api_url = process.env.NUXT_ENV_API_URL;
-      this.$store.dispatch("config/storeConfigApiUrl", api_url);
+        id: this.$route.params.id,
+        path: this.$route.name,
+        berita: null,
+        id_berita: this.$route.params.id,
+        detail: {},
+        images: [],
+        index: null,
+      };
     },
 
-    DetailBeritaSample() {
-      this.detail = SampleNews.filter((d) => d.id == this.id_berita)[0];
+    async asyncData({ $axios, params }) {
+      const lists = await $axios.$get(`/web/berita/${params.id}`);
+      console.log(lists);
+      const next_id = parseInt(params.id) + 1;
+      const next = await $axios.$get(`/web/berita/${next_id}`);
+      console.log(next);
+      return {
+        lists,
+        next,
+      };
     },
-  },
 
-  computed: {
-    api_url() {
-      return this.$store.getters["config/ConfigApiUrl"];
+    beforeMount() {
+      this.ConfigApiUrl();
     },
-  },
-};
+
+    methods: {
+      ConfigApiUrl() {
+        const api_url = process.env.NUXT_ENV_API_URL;
+        this.$store.dispatch("config/storeConfigApiUrl", api_url);
+      },
+
+      DetailBeritaSample() {
+        this.detail = SampleNews.filter((d) => d.id == this.id_berita)[0];
+      },
+    },
+
+    computed: {
+      api_url() {
+        return this.$store.getters["config/ConfigApiUrl"];
+      },
+    },
+  };
 </script>
 
 <style scoped>
@@ -121,14 +121,34 @@ export default {
   border: 1px solid lightgray;
   object-fit: contain;
 }
-
 .content-desc >>> img{
-  width: 800px;
+  width: 350px;
 }
-
 .content-desc >>> p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 31px;
-  word-spacing: 2px;
+  word-spacing: 3px;
+}
+@media (min-width: 992px) {
+  .image {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    object-fit: contain;
+  }
+
+  .content-desc >>> img{
+    width: 800px;
+  }
+
+  .content-desc >>> p {
+    font-size: 16px;
+    line-height: 31px;
+    word-spacing: 2px;
+  }
 }
 </style>
