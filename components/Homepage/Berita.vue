@@ -249,12 +249,12 @@
                       </mdb-btn>
                     </mdb-popover> -->
                     <a :href="feeds[feedIndex-1].link" target="_blank" class="btn btn-sm" style="background :#00923f!important; color: #fff; font-size: 10px;">
-                      View Feed
+                      Lihat
                     </a>
                   </div>
                 </div>
                 <div v-if="feeds.length > feedToShow" class="col-sm-12 col-md-12 mt-2">
-                  <b-button @click="feedToShow += feeds.length" style="background :#00923f!important; color: #fff; font-size: 14px;" class="btn rounded-pill btn-sm btn-block">
+                  <b-button @click="feedToShow += 3" style="background :#00923f!important; color: #fff; font-size: 14px;" class="btn rounded-pill btn-sm btn-block">
                     Lebih Banyak
                   </b-button>
                 </div>

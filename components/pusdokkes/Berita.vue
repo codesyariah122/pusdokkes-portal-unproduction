@@ -15,11 +15,11 @@
         <!-- delay looping data with loader spinner -->
 
         <!-- show card berita -->
-        <mdb-row class="row justify-content-center mb-5 webinar__content">
+        <mdb-row class="row justify-content-center mt-2 mb-5 webinar__content">
           <!-- List berita inside global-components -->
           <mdb-col lg="12" xs="12" sm="12">
             <div class="card__list">
-              <div class="mt-5 card__content">
+              <div class="card__content">
                 <mdb-row>
                   <mdb-col
                     id="show-event"
@@ -34,7 +34,6 @@
                        
                       <mdb-card-body>
                         <mdb-card-title
-                          class="truncate"
                           style="font-size: 16px;"
                           >{{ item.judul }}</mdb-card-title
                         >
