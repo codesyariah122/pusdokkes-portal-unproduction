@@ -1,16 +1,144 @@
 export const feeds = [
 {
   id: 1,
+  desc: `Sosialisasi Kepuasan Masyarakat Oleh Deputi Pelayanan Publik Kemenpan RB. <br/>
+  <a href='https://www.instagram.com/p/CjSGRtsr3vd/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+  `,
+  link: 'https://www.instagram.com/p/CjSGRtsr3vd/',
+  type: 'image',
+  images: require('~/assets/images/feeds/feed-new-1.jpg')
+},
+{
+  id: 2,
+  desc: `<br/>
+  <a href='https://www.instagram.com/p/CjSF_O3PgfO/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+  `,
+  link: 'https://www.instagram.com/p/CjSF_O3PgfO/',
+  type: 'video',
+  images: require('~/assets/images/feeds/feed-new-2.mp4')
+},
+{
+  id: 3,
+  desc: `<br/>
+  <a href='https://www.instagram.com/p/CjSDKrDrctS/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+  `,
+  link: 'https://www.instagram.com/p/CjSDKrDrctS/',
+  type: 'image',
+  images: require('~/assets/images/feeds/feed-new-3.jpg')
+},
+{
+  id: 4,
+  desc: `Giat Asistensi Ops DVI Tragedi Stadion Kanjuruhan Malang. <br/>
+  <a href='https://www.instagram.com/p/CjRbDQTP-AX/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+  `,
+  link: 'https://www.instagram.com/p/CjRbDQTP-AX/',
+  type: 'image',
+  images: require('~/assets/images/feeds/feed-new-4.jpg')
+},
+{
+  id: 5,
+  desc: `Pusat Kedokteran dan Kesehatan Polri beserta Jajaran Mengucapkan Turut Berbelasungkawa Korban Tragedi Kerusuhan Stadion Kanjuruhan Malang Jawa Timur.<br/>
+  <a href='https://www.instagram.com/p/CjQIIx1L-oQ/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+  `,
+  link: 'https://www.instagram.com/p/CjQIIx1L-oQ/',
+  type: 'image',
+  images: require('~/assets/images/feeds/feed-new-5.jpg')
+},
+{
+  id: 6,
+  desc: `Semoga lancar Ndaann Iskandar......<br/>
+  <a href='https://www.instagram.com/p/CjPJG4IDsVB/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+  `,
+  link: 'https://www.instagram.com/p/CjPJG4IDsVB/',
+  type: 'video',
+  images: require('~/assets/images/feeds/feed-new-6.mp4')
+},
+{
+  id: 7,
+  desc: `Korp Rapot Kenaikan Pangkat Personel Pusdokkes Polri TMT 1 Oktober 2022. <br/>
+  <a href='https://www.instagram.com/p/CjPFxZ9rk1X/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+  `,
+  link: 'https://www.instagram.com/p/CjPFxZ9rk1X/',
+  type: 'image',
+  images: require('~/assets/images/feeds/feed-new-7.jpg')
+},
+{
+  id: 8,
+  desc: `Asistensi penilaian Prasurvey Akreditasi FKTP Polri Biddokkes Polda Bali 28 - 30 Oktober 2022.<br/>
+  <a href='https://www.instagram.com/p/CjO9R2mPA-7/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+  `,
+  link: 'https://www.instagram.com/p/CjO9R2mPA-7/',
+  type: 'image',
+  images: require('~/assets/images/feeds/feed-new-8.jpg')
+},
+{
+  id: 9,
+  desc: `<br/>
+  <a href='https://www.instagram.com/p/CjO36zIJJZr/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+  `,
+  link: 'https://www.instagram.com/p/CjO36zIJJZr/',
+  type: 'video',
+  images: require('~/assets/images/feeds/feed-new-9.mp4')
+},
+{
+  id: 10,
+  desc: `Posted @withrepost • @spri_pusdokkespolri Segenap Keluarga Besar
+  PUSAT KEDOKTERAN DAN KESEHATAN POLRI
+  BESERTA JAJARAN
+  menghaturkan ucapan
+  "Selamat & Sukses"
+
+  Kepada Yth. KAPUSDOKKES POLRI
+  IRJEN POL dr. ASEP HENDRADIANA,Sp.AN.,KIC.,M.Kes
+  Atas terpilihnya sebagai
+  Ketua Umum PP PERDATIN
+  periode Tahun 2022-2025
+
+  "Semoga ALLOH SWT senantiasa memberikan kesehatan, kesuksesan, kemudahan, keselamatan dan keberkahan dalam menjalankan amanah ini. Aamiin Yaa Robbalalamiin".
+
+  Dokkes PRESISI
+  Profesional, Terpercaya, Terintegrasi
+  Salam PRESISI<br/>
+  <a href='https://www.instagram.com/p/CjOnvnsJMrF/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+  `,
+  link: 'https://www.instagram.com/p/CjOnvnsJMrF/',
+  type: 'video',
+  images: require('~/assets/images/feeds/feed-new-10.mp4')
+},
+{
+  id: 11,
+  desc: `Posted @withrepost • @spri_pusdokkespolri Segenap Keluarga Besar
+  PUSAT KEDOKTERAN DAN KESEHATAN POLRI
+  BESERTA JAJARAN
+  menghaturkan ucapan "Selamat & Sukses"
+  Kepada Yth.
+  Irjen Pol dr. Asep Hendradiana,Sp.AN.,KIC.,M.Kes
+  Atas terpilihnya sebagai Ketua Umum PP PERDATIN
+  periode Tahun 2022-2025
+
+  "Semoga ALLOH SWT senantiasa memberikan kesehatan, kesuksesan, kemudahan, keselamatan dan keberkahan dalam menjalankan amanah ini. Aamiin Yaa Robbalalamiin".
+
+  Dokkes PRESISI
+  Profesional, Terpercaya, Terintegrasi
+  Salam PRESISI. <br/>
+  <a href='https://www.instagram.com/p/CjOno1TvPMk/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+  `,
+  link: 'https://www.instagram.com/p/CjOno1TvPMk/',
+  type: 'image',
+  images: require('~/assets/images/feeds/feed-new-11.jpg')
+},
+{
+  id: 12,
   desc: `Turut Berduka Cita atas wafatnya Iptu dr. Lia
   Semoga amal ibadah beliau diterima disisi Nya. <br/>
   <a href='https://www.instagram.com/p/CjMp6Ddr5DZ/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
   `,
   link: 'https://www.instagram.com/p/CjMp6Ddr5DZ/',
   type: 'image',
-  images: require('~/assets/images/feeds/feed1.jpg')
+  images: require('~/assets/images/feeds/old/feed1.jpg')
 },
 {
-  id: 2,
+  id: 13,
   desc: `Posted @withrepost • @dr.asephendradiana Saya mengucapkan Terima kasih atas ucapan doa dan dukungan nya serta kepercayaan kepada saya untuk menjadi ketua umum Perdatin Periode 2022- 2025.
 
   Semoga senantiasa di berikan kesehatan, kemampuan dan kesuksesan serta keberkahan dalam melaksanakan amanah tersebut.
@@ -21,20 +149,20 @@ export const feeds = [
   `,
   link: 'https://www.instagram.com/p/CjMJUqtv9vw/',
   type: 'image',
-  images: require('~/assets/images/feeds/feed2.jpg')
+  images: require('~/assets/images/feeds/old/feed2.jpg')
 },
 {
-  id: 3,
+  id: 14,
   desc: `Posted @withrepost • @dr.asephendradiana Selamat Hari Kesaktian Pancasila, 1 Oktober 2022.
   Bangkit Bergerak Bersama Pancasila. <br/>
   <a href='https://www.instagram.com/p/CjKlYXGB2e9/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
   `,
   link: 'https://www.instagram.com/p/CjKlYXGB2e9/',
   type: 'image',
-  images: require('~/assets/images/feeds/feed3.jpg')
+  images: require('~/assets/images/feeds/old/feed3.jpg')
 },
 {
-  id: 4,
+  id: 15,
   desc: `Tim Medis Ops Damai Cartenz Bersama TNI Bantu Sehatkan Masyarakat Melalui Program Keladi Sagu
 
   Tim Medis Ops Damai Cartenz yang dipimpin Ipda dr Wahyu Aprianto, kali ini bersama dengan TNI gencarkan program Keladi Sagu dalam rangka memberikan pengobatan kepada masyarakat yang bertempat di Kampung Yokatapa, Distrik Sugapa, Kabupaten Intan Jaya. <br/>
@@ -42,10 +170,10 @@ export const feeds = [
   `,
   link: 'https://www.instagram.com/p/CjFb56SMqCM/',
   type: 'video',
-  images: require('~/assets/images/feeds/feed4.mp4')
+  images: require('~/assets/images/feeds/old/feed4.mp4')
 },
 {
-  id: 5,
+  id: 16,
   desc: `Sambutan dan pesan Kapusdokkes Polri pada acara pemberian Sertifikat Akreditasi kepada Rumah Sakit Bhayangkara Tk. I Pusdokkes Polri dan Rumah Sakit Bhayangkara Tk. II Kediri dengan Standar Kementerian Kesehatan dengan tingkat:
   .
   PARIPURNA ⭐️⭐️⭐️⭐️⭐️ <br/>
@@ -53,10 +181,10 @@ export const feeds = [
   `,
   link: 'https://www.instagram.com/p/CjEcdNsLbDm/',
   type: 'video',
-  images: require('~/assets/images/feeds/feed5.mp4')
+  images: require('~/assets/images/feeds/old/feed5.mp4')
 },
 {
-  id: 6,
+  id: 17,
   desc: `Posted @withrepost • @spri_pusdokkespolri Kapusdokkes Polri menghadiri dan memberikan sambutan pada acara penerimaan sertifikat akreditasi Paripurna kepada Rumkit Bhayangkara Tk.I Pusdokkes Polri dan Rumkit Bhayangkara Tk.II Kediri sekligus penyematan Pin LAFKI dari Ketua LAFKI kepada Kapusdokkes Polri.
 
   Acara ini dilaksanakan secara Hybrid (offline & online) dihadiri oleh:
@@ -80,10 +208,10 @@ export const feeds = [
   `,
   link: 'https://www.instagram.com/p/CjETiGTvSMD/',
   type: 'image',
-  images: require('~/assets/images/feeds/feed6.jpg')
+  images: require('~/assets/images/feeds/old/feed6.jpg')
 },
 {
-  id: 7,
+  id: 18,
   desc: `Selamat untuk Rumah Sakit Bhayangkara Tk. II Kediri atas tercapainya Akreditasi Standar Pelayanan Kesehatan dengan tingkat:
   .
   PARIPURNA ⭐️⭐️⭐️⭐️⭐️ <br/>
@@ -91,10 +219,10 @@ export const feeds = [
   `,
   link: 'https://www.instagram.com/p/CjDWAzYLYaW/',
   type: 'image',
-  images: require('~/assets/images/feeds/feed7.jpg')
+  images: require('~/assets/images/feeds/old/feed7.jpg')
 },
 {
-  id: 8,
+  id: 19,
   desc: `Posted @withrepost • @igdrspolri Selamat untuk Rumah Sakit Bhayangkara Tk. I Raden Said Sukanto / Pusdokkes Polri atas tercapainya Akreditasi Standar Pelayanan Kesehatan dengan Tingkat:
   .
   PARIPURNA ⭐⭐⭐⭐⭐ <br/>
@@ -102,10 +230,10 @@ export const feeds = [
   `,
   link: 'https://www.instagram.com/p/CjAfclYLIpM/',
   type: 'image',
-  images: require('~/assets/images/feeds/feed8.jpg')
+  images: require('~/assets/images/feeds/old/feed8.jpg')
 },
 {
-  id: 9,
+  id: 20,
   desc: `Rapat Internal Membahas Dewas Rumkit Bhayangkara.
 
   Selasa, 27 September 2022 <br/>
@@ -113,10 +241,10 @@ export const feeds = [
   `,
   link: 'https://www.instagram.com/p/CjAfHWTLUVy/',
   type: 'image',
-  images: require('~/assets/images/feeds/feed9.jpg')
+  images: require('~/assets/images/feeds/old/feed9.jpg')
 },
 {
-  id: 10,
+  id: 21,
   desc: `Peninjauan Pembangunan Gedung Presisi DIV TIK Polri Tahap l.
 
   Selasa, 27 September 2022 <br/>
@@ -124,128 +252,128 @@ export const feeds = [
   `,
   link: 'https://www.instagram.com/p/CjAe-53rHgp/',
   type: 'image',
-  images: require('~/assets/images/feeds/feed10.jpg')
-},
-{
-  id: 11,
-  desc: `Posted @withrepost • @spri_pusdokkespolri Kapusdokkes Polri membuka kegiatan Pelatihan SAKTI Rumkit Bhayangkara BLU Polri Tahun 2022. (27/09/2022). Bertempat di Hotel Haris Suites Puri Mansion, Jakarta Barat
-  PJU Pendamping:
-  - Kapus Keu Polri
-  - Karo Kespol Pusdokkes Polri
-  - Karumkit Bhayangkara Tk.I Pusdokkes Polri
-  - Kabid Analisa Pelaporan Puskeu Polri
-
-  Dokkes PRESISI
-  Profesional, Terpercaya, Terintegrasi
-  Salam PRESISI <br/>
-  <a href='https://www.instagram.com/p/CjAeZ-4riLT/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/CjAeZ-4riLT/',
-  type: 'image',
-  images: require('~/assets/images/feeds/feed11.jpg')
-},
-{
-  id: 12,
-  desc: `Harus tetap waspada terhadap Covid - 19 <br/> Pesan Bpk Presiden RI <br/> Ir. Joko Widodo <br/>
-  <a href='https://www.instagram.com/p/Ciy42q2LgMY/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/Ciy42q2LgMY/?hl=id',
-  type: 'image',
-  images: require('~/assets/images/feeds/old/feed1.jpg')
-},
-{
-  id: 13,
-  desc: `Pembukaan dan Pengarahan Kapusdokkes Polri Kepada Siswa Dikbangspes Dokpol Bintara/PNS Gol ll Angkatan XXV T.A 2022. <br/> Aula Bagfarmapol, 19 September 2022 <br/> 
-  <a href='https://www.instagram.com/p/CiwQeOwJoaB/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/CiwQeOwJoaB/?hl=id',
-  type: 'image',
-  images: require('~/assets/images/feeds/old/feed2.jpg')
-},
-{
-  id: 14,
-  desc: `Tidak sulit memelihara kesehatan jantung <br/> Semoga bermanfaat <br/> 
-  <a href='https://www.instagram.com/p/CivjBLNhXEu/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/CivjBLNhXEu/?hl=id',
-  type: 'video',
-  images: require('~/assets/images/feeds/old/feed3.mp4')
-},
-{
-  id: 15,
-  desc: `<a href='https://www.instagram.com/p/CiuvzKmrRPF/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>`,
-  link: 'https://www.instagram.com/p/CiuvzKmrRPF/?hl=id',
-  type: 'image',
-  images: require('~/assets/images/feeds/old/feed4.jpg')
-},
-{
-  id: 16,
-  desc: `STUNTING MENJADI MASALAH DUNIA KARENA IMPLIKASINYA MENENTUKAN MASA DEPAN BANGSA. MENURUT DATA DARI SURVEI STATUS GIZI INDONESIA TAHUN 2021 YANG DILAKUKAN OLEH KEMENTRIAN KESEHATAN TERCATAT ANGKA STUNTING DI INDONESIA SEBESAR 24 %. ANGKA INI MASIH JAUH DARI ANGKA TARGET YANG DITETAPKAN OLEH BADAN KESEHATAN DUNIA (WHO), SEHARUSNYA ANGKA STUNTING TIDAK LEBIH DARI 20%. POLRI BERSAMA DENGAN KEMENTRIAN KESEHATAN DAN BKKBN MENDUKUNG PROGRAM STRATEGI NASIONAL DALAM MENCAPAI TARGET PENURUNAN STUNTING DI INDONESIA. <br/> 
-  <a href='https://www.instagram.com/p/Citp-E6rJz3/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/Citp-E6rJz3/?hl=id',
-  type: 'image',
-  images: require('~/assets/images/feeds/old/feed5.jpg')
-},
-{
-  id: 17,
-  desc: `STUNTING MENJADI MASALAH DUNIA KARENA IMPLIKASINYA MENENTUKAN MASA DEPAN BANGSA. MENURUT DATA DARI SURVEI STATUS GIZI INDONESIA TAHUN 2021 YANG DILAKUKAN OLEH KEMENTRIAN KESEHATAN TERCATAT ANGKA STUNTING DI INDONESIA SEBESAR 24 %. ANGKA INI MASIH JAUH DARI ANGKA TARGET YANG DITETAPKAN OLEH BADAN KESEHATAN DUNIA (WHO), SEHARUSNYA ANGKA STUNTING TIDAK LEBIH DARI 20%. POLRI BERSAMA DENGAN KEMENTRIAN KESEHATAN DAN BKKBN MENDUKUNG PROGRAM STRATEGI NASIONAL DALAM MENCAPAI TARGET PENURUNAN STUNTING DI INDONESIA.<br/>
-  <a href='https://www.instagram.com/p/Citp-E6rJz3/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/Citp-E6rJz3/?hl=id',
-  type: 'image',
-  images: require('~/assets/images/feeds/old/feed6.jpg')
-},
-{
-  id: 18,
-  desc: `<a href='https://www.instagram.com/p/CijdRm3rq6C/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/CijdRm3rq6C/?hl=id',
-  type: 'image',
-  images: require('~/assets/images/feeds/old/feed7.jpg')
-},
-{
-  id: 19,
-  desc: `<a href='https://www.instagram.com/p/CihJs66LUo4/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/CihJs66LUo4/?hl=id',
-  type: 'image',
-  images: require('~/assets/images/feeds/old/feed8.jpg')
-},
-{
-  id: 20,
-  desc: `<a href='https://www.instagram.com/p/CighnMKP8Dx/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/CighnMKP8Dx/?hl=id',
-  type: 'image',
-  images: require('~/assets/images/feeds/old/feed9.jpg')
-},
-{
-  id: 21,
-  desc: `<a href='https://www.instagram.com/p/Cige7jwvyum/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/Cige7jwvyum/?hl=id',
-  type: 'image',
   images: require('~/assets/images/feeds/old/feed10.jpg')
 },
 // {
 //   id: 22,
-//   desc: `<a href='https://www.instagram.com/p/CigcoZ9vvsh/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   desc: `Posted @withrepost • @spri_pusdokkespolri Kapusdokkes Polri membuka kegiatan Pelatihan SAKTI Rumkit Bhayangkara BLU Polri Tahun 2022. (27/09/2022). Bertempat di Hotel Haris Suites Puri Mansion, Jakarta Barat
+//   PJU Pendamping:
+//   - Kapus Keu Polri
+//   - Karo Kespol Pusdokkes Polri
+//   - Karumkit Bhayangkara Tk.I Pusdokkes Polri
+//   - Kabid Analisa Pelaporan Puskeu Polri
+
+//   Dokkes PRESISI
+//   Profesional, Terpercaya, Terintegrasi
+//   Salam PRESISI <br/>
+//   <a href='https://www.instagram.com/p/CjAeZ-4riLT/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
 //   `,
-//   link: 'https://www.instagram.com/p/CigcoZ9vvsh/?hl=id',
+//   link: 'https://www.instagram.com/p/CjAeZ-4riLT/',
 //   type: 'image',
 //   images: require('~/assets/images/feeds/old/feed11.jpg')
 // },
 // {
 //   id: 23,
-//   desc: `Latihan BHD (Bantuan Hidup Dasar) di RS Bhayangkara Lemdiklat Polri <br/> <a href='https://www.instagram.com/p/CigPBvxPeKd/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   desc: `Harus tetap waspada terhadap Covid - 19 <br/> Pesan Bpk Presiden RI <br/> Ir. Joko Widodo <br/>
+//   <a href='https://www.instagram.com/p/Ciy42q2LgMY/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
 //   `,
-//   link: 'https://www.instagram.com/p/CigPBvxPeKd/?hl=id',
+//   link: 'https://www.instagram.com/p/Ciy42q2LgMY/?hl=id',
 //   type: 'image',
 //   images: require('~/assets/images/feeds/old/feed12.jpg')
 // },
 // {
 //   id: 24,
+//   desc: `Pembukaan dan Pengarahan Kapusdokkes Polri Kepada Siswa Dikbangspes Dokpol Bintara/PNS Gol ll Angkatan XXV T.A 2022. <br/> Aula Bagfarmapol, 19 September 2022 <br/> 
+//   <a href='https://www.instagram.com/p/CiwQeOwJoaB/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/CiwQeOwJoaB/?hl=id',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/old/feed13.jpg')
+// },
+// {
+//   id: 25,
+//   desc: `Tidak sulit memelihara kesehatan jantung <br/> Semoga bermanfaat <br/> 
+//   <a href='https://www.instagram.com/p/CivjBLNhXEu/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/CivjBLNhXEu/?hl=id',
+//   type: 'video',
+//   images: require('~/assets/images/feeds/old/feed14.mp4')
+// },
+// {
+//   id: 26,
+//   desc: `<a href='https://www.instagram.com/p/CiuvzKmrRPF/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>`,
+//   link: 'https://www.instagram.com/p/CiuvzKmrRPF/?hl=id',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/old/feed15.jpg')
+// },
+// {
+//   id: 27,
+//   desc: `STUNTING MENJADI MASALAH DUNIA KARENA IMPLIKASINYA MENENTUKAN MASA DEPAN BANGSA. MENURUT DATA DARI SURVEI STATUS GIZI INDONESIA TAHUN 2021 YANG DILAKUKAN OLEH KEMENTRIAN KESEHATAN TERCATAT ANGKA STUNTING DI INDONESIA SEBESAR 24 %. ANGKA INI MASIH JAUH DARI ANGKA TARGET YANG DITETAPKAN OLEH BADAN KESEHATAN DUNIA (WHO), SEHARUSNYA ANGKA STUNTING TIDAK LEBIH DARI 20%. POLRI BERSAMA DENGAN KEMENTRIAN KESEHATAN DAN BKKBN MENDUKUNG PROGRAM STRATEGI NASIONAL DALAM MENCAPAI TARGET PENURUNAN STUNTING DI INDONESIA. <br/> 
+//   <a href='https://www.instagram.com/p/Citp-E6rJz3/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/Citp-E6rJz3/?hl=id',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/old/feed16.jpg')
+// },
+// {
+//   id: 28,
+//   desc: `STUNTING MENJADI MASALAH DUNIA KARENA IMPLIKASINYA MENENTUKAN MASA DEPAN BANGSA. MENURUT DATA DARI SURVEI STATUS GIZI INDONESIA TAHUN 2021 YANG DILAKUKAN OLEH KEMENTRIAN KESEHATAN TERCATAT ANGKA STUNTING DI INDONESIA SEBESAR 24 %. ANGKA INI MASIH JAUH DARI ANGKA TARGET YANG DITETAPKAN OLEH BADAN KESEHATAN DUNIA (WHO), SEHARUSNYA ANGKA STUNTING TIDAK LEBIH DARI 20%. POLRI BERSAMA DENGAN KEMENTRIAN KESEHATAN DAN BKKBN MENDUKUNG PROGRAM STRATEGI NASIONAL DALAM MENCAPAI TARGET PENURUNAN STUNTING DI INDONESIA.<br/>
+//   <a href='https://www.instagram.com/p/Citp-E6rJz3/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/Citp-E6rJz3/?hl=id',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/old/feed17.jpg')
+// },
+// {
+//   id: 29,
+//   desc: `<a href='https://www.instagram.com/p/CijdRm3rq6C/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/CijdRm3rq6C/?hl=id',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/old/feed18.jpg')
+// },
+// {
+//   id: 30,
+//   desc: `<a href='https://www.instagram.com/p/CihJs66LUo4/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/CihJs66LUo4/?hl=id',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/old/feed19.jpg')
+// },
+// {
+//   id: 31,
+//   desc: `<a href='https://www.instagram.com/p/CighnMKP8Dx/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/CighnMKP8Dx/?hl=id',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/old/feed20.jpg')
+// },
+// {
+//   id: 32,
+//   desc: `<a href='https://www.instagram.com/p/Cige7jwvyum/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/Cige7jwvyum/?hl=id',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/old/feed21.jpg')
+// },
+// {
+//   id: 33,
+//   desc: `<a href='https://www.instagram.com/p/CigcoZ9vvsh/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/CigcoZ9vvsh/?hl=id',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/old/feed22.jpg')
+// },
+// {
+//   id: 34,
+//   desc: `Latihan BHD (Bantuan Hidup Dasar) di RS Bhayangkara Lemdiklat Polri <br/> <a href='https://www.instagram.com/p/CigPBvxPeKd/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/CigPBvxPeKd/?hl=id',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/old/feed23.jpg')
+// },
+// {
+//   id: 35,
 //   desc: `<a href='https://www.instagram.com/p/CidhIBehwrl/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
 //   `,
 //   link: 'https://www.instagram.com/p/CidhIBehwrl/?hl=id',
@@ -253,7 +381,7 @@ export const feeds = [
 //   images: require('~/assets/images/feeds/old/feed13.jpg')
 // },
 // {
-//   id: 25,
+//   id: 36,
 //   desc: `<a href='https://www.instagram.com/p/CicPK0FrTur/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
 //   `,
 //   link: 'https://www.instagram.com/p/CicPK0FrTur/?hl=id',
@@ -261,7 +389,7 @@ export const feeds = [
 //   images: require('~/assets/images/feeds/old/feed14.jpg')
 // },
 // {
-//   id: 26,
+//   id: 37,
 //   desc: `<a href='https://www.instagram.com/p/CibFh3wvTmJ/?hl=id' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
 //   `,
 //   link: 'https://www.instagram.com/p/CibFh3wvTmJ/?hl=id',
@@ -307,6 +435,7 @@ export const CheckWeather = async(city, apiKey) => {
     console.error(err)
   }
 }
+
 
 export const SampleEvents = [
 {
