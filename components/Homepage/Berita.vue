@@ -165,7 +165,7 @@
         <div v-else class="col-lg-8 col-sm-12">
           <div v-for="(item, index) in news">
             <!-- Trending Top -->
-            <div v-if="index == news.length - 1" class="trending-top mb-5">
+            <div v-if="index == news.length - 1" class="trending-top mb-3">
               <div class="trend-top-img">
                 <img :src="item.foto_url" alt="">
                 <div class="trend-top-cap mt-2">
@@ -204,9 +204,9 @@
                 </div>
               </div>
             </div>
-            <div class="row justify-content-center mb-5" :style="`${$device.isMobile ? 'margin-top: 1rem; margin-bottom: 2rem;' : 'margin-top: 3rem;'}`">
-              <div class="col-lg-8 col-sm-12">
-                <nuxt-link to="/pusdokkes/berita" class="btn my__btn-primary btn-md btn-block  rounded-pill shadow-none">Lihat Semua Berita</nuxt-link>
+            <div class="row justify-content-start mb-5" :style="`${$device.isMobile ? 'margin-top: 1rem; margin-bottom: 2rem;' : 'margin-top: 7rem;'}`">
+              <div class="col-lg-12 col-sm-12">
+                <nuxt-link to="/pusdokkes/berita" class="btn my__btn-primary btn-md btn-block rounded-pill shadow-none">Lihat Semua Berita</nuxt-link>
               </div>
             </div>
           </div>
@@ -214,18 +214,18 @@
 
         <!-- Riht content -->
         <div class="col-lg-4 col-sm-12">
-          <div class="trand-right-single section-tittle">
-            <b-button style="background :#00923f!important; color: #fff; font-size: 14px;" :class="`btn btn-block ${$device.isDesktop ? 'btn-md' : 'btn-sm'} rounded`">
+          <div class="trand-right-single">
+            <b-button :style="`${$device.isDesktop ? 'background :#00923f!important; color: #fff; font-size: 14px;margin-left: -.2rem;' : 'background :#00923f!important; color: #fff; font-size: 14px; margin-left: -.5rem;'}`" :class="`btn btn-block ${$device.isDesktop ? 'btn-md btn-block' : 'btn-sm'} rounded`">
               pesan kapusdokkes
             </b-button>
           </div>
 
-          <div class="trand-right-single" style="margin-top: -2.5rem;">
+          <div class="trand-right-single"  style="margin-top: -2.5rem;">
             <iframe :width="`${$device.isDesktop ? '337' : '300'}`" height="250" src="https://www.youtube.com/embed/Pw_HBvCESdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
 
-          <div class="trand-right-single section-tittle">
-            <a style="background :#00923f!important; color: #fff; font-size: 14px;" :class="`btn btn-block ${$device.isDesktop ? 'btn-sm' : 'btn-sm'} rounded`" href="https://www.instagram.com/pusdokkespolri/?hl=id" target="_blank">
+          <div class="trand-right-single">
+            <a :style="`${$device.isDesktop ? 'background :#00923f!important; color: #fff; font-size: 14px;margin-left: -.5rem;' : 'background :#00923f!important; color: #fff; font-size: 14px;margin-left: -.3rem;'}`" :class="`btn btn-block ${$device.isDesktop ? 'btn-sm' : 'btn-sm'} rounded`" href="https://www.instagram.com/pusdokkespolri/?hl=id" target="_blank">
               Follow Me On Instagram <i class="fab fa-instagram fa-lg fa-fw"></i>
             </a>
           </div>

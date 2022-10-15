@@ -16,11 +16,11 @@
 			</div>
 		</div>
 		<div v-else class="row mx-5 mb-5 px-5">
-			<div v-for="(item, index) in lists" :key="index" class="col-12">
+			<div v-for="(item, index) in lists" :key="index" class="col-lg-12 col-sm-12">
 				<div class="accordion" id="accordionPolda">
 					<div id="headpolda1" class="my-3 border-bottom">
-						<div class="row">
-							<div class="col-lg-2 text-center">
+						<div class="row justify-content-start">
+							<div class="col-lg-2 col-md-2 col-sm-2">
 								<img v-if="item.photo_url_original !== null"
 								class="pb-2"
 								:src="item.photo"
@@ -29,7 +29,7 @@
 								width="80"
 								/>
 							</div>
-							<div class="col-lg-10">
+							<div class="col-lg-10 col-md-10 col-sm-10">
 								<h5 style="margin: 0">
 									{{ item.name }}
 								</h5>
