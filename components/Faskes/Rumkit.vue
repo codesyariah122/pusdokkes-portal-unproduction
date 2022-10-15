@@ -20,8 +20,8 @@
 				<div class="accordion" id="accordionPolda">
 					<div id="headpolda1" class="my-3 border-bottom">
 						<div class="row">
-							<div v-if="item.photo_url_original !== null" class="col-lg-2 text-center">
-								<img
+							<div class="col-lg-2 text-center">
+								<img v-if="item.photo_url_original !== null"
 								class="pb-2"
 								:src="item.photo"
 								alt=""

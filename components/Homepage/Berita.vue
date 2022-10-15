@@ -186,12 +186,12 @@
           <!-- Trending Bottom -->
           <div class="trending-bottom">
             <div class="row">
-              <div v-for="(item, index) in news.slice(0, 9)" v-if="index !== news.length - 1" class="col-lg-12 col-sm-12 mb-3">
-                <div class="single-bottom">
-                  <div class="trend-bottom-img">
-                    <img :src="item.foto_url" :alt="item.title" class="img-thumbnail img-fluid">
+              <div v-for="(item, index) in news.slice(0, 10)" v-if="index !== news.length - 1" class="col-lg-12 col-sm-12 mb-4">
+                <div class="row single-bottom">
+                  <div class="col-md-4 col-sm-12 trend-bottom-img">
+                    <img :src="item.foto_url" :alt="item.title" class="img-fluid"/>
                   </div>
-                  <div class="trend-bottom-cap">
+                  <div class="col-md-6 col-sm-12 trend-bottom-cap">
                     <h4 style="font-weight: 700;"><nuxt-link :to="{
                       name: `detail-berita-id-slug`,
                       params: {

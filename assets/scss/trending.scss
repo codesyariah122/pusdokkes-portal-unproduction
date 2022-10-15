@@ -72,23 +72,29 @@
      // trending Bottom
     .trending-bottom{
         .single-bottom{
-            display: flex;
-            flex-direction: row;
-            flex-flow: row nowrap;
-            align-items: flex-start;
-            box-sizing: content-box;
-            position: relative;
+            // display: flex;
+            // flex-direction: row;
+            // flex-flow: row nowrap;
+            // align-items: flex-start;
+            // box-sizing: content-box;
+            // position: relative;
+            // width: 100%;
             .trend-bottom-img{
-                overflow: hidden;
-                position: relative;
+                // overflow: hidden;
                 img{
-                    width: 100%;
-                    height: 150px;
+                    // width: 100%;
+                    // height: 150px;
+                    // max-width: 350px;
+                    // min-width: 350px;
                     // object-fit: contain;
-                    // aspect-ratio:2/1;
-                    border-radius: 5px;
-                    transform: scale(1);
-                    transition: all 0.5s ease-out 0s;
+                    // aspect-ratio:1/1;
+                    // object-fit: cover;
+                    // width: 350px;
+                    // height: 100%;
+                    // vertical-align: middle;
+                    // border-radius: 5px;
+                    // transform: scale(1);
+                    // transition: all 0.5s ease-out 0s;
                 }
             }
             .trend-bottom-cap{
