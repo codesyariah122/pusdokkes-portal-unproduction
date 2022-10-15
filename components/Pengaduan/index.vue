@@ -14,22 +14,22 @@
 			<!-- delay looping data with loader spinner -->
 
 			<!-- show card berita -->
-			<mdb-row class="row justify-content-center mt-2 mb-5 form__content">
+			<mdb-row class="row justify-content-center mt-3 mb-5 form__content">
 				<!-- List berita inside global-components -->
 				<mdb-col lg="8" xs="8" sm="12">
 					<b-form @submit.prevent="onSubmit" @reset="onReset" v-if="show">
-						<b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
+						<b-form-group id="input-group-2" label="Nama :" label-for="input-2">
 							<b-form-input
 							id="input-2"
 							v-model="form.nama"
 							placeholder="Inputkan nama / nama lengkap Anda"
-							required autocomplete
+							required autocomplete="off"
 							></b-form-input>
 						</b-form-group>
 
 						<b-form-group
 						id="input-group-1"
-						label="No Telephone:"
+						label="No Telephone :"
 						label-for="input-1"
 						description="Harap isi dengan no telephone yang aktif Anda gunakan."
 						>
@@ -38,28 +38,28 @@
 						v-model="form.no_telepon"
 						type="number"
 						placeholder="Inputkan No Telephone Anda"
-						required autocomplete
+						required autocomplete="off"
 						></b-form-input>
 					</b-form-group>
 
-					<b-form-group id="input-group-3" label="Pengaduan Anda:" label-for="input-3">
+					<b-form-group id="input-group-3" label="Pengaduan :" label-for="input-3">
 						<b-form-textarea
 						id="textarea"
 						v-model="form.pengaduan"
 						placeholder="Inputkan pengaduan Anda ..."
-						rows="3"
-						max-rows="6" autocomplete
+						rows="6"
+						max-rows="6" autocomplete="off"
 						></b-form-textarea>
 					</b-form-group>
 
-					<b-button type="submit" variant="primary">
+					<b-button class="mt-3" type="submit" variant="primary">
 						<span v-if="loading">
 							<b-spinner small type="grow"></b-spinner>
 							Loading...
 						</span>
 						<span v-else>Submit</span>
 					</b-button>
-					<b-button type="reset" variant="danger">Reset</b-button>
+					<b-button class="mt-3" type="reset" variant="danger" @click="onReset">Reset</b-button>
 				</b-form>
 				<b-alert class="mt-5" v-if="pengaduan !== null" show variant="success">
 					<h4 class="alert-heading">Terima kasih</h4>
