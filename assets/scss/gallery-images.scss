@@ -92,7 +92,8 @@
 	color: #fff;
 	transition: 0.3s;
 	top: 35%;
-	background-color: $bg-primary!important;
+	// background-color: $bg-primary!important;
+	background-color: transparent!important;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
@@ -116,9 +117,14 @@
 	padding-top: 40px;
 }
 
+
 .vgs{
 	.vgs__container{
 		margin-top: -8rem!important;
+		background-color: transparent!important;
+	}
+	.vgs__gallery{
+		display: none;
 	}
 }
 @media (min-width: 992px) {
@@ -210,18 +216,19 @@
 	.portfolio .portfolio-item .portfolio-info .details-link {
 		position: absolute;
 		right: 100px;
-		font-size: 23px;
+		font-size: 33px;
 		text-transform: capitalize;
 		top: calc(50% - 18px);
 		color: #fff;
 		transition: 0.3s;
 		top: 35%;
-		background-color: $bg-primary!important;
+		// background-color: $bg-primary!important;
+		background-color: transparent!important;
 	}
 
 	.portfolio .portfolio-item .portfolio-info .preview-link:hover,
 	.portfolio .portfolio-item .portfolio-info .details-link:hover {
-		color: #ffc041;
+		color: rgb(255, 99, 78)!important;
 	}
 
 	.portfolio .portfolio-item .portfolio-info .details-link {
@@ -243,6 +250,10 @@
 	.vgs{
 		.vgs__container{
 			margin-top: 7rem!important;
+			background-color: transparent!important;
+		}
+		.vgs__gallery{
+			display: none;
 		}
 	}
 }

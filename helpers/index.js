@@ -275,39 +275,39 @@ export const feeds = [
   type: 'image',
   images: require('~/assets/images/feeds/feed18.jpg')
 },
-{
-  id: 25,
-  desc: `Posted @withrepost • @igdrspolri Selamat untuk Rumah Sakit Bhayangkara Tk. I Raden Said Sukanto / Pusdokkes Polri atas tercapainya Akreditasi Standar Pelayanan Kesehatan dengan Tingkat:
-  .
-  PARIPURNA ⭐⭐⭐⭐⭐ <br/>
-  <a href='https://www.instagram.com/p/CjAfclYLIpM/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/CjnWrR0LL66/',
-  type: 'image',
-  images: require('~/assets/images/feeds/feed19.jpg')
-},
-{
-  id: 26,
-  desc: `Rapat Internal Membahas Dewas Rumkit Bhayangkara.
+// {
+//   id: 25,
+//   desc: `Posted @withrepost • @igdrspolri Selamat untuk Rumah Sakit Bhayangkara Tk. I Raden Said Sukanto / Pusdokkes Polri atas tercapainya Akreditasi Standar Pelayanan Kesehatan dengan Tingkat:
+//   .
+//   PARIPURNA ⭐⭐⭐⭐⭐ <br/>
+//   <a href='https://www.instagram.com/p/CjAfclYLIpM/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/CjnWrR0LL66/',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/feed19.jpg')
+// },
+// {
+//   id: 26,
+//   desc: `Rapat Internal Membahas Dewas Rumkit Bhayangkara.
 
-  Selasa, 27 September 2022 <br/>
-  <a href='https://www.instagram.com/p/CjAfHWTLUVy/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/CjorHDpBHr7/',
-  type: 'video',
-  images: require('~/assets/images/feeds/feed20.mp4')
-},
-{
-  id: 27,
-  desc: `Peninjauan Pembangunan Gedung Presisi DIV TIK Polri Tahap l.
+//   Selasa, 27 September 2022 <br/>
+//   <a href='https://www.instagram.com/p/CjAfHWTLUVy/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/CjorHDpBHr7/',
+//   type: 'video',
+//   images: require('~/assets/images/feeds/feed20.mp4')
+// },
+// {
+//   id: 27,
+//   desc: `Peninjauan Pembangunan Gedung Presisi DIV TIK Polri Tahap l.
 
-  Selasa, 27 September 2022 <br/>
-  <a href='https://www.instagram.com/p/CjAe-53rHgp/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
-  `,
-  link: 'https://www.instagram.com/p/Cjp4zOCL3lX/',
-  type: 'image',
-  images: require('~/assets/images/feeds/feed21.jpg')
-}
+//   Selasa, 27 September 2022 <br/>
+//   <a href='https://www.instagram.com/p/CjAe-53rHgp/' target='_blank' class='btn btn-success btn-sm'>See My Feed</a>
+//   `,
+//   link: 'https://www.instagram.com/p/Cjp4zOCL3lX/',
+//   type: 'image',
+//   images: require('~/assets/images/feeds/feed21.jpg')
+// }
 ]
 
 export const FetchData = async (url) => {

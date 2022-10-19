@@ -87,10 +87,10 @@
 	.banner{
 		z-index: 1;
 		.jumbotron__home{
-			margin-top: 1.5rem;
+			margin-top: .3rem;
 			margin-bottom: 2rem;
 			max-width: $bg-jumbo-width;
-			max-height:125vh;
+			max-height:120vh;
 			position:relative;
 
 			&:after{
@@ -114,7 +114,7 @@
 		.carousel-control-next-icon {
 			height: 50px !important;
 			width: 50px !important;
-			margin-top: 7rem;
+			margin-top: 9rem;
 			border-radius:50%;
 			background-color: $color-primary;
 			z-index: 1!important;
