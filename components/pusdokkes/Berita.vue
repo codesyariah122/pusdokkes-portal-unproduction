@@ -1,4 +1,44 @@
 <style>
+.truncate {
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 3);
+  -webkit-box-orient: vertical;
+  word-break: var(--word-break, "none");
+  overflow: hidden;
+  hyphens: auto;
+  text-align: var(--align, left);
+
+  --is-single-line: 1 - Clamp(0, Calc(var(--line-clamp) - 1), var(--line-clamp));
+  --delay: Calc(-1s * (var(--is-single-line, 1) - 1));
+  animation: states 1s var(--delay) paused;
+
+  @keyframes states {
+    0% {
+      word-break: break-all;
+    }
+  }
+}
+
+.truncate2 {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 2);
+  -webkit-box-orient: vertical;
+  word-break: var(--word-break, "none");
+  overflow: hidden;
+  hyphens: auto;
+  text-align: var(--align, left);
+
+  --is-single-line: 1 - Clamp(0, Calc(var(--line-clamp) - 1), var(--line-clamp));
+  --delay: Calc(-1s * (var(--is-single-line, 1) - 1));
+  animation: states 1s var(--delay) paused;
+
+  @keyframes states {
+    0% {
+      word-break: break-all;
+    }
+  }
+}
 .column{
   position: relative;
   width: 100%;
@@ -32,9 +72,15 @@
   font-size: 0;
   overflow: hidden;
 }
-.effect .effect-img img{
+/*.effect .effect-img img{
   width: 100%;
   height: auto;
+  transition: all .3s;
+}
+*/
+.effect .effect-img img{
+  width: 100%;
+  height: 350px;
   transition: all .3s;
 }
 
@@ -131,8 +177,12 @@
   }
 }
 
-.effect .effect-text h2{
-  height: 45px;
+.effect .effect-text {
+  text-align: left;
+}
+
+/*.effect .effect-text h2{
+  height: 16px;
   color: #ffffff;
   font-size: 25px;
   margin: 0;
@@ -140,8 +190,37 @@
 
 .effect .effect-text p{
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 20px;
+}*/
+.effect .effect-text h2{
+  height: 15px;
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 5rem;
+  line-height: 25px;
+}
+
+.effect .effect-text p{
+  margin-top: auto;
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: auto;
+}
+
+.effect .effect-text span{
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.effect .effect-btn .btn{
+  display: inline-block;
+  height: 35px;
+  padding: 7px 15px;
+  color: #333333;
+  background: #ffffff;
+  margin-top: 3rem;
 }
 .effect .effect-btn .btn{
   display: inline-block;
@@ -152,13 +231,28 @@
 }
 
 
-@media (min-width:576px){
+/*@media (min-width:576px){
   .container{
     max-width: 540px;
   }
   .column{
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .effect .effect-text {
+    text-align: left;
+  }
+  .effect .effect-text h2{
+    height: 16px;
+    color: #ffffff;
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .effect .effect-text p{
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 768px){
@@ -169,7 +263,22 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
-}
+  .effect .effect-text {
+    text-align: left;
+  }
+  .effect .effect-text h2{
+    height: 16px;
+    color: #ffffff;
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .effect .effect-text p{
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}*/
 
 
 @media (min-width:992px){
@@ -357,46 +466,3 @@
     }
   }
 </script>
-
-<style lang="css">
-.truncate {
-  text-transform: capitalize;
-  display: -webkit-box;
-  -webkit-line-clamp: var(--line-clamp, 3);
-  -webkit-box-orient: vertical;
-  word-break: var(--word-break, "none");
-  overflow: hidden;
-  hyphens: auto;
-  text-align: var(--align, left);
-
-  --is-single-line: 1 - Clamp(0, Calc(var(--line-clamp) - 1), var(--line-clamp));
-  --delay: Calc(-1s * (var(--is-single-line, 1) - 1));
-  animation: states 1s var(--delay) paused;
-
-  @keyframes states {
-    0% {
-      word-break: break-all;
-    }
-  }
-}
-
-.truncate2 {
-  display: -webkit-box;
-  -webkit-line-clamp: var(--line-clamp, 2);
-  -webkit-box-orient: vertical;
-  word-break: var(--word-break, "none");
-  overflow: hidden;
-  hyphens: auto;
-  text-align: var(--align, left);
-
-  --is-single-line: 1 - Clamp(0, Calc(var(--line-clamp) - 1), var(--line-clamp));
-  --delay: Calc(-1s * (var(--is-single-line, 1) - 1));
-  animation: states 1s var(--delay) paused;
-
-  @keyframes states {
-    0% {
-      word-break: break-all;
-    }
-  }
-}
-</style>

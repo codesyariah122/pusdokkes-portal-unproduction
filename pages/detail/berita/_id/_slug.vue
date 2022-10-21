@@ -2,16 +2,16 @@
   <div class="berita__detail-content" :style="berita__list_style">
     <mdb-container>
       <!-- header -->
-      <mdb-row class="row justify-content-center">
+      <mdb-row class="row justify-content-left">
         <mdb-col lg="12" xs="12" sm="12" class="col__berita-1">
-          <h2 class="text-capitalize">{{ lists.berita.judul }}</h2>
+          <h2 :style="`${$device.isDesktop ? 'line-height: 45px;' : 'line-height: 40px;'}`" class="text-capitalize">{{ lists.berita.judul }}</h2>
           <p>{{ $moment(lists.berita.created_at).format("LLL") }}</p>
           <!-- Image content -->
-          <div class="d-flex justify-content-center">
-            <img class="img-thumbnail" :src="lists.berita.foto_url" />
+          <div class="d-flex justify-content-left">
+            <img  :src="lists.berita.foto_url" class="image" />
           </div>
 
-          <div id="slideshow">
+        <!--   <div id="slideshow">
             <img
             class="image"
             v-for="(image, i) in lists.list_image"
@@ -24,11 +24,11 @@
             :index="index"
             @close="index = null"
             ></vue-gallery-slideshow>
-          </div>
+          </div> -->
         </mdb-col>
 
         <mdb-col
-        lg="10"
+        lg="12"
         xs="12"
         sm="12"
         class="col__berita-2"
@@ -112,8 +112,8 @@
 
 <style scoped>
 .image {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: auto;
   background-size: cover;
   cursor: pointer;
   margin: 5px;
@@ -121,18 +121,25 @@
   border: 1px solid lightgray;
   object-fit: contain;
 }
+
+.content-desc{
+  width: 95%;
+  margin-left: 1rem;
+}
 .content-desc >>> img{
   width: 350px;
+  border-radius: 5px;
 }
 .content-desc >>> p {
   font-size: 18px;
   line-height: 31px;
   word-spacing: 3px;
+  text-align: left;
 }
 @media (min-width: 992px) {
   .image {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: auto;
     background-size: cover;
     cursor: pointer;
     margin: 5px;
@@ -141,14 +148,21 @@
     object-fit: contain;
   }
 
+  .content-desc{
+    width: 100%;
+    margin-left: 1rem;
+  }
+
   .content-desc >>> img{
     width: 800px;
+    border-radius: 5px;
   }
 
   .content-desc >>> p {
-    font-size: 16px;
-    line-height: 31px;
+    font-size: 18px;
+    line-height: 35px;
     word-spacing: 2px;
+    text-align: left;
   }
 }
 </style>
