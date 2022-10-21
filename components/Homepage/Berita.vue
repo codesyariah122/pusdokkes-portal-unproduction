@@ -238,7 +238,7 @@
     .col-feed{
       position:relative;
       img{
-        height: auto;
+        height: 100px;
         width: 100%;
         cursor: pointer;
         opacity: 1;
@@ -418,7 +418,7 @@
               </div>
             </div>
             <div v-else class="row instagram__feed">
-              <div v-if="feedIndex <= feeds.length" v-for="feedIndex in feedToShow" class="col-md-12 col-sm-12 mb-3 col-feed">
+              <div v-if="feedIndex <= feeds.length" v-for="feedIndex in feedToShow" class="col-md-4 col-sm-12 mb-3 col-feed">
                 <img v-if="feeds[feedIndex-1].type === 'image'" :src="feeds[feedIndex-1].images" />
                 <video v-else :src="feeds[feedIndex-1].images"></video>
                 <div class="middle">
