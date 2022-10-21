@@ -413,13 +413,13 @@
         <div  :class="`trand-right-single d-flex ${$device.isDesktop ? 'mt-2' : ''}`">
           <div class="trand-right-img" :style="`${$device.isMobile ? 'margin-left: -.3rem; margin-top:2rem;' : ''}`">
             <div v-if="loading" class="row instagram__feed">
-              <div  v-for="n in feeds.length" class="col-md-4 col-sm-4 mb-3 col-feed">
+              <div v-for="n in feeds.length" class="col-md-4 col-sm-4 mb-3 col-feed">
                 <b-skeleton-img></b-skeleton-img>
               </div>
             </div>
             <div v-else class="row instagram__feed">
-              <div v-if="feedIndex <= feeds.length" v-for="feedIndex in feedToShow" class="col-md-4 col-sm-2 mb-3 col-feed">
-                <img v-if="feeds[feedIndex-1].type === 'image'" :src="feeds[feedIndex-1].images" class="img-thumbnail">
+              <div v-if="feedIndex <= feeds.length" v-for="feedIndex in feedToShow" class="col-md-4 col-sm-12 mb-3 col-feed">
+                <img v-if="feeds[feedIndex-1].type === 'image'" :src="feeds[feedIndex-1].images" class="img-thumbnail"/>
                 <video v-else :src="feeds[feedIndex-1].images"></video>
                 <div class="middle">
                     <!-- <mdb-popover trigger="click" :options="{placement: 'left'}">

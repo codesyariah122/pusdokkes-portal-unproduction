@@ -21,7 +21,7 @@
 					</div>
 					<div class="portfolio-info">
 						<mdb-btn @click="index = idx"  class="portfolio-lightbox preview-link" >
-							Lihat
+							<i class="fas fa-clone fa-fw fa-lg"></i>
 						</mdb-btn>
 						<vue-gallery-slideshow
 						:images="images"

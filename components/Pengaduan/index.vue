@@ -29,6 +29,21 @@
 
 						<b-form-group
 						id="input-group-1"
+						label="No KTP :"
+						label-for="input-1"
+						description="Harap isi dengan no kartu tanda penduduk Anda."
+						>
+						<b-form-input
+						id="input-1"
+						v-model="form.no_ktp"
+						type="number"
+						placeholder="Inputkan No KTP Anda"
+						required autocomplete="off"
+						></b-form-input>
+					</b-form-group>
+
+						<b-form-group
+						id="input-group-1"
 						label="No Telephone :"
 						label-for="input-1"
 						description="Harap isi dengan no telephone yang aktif Anda gunakan."
@@ -59,7 +74,7 @@
 						</span>
 						<span v-else>Submit</span>
 					</b-button>
-					<b-button class="mt-3" type="reset" variant="danger" @click="onReset">Reset</b-button>
+					<b-button class="mt-3" type="reset" variant="danger" @click="onReset">Cancel</b-button>
 				</b-form>
 				<b-alert class="mt-5" v-if="pengaduan !== null" show variant="success">
 					<h4 class="alert-heading">Terima kasih</h4>
@@ -86,6 +101,7 @@
 				: "margin-top: 5rem;",
 				form: {
 					nama: '',
+					no_ktp: '',
 					no_telepon: '',
 					pengaduan: null
 				},
@@ -108,41 +124,54 @@
 			},
 
 			onSubmit(event) {
-				this.pengaduan = JSON.stringify(this.form)
-				this.loading = true 
-				this.$axios
-				.post(`${this.api_url}/web/pengaduan`, {
-					"nama": this.form.nama,
-					"no_telepon": this.form.no_telepon,
-					"pengaduan": this.form.pengaduan
-				}, {
-					"headers": {
-						"content-type": "application/json",
-					}
-				})
-				.then(({data}) => {
-					this.$swal({
-						position: 'top-end',
-						icon: 'success',
-						title: `Terima kasih, Pengaduan Anda Segera Di Proses`,
-						showConfirmButton: false,
-						timer: 1500
+				if(this.form.no_ktp.length === 16){
+					this.pengaduan = JSON.stringify(this.form)
+					this.loading = true 
+					this.$axios
+					.post(`${this.api_url}/web/pengaduan`, {
+						"nama": this.form.nama,
+						"no_telepon": this.form.no_telepon,
+						"pengaduan": this.form.pengaduan
+					}, {
+						"headers": {
+							"content-type": "application/json",
+						}
 					})
-					setTimeout(() => {
-						this.pengaduan = data.pengaduan
-					}, 1500)
-				})
-				.catch(err => console.error(err))
-				.finally(() => {
-					setTimeout(() => {
-						this.loading = false
-					}, 1500)
-				})
+					.then(({data}) => {
+						this.$swal({
+							position: 'top-end',
+							icon: 'success',
+							title: `Terima kasih, Pengaduan Anda Segera Di Proses`,
+							showConfirmButton: false,
+							timer: 1500
+						})
+						setTimeout(() => {
+							this.pengaduan = data.pengaduan
+							this.form.no_telepon = ''
+							this.form.no_ktp = ''
+							this.form.nama = ''
+							this.form.pengaduan = null
+						}, 1500)
+					})
+					.catch(err => console.error(err))
+					.finally(() => {
+						setTimeout(() => {
+							this.loading = false
+						}, 1500)
+					})
+				}else{
+					this.$swal({
+						icon: 'error',
+						title: 'Oops...',
+						text: 'No KTP Salah !'
+					})
+				}
 			},
 			onReset(event) {
 				this.pengaduan = null
 				event.preventDefault()
 				this.form.no_telepon = ''
+				this.form.no_ktp = ''
 				this.form.nama = ''
 				this.form.pengaduan = null
 				this.show = false
