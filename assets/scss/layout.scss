@@ -8,6 +8,9 @@
 .nav-link {
 	@include navbar_mobile;
 	text-decoration: none!important;
+	&:hover{
+		color:$primary-button!important;
+	}
 }
 .dropdown-menu{
 	a{
@@ -86,11 +89,46 @@
 	.nav-link {
 		// margin-left: 1rem;
 		@include navbar_desktop;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			transform: scaleX(0);
+			height: 2px;
+			bottom: 0;
+			left: 0;
+			background-color: $color-primary;
+			transform-origin: bottom right;
+			transition: transform 0.25s ease-out;
+		}
+		&:hover::after{
+			// color:$primary-button!important;
+			transform: scaleX(1);
+			transform-origin: bottom left;
+		}
+
 	}
 	.dropdown-menu{
 		margin-top: -1rem;
 		a{
 			text-decoration: none;
+			&:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				transform: scaleX(0);
+				height: 2px;
+				bottom: 0;
+				left: 0;
+				background-color: $color-primary;
+				transform-origin: bottom right;
+				transition: transform 0.25s ease-out;
+			}
+			&:hover::after{
+				// color:$primary-button!important;
+				transform: scaleX(1);
+				transform-origin: bottom left;
+			}
 		}
 	}
 	.keranjang__dropdown{

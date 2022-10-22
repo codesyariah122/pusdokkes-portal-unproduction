@@ -8,6 +8,9 @@
 	font-size:16px;
 	font-weight: 500;
 	line-height: 21.79px;
+	a{
+		color: $nav-item;
+	}
 }
 
 @mixin navbar_mobile {
@@ -18,9 +21,6 @@
 	line-height: 21.79px;
 	a{
 		color: $nav-item;
-	}
-	&:hover{
-		color:$color-secondary;
 	}
 }
 // end navigation

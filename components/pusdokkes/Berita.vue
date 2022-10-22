@@ -298,18 +298,16 @@
     text-align: left;
   }
   .effect .effect-text h2{
-    height: 15px;
+    height: calc(50% / 15px);
     color: #ffffff;
     font-size: 18px;
     margin: 0;
-    margin-bottom: 3.5rem;
+    margin-bottom: calc(50% - 75px);
   }
 
   .effect .effect-text p{
-    margin-top: auto;
     color: #ffffff;
     font-size: 16px;
-    margin-bottom: auto;
   }
 
   .effect .effect-text span{
@@ -372,8 +370,8 @@
                     <div class="effect-text">
                       <div class="inner">
                         <h2>{{ item.judul }}</h2>
-                        <span>{{ $moment(item.created_at).format("LL") }}</span>
-                        <p  class="mt-3 mb-2 truncate2">
+                        <span class="mt-3">Oleh Pusdokkes | {{ $moment(item.created_at).format("LL") }}</span>
+                        <p  class="mt-3 truncate2">
                           {{item.konten}}
                         </p>
                         <div class="effect-btn">

@@ -1,3 +1,10 @@
+<style lang="scss">
+.nuxt-link-exact-active {
+  color: $primary-button;
+  font-weight: 700;
+}
+</style>
+
 <template>
   <div>
     <mdb-navbar
@@ -16,7 +23,7 @@
     </mdb-navbar-brand>
     <mdb-navbar-toggler>
       <mdb-navbar-nav right style="margin-right: 2rem;">
-        <mdb-nav-item active waves-fixed>
+        <mdb-nav-item waves-fixed>
           <nuxt-link to="/" tag="li" navLink > Home </nuxt-link>
         </mdb-nav-item>
 
@@ -81,11 +88,11 @@
   </mdb-dropdown>
 
 
-  <mdb-nav-item active waves-fixed>
+  <mdb-nav-item waves-fixed>
     <nuxt-link to="/pusdokkes/berita" tag="li" navLink > Berita </nuxt-link>
   </mdb-nav-item>
 
-  <mdb-nav-item active waves-fixed>
+  <mdb-nav-item waves-fixed>
     <nuxt-link to="/pusdokkes/gallery" tag="li" navLink > Gallery </nuxt-link>
   </mdb-nav-item>
   
