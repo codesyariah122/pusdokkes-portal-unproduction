@@ -1,476 +1,516 @@
-<style>
-.truncate {
-  text-transform: capitalize;
-  display: -webkit-box;
-  -webkit-line-clamp: var(--line-clamp, 3);
-  -webkit-box-orient: vertical;
-  word-break: var(--word-break, "none");
-  overflow: hidden;
-  hyphens: auto;
-  text-align: var(--align, left);
-
-  --is-single-line: 1 - Clamp(0, Calc(var(--line-clamp) - 1), var(--line-clamp));
-  --delay: Calc(-1s * (var(--is-single-line, 1) - 1));
-  animation: states 1s var(--delay) paused;
-
-  @keyframes states {
-    0% {
-      word-break: break-all;
-    }
-  }
-}
-
-.truncate2 {
-  display: -webkit-box;
-  -webkit-line-clamp: var(--line-clamp, 2);
-  -webkit-box-orient: vertical;
-  word-break: var(--word-break, "none");
-  overflow: hidden;
-  hyphens: auto;
-  text-align: var(--align, left);
-
-  --is-single-line: 1 - Clamp(0, Calc(var(--line-clamp) - 1), var(--line-clamp));
-  --delay: Calc(-1s * (var(--is-single-line, 1) - 1));
-  animation: states 1s var(--delay) paused;
-
-  @keyframes states {
-    0% {
-      word-break: break-all;
-    }
-  }
-}
-.column{
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-.section-title{
-  position: relative;
-  width: 100%;
-  text-align: center;
-  padding: 45px 0 30px 0;
-}
-.section-title::after{
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 1px;
-  left: 0;
-  background: #eeeeee;
-}
-
-
-.effect{
-  position: relative;
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-.effect .effect-img{
-  font-size: 0;
-  overflow: hidden;
-}
-/*.effect .effect-img img{
-  width: 100%;
-  height: auto;
-  transition: all .3s;
-}
-*/
-.effect .effect-img img{
-  width: 100%;
-  height: 350px;
-  transition: all .3s;
-}
-
-.effect:hover .effect-img img{
-  transform: scale(1.2);
-}
-
-.effect .effect-text{
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: rgba(0, 0, 0, .5);
-  overflow: hidden;
-  transition: all .3s ease-in;
-  opacity: 1;
-}
-.effect .effect-text .inner{
-  position: absolute;
-  padding: 15px;
-  z-index: 1;
-}
-.effect .effect-text:before,
-.effect .effect-text:after{
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 0;
-  content: '';
-}
-.effect .effect-text:before{
-  border-top: 3px solid #ffffff;
-  border-right: 3px solid #ffffff;
-  left: -100%;
-  top: 0;
-}
-.effect .effect-text:after{
-  border-bottom: 3px solid #ffffff;
-  border-left: 3px solid #ffffff;
-  left: 100%;
-  bottom: 0;
-}
-.effect:hover .effect-text{
-  background: rgba(0, 0, 0, .7);
-  opacity: 1;
-}
-.effect:hover .effect-text:after,
-.effect:hover .effect-text:before{
-  animation-delay: .1s;
-  animation-duration: .5s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-.effect:hover .effect-text:after{
-  animation-name: left-up;
-}
-.effect:hover .effect-text:before{
-  animation-name: right-dn;
-}
-
-@-webkit-keyframes left-up {
-  0% {
-    left: 100%;
-    height: 0;
-  }
-  50% {
-    left: 0;
-    height: 0;
-  }
-  100% {
-    height: 100%;
-    left: 0;
-  }
-}
-
-@-webkit-keyframes right-dn {
-  0% {
-    left: -100%;
-    height: 0;
-  }
-  50% {
-    left: 0;
-    height: 0;
-  }
-  100% {
-    height: 100%;
-    left: 0;
-  }
-}
-
-.effect .effect-text {
-  text-align: left;
-}
-
-/*.effect .effect-text h2{
-  height: 16px;
-  color: #ffffff;
-  font-size: 25px;
-  margin: 0;
-}
-
-.effect .effect-text p{
-  color: #ffffff;
-  font-size: 14px;
-  margin-bottom: 20px;
-}*/
-.effect .effect-text h2{
-  height: 15px;
-  color: #ffffff;
-  font-size: 18px;
-  margin: 0;
-  margin-bottom: 5rem;
-  line-height: 25px;
-}
-
-.effect .effect-text p{
-  margin-top: auto;
-  color: #ffffff;
-  font-size: 16px;
-  margin-bottom: auto;
-}
-
-.effect .effect-text span{
-  color: #ffffff;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-.effect .effect-btn .btn{
-  display: inline-block;
-  height: 35px;
-  padding: 7px 15px;
-  color: #333333;
-  background: #ffffff;
-  margin-top: 3rem;
-}
-.effect .effect-btn .btn{
-  display: inline-block;
-  height: 35px;
-  padding: 7px 15px;
-  color: #333333;
-  background: #ffffff;
-}
-
-
-/*@media (min-width:576px){
-  .container{
-    max-width: 540px;
-  }
-  .column{
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .effect .effect-text {
-    text-align: left;
-  }
-  .effect .effect-text h2{
-    height: 16px;
-    color: #ffffff;
-    font-size: 25px;
-    margin: 0;
-  }
-
-  .effect .effect-text p{
-    color: #ffffff;
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-}
-@media (min-width: 768px){
-  .container{
-    max-width: 720px;
-  }
-  .column{
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .effect .effect-text {
-    text-align: left;
-  }
-  .effect .effect-text h2{
-    height: 16px;
-    color: #ffffff;
-    font-size: 25px;
-    margin: 0;
-  }
-
-  .effect .effect-text p{
-    color: #ffffff;
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-}*/
-
-
-@media (min-width:992px){
-  .container{
-    max-width: 960px;
-  }
-  .column{
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-  }
-  .effect .effect-img img{
-    width: 100%;
-    height: 300px;
-    transition: all .3s;
-  }
-  .effect .effect-text {
-    text-align: left;
-  }
-  .effect .effect-text h2{
-    height: 15%;
-    color: #ffffff;
-    font-size: 18px;
-    margin: 0;
-    margin-bottom: 2%;
-  }
-
-  .effect .effect-text h2:hover{
-    color: #0078FF;
-  }
-
-  .effect .effect-text p{
-    color: #ffffff;
-    font-size: 16px;
-  }
-
-  .effect .effect-text span{
-    color: #ffffff;
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  .effect .effect-btn .btn{
+<style lang="scss">
+.underline__title{
     display: inline-block;
-    height: 35px;
-    padding: 7px 15px;
-    color: #333333;
-    background: #ffffff;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-top: 1rem;
+    h4{
+      font-family: 'Rubik', sans-serif;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .underline{
+      content: '';
+      display: flex;
+      margin: auto;
+      margin-top: 5px;
+      position: relative;
+      width: 100%;
+      height: 3px;
+      background:#000;
+      &:after{
+        content: '';
+        display: block;
+        margin: auto;
+        position: relative;
+        margin-top: -.1px;
+        width: 10%;
+        height: 3px;
+        background:rgb(255, 99, 78);
+      }
+    }
   }
-}
-@media (min-width:1200px){
-  .container{
-    max-width: 1140px;
+  .papper__fold{
+    font-family: 'Rubik', sans-serif;
+    text-rendering: optimizeLegibility;
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 45px;
+    background-color: $bg-primary!important;
+    border: 0px;
+    cursor: pointer;
+    transition: 0.5s;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%);
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: $default;
+    margin-left: 1rem;
+    &:before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,.2) 0, rgba(0,0,0,.4) 27px, #025364);
+    // background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,.2) 0, rgba(0,0,0,.4)) no-repeat 100% 0;
+    // background-color: rgba(0,0,0,.4);
+    left: -1px;
+    top: -3px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 1px 1px 2px 0px $black;
+    transition: 0.5s;
   }
+  &:hover::before
+  {
+    width: 0px;
+    height: 0px;
+  }
+  &:hover
+  {
+   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+ }
 
 }
+
+.section-tittle{
+  .flex__title{
+    margin-left: -1rem;
+    .text{
+      margin-left: -2.5rem;
+      a{
+        color: $second-black;
+        &:hover{
+          color: $color-link;
+        }
+      }
+    }
+  }
+}
+
+.instagram__feed{
+  .col-feed{
+    position:relative;
+    img{
+      height: auto;
+      width: 100%;
+      cursor: pointer;
+      opacity: 1;
+      display: block;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+    video{
+      height: 400px;
+      width: 300px;
+      cursor: pointer;
+      opacity: 1;
+      display: block;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+
+    .middle {
+      z-index: 333;
+      transition: .5s ease;
+      opacity: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+      .popover{
+        z-index: 1;
+      }
+    }
+
+    &:hover img, &:hover video {
+      opacity: 0.7;
+    }
+
+    &:hover .middle {
+      opacity: 1;
+    }
+
+    .button{
+      font-size: 31px;
+    }
+
+  }
+}
+
+@media (min-width: 992px) {
+  .underline__title{
+    display: inline-block;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: -23rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    h4{
+      font-family: 'Rubik', sans-serif;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .underline{
+      content: '';
+      display: flex;
+      margin: auto;
+      margin-top: 5px;
+      position: relative;
+      margin-bottom:2rem;
+      width: 65%;
+      height: 3px;
+      background:#000;
+      &:after{
+        content: '';
+        display: block;
+        margin: auto;
+        position: relative;
+        margin-top: -.1px;
+        width: 10%;
+        height: 3px;
+        background:rgb(255, 99, 78);
+      }
+    }
+  }
+  .papper__fold{
+    font-family: 'Rubik', sans-serif;
+    text-rendering: optimizeLegibility;
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 45px;
+    background-color: $bg-primary!important;
+    border: 0px;
+    cursor: pointer;
+    transition: 0.5s;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%);
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: $default;
+    margin-left: 2rem;
+    &:before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,.2) 0, rgba(0,0,0,.4) 27px, #025364);
+    // background: linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,.2) 0, rgba(0,0,0,.4)) no-repeat 100% 0;
+    // background-color: rgba(0,0,0,.4);
+    left: -1px;
+    top: -3px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 1px 1px 2px 0px $black;
+    transition: 0.5s;
+  }
+  &:hover::before
+  {
+    width: 0px;
+    height: 0px;
+  }
+  &:hover
+  {
+   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+ }
+
+}
+  .instagram__feed{
+    .col-feed{
+      position:relative;
+      img{
+        height: 100px;
+        width: 100%;
+        cursor: pointer;
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+      video{
+        height: 100px;
+        width: 100px;
+        cursor: pointer;
+        opacity: 1;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+
+      .middle {
+        z-index: 333;
+        transition: .5s ease;
+        opacity: 0.8;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        .popover{
+          z-index: 1;
+        }
+      }
+
+      &:hover img, &:hover video {
+        opacity: 0.7;
+      }
+
+      &:hover .middle {
+        opacity: 3;
+      }
+
+      .button{
+        border-radius: 100%;
+        background-color: transparent;
+        font-size: 25px;
+      }
+
+    }
+  }
+}
+
+
 </style>
 
 <template>
-  <div>
-    <div ref="berita_square" class="card__list" :style="berita__list_style">
-      <mdb-container>
-        <mdb-row class="row justify-content-center header__ppkc-list-page">
-          <mdb-col lg="12" xs="12" sm="12" style="margin-top: 32px">
-            <h2 style="font-weight: 700">Berita</h2>
-          </mdb-col>
-          <mdb-col lg="12" xs="12" sm="12">
-            <p>
-              Ikuti kegiatan dan berita dari PUSDOKKES - POLRI
-            </p>
-          </mdb-col>
-        </mdb-row>
-        <!-- delay looping data with loader spinner -->
-
-        <!-- show card berita -->
-        <mdb-row class="row justify-content-center mt-2 mb-5 webinar__content">
-          <!-- List berita inside global-components -->
-          <mdb-col lg="12" xs="12" sm="12">
-            <div class="card__list">
-              <div class="card__content">
-                <mdb-row>
-                  <mdb-col
-                  id="show-event"
-                  v-for="item in lists"
-                  md="4"
-                  xs="12"
-                  sm="12"
-                  :key="item.id" :style="`${$device.isMobile ? 'margin-bottom: 2rem;' : ''}`" class="column"
-                  >
-                  <div class="effect">
-                    <div class="effect-img">
-                      <img :src="item.foto_url" :alt="item.judul">
-                    </div>
-                    <div class="effect-text">
-                      <div class="inner">
-                        <nuxt-link :to="{
-                            name: `detail-berita-id-slug`,
-                            params: {
-                              id: item.id,
-                              slug: $slug(item.judul)
-                            }
-                          }">
-                          <h2>{{ item.judul }}</h2>
-                        </nuxt-link>
-                        <span class="mt-3">Oleh Pusdokkes | {{ $moment(item.created_at).format("LL") }}</span>
-                        <p  class="mt-3 truncate2">
-                          {{item.konten}}
-                        </p>
-                        <!-- <div class="effect-btn">
-                          <nuxt-link
-                          :to="{
-                            name: `detail-berita-id-slug`,
-                            params: {
-                              id: item.id,
-                              slug: $slug(item.judul),
-                            },
-                          }"
-                          class="mb-2 btn"
-                          >Baca Selengkapnya <i class="fa fa-eye"></i></nuxt-link>
-                        </div> -->
-                      </div>
-                    </div>
-                  </div>
-                </mdb-col>
-              </mdb-row>
-            </div>
-          </div>
-        </mdb-col>
-      </mdb-row>
-
-      <mdb-row v-if="loading" class="row justify-content-center">
-        <mdb-col lg="12" xs="12" sm="12">
-          <div class="d-flex justify-content-center mt-5 mb-5">
-            <div
-            class="spinner-grow text-primary"
-            role="status"
-            style="width: 3rem; height: 3rem"
-            >
-            <span class="sr-only">Loading...</span>
+  <div class="trending-area fix" :style="`${$device.isDesktop ? 'margin-top: -5rem;' : ''}`">
+    <div class="container">
+      <div class="trending-main">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 col-sm-12 underline__title">
+            <h4>Berita Dokkes</h4>
+            <h1 class="underline"></h1>
           </div>
         </div>
-      </mdb-col>
-    </mdb-row>
+        <!-- <div class="row">
+          <div class="col-lg-12 col-sm-12">
+            <div class="trending-tittle">
+              <strong>Berita Dokkes</strong>
+            </div>
+          </div>
+        </div> -->
 
-    <mdb-row
-    v-if="error"
-    class="row justify-content-center header__ppkc-list-page"
-    >
-    <mdb-col lg="12" xs="12" sm="12">
-      <button type="button" @click="LoadBerita" class="btn btn-info">
-        Load More
-      </button>
-    </mdb-col>
-  </mdb-row>
-</mdb-container>
-</div>
+        <div class="row" :style="`${$device.isDesktop ? 'margin-top: -2rem;' : 'margin-top: 1rem;'}`">
+          <div v-if="loading" class="col-lg-8 col-sm-12">
+            <div class="trending-top mb-5">
+              <div class="trend-top-img">
+                <b-skeleton-img></b-skeleton-img>
+              </div>
+            </div>
+            <div class="trending-bottom">
+              <div class="row">
+                <div v-for="n in news.length" class="col-lg-4 col-sm-12">
+                  <div class="single-bottom mb-35">
+                    <div class="trend-bottom-img mb-30">
+                      <b-skeleton-img></b-skeleton-img>
+                    </div>
+                    <div class="trend-bottom-cap">
+                     <b-skeleton animation="wave" width="85%"></b-skeleton>
+                     <b-skeleton animation="wave" width="55%"></b-skeleton>
+                     <b-skeleton animation="wave" width="70%"></b-skeleton>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="row justify-content-center mb-5" :style="`${$device.isDektop ? '`margin-top: 8rem;' : 'margin-top: 1rem;'}`">
+              <div class="col-lg-12 col-sm-12">
+                <b-skeleton type="button"></b-skeleton>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-else class="col-lg-8 col-sm-12">
+          <div v-for="(item, index) in news">
+            <!-- Trending Top -->
+            <div v-if="index == news.length - 1" class="trending-top mb-3">
+              <div class="trend-top-img">
+                <img :src="item.foto_url" alt="">
+                <div class="trend-top-cap mt-2">
+                  <h4><nuxt-link :to="{
+                    name: `detail-berita-id-slug`,
+                    params: {
+                      id: item.id,
+                      slug: $slug(item.judul),
+                    },
+                  }">{{item.judul}}</nuxt-link></h4>
+                  <p>
+                    {{$moment(item.created_at).format("LL")}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Trending Bottom -->
+          <div class="trending-bottom">
+            <div class="row">
+              <div v-for="(item, index) in news.slice(0, 10)" v-if="index !== news.length - 1" :class="`col-lg-12 col-sm-12 ${$device.isDesktop ? 'mb-4' : 'mb-2'}`">
+                <div class="row single-bottom">
+                  <div class="col-md-4 col-sm-12 trend-bottom-img">
+                    <img :src="item.foto_url" :alt="item.title" class="img-fluid"/>
+                  </div>
+                  <div class="col-md-6 col-sm-12 trend-bottom-cap">
+                    <h4 style="font-weight: 700;"><nuxt-link :to="{
+                      name: `detail-berita-id-slug`,
+                      params: {
+                        id: item.id,
+                        slug: $slug(item.judul),
+                      },
+                    }"> {{item.judul}} </nuxt-link></h4>
+                    <p style="color: #4B5563!important;font-weight: 400;">{{$moment(item.created_at).format("LL")}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-start mb-5" :style="`${$device.isMobile ? 'margin-top: 1rem; margin-bottom: 2rem;' : 'margin-top: 2rem;'}`">
+              <div class="col-lg-12 col-sm-12">
+                <nuxt-link to="/pusdokkes/berita" style="font-size: 18px;">Lihat Semua Berita...</nuxt-link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Riht content -->
+        <div class="col-lg-4 col-sm-6">
+          <div class="trand-right-single">
+          <!-- <b-button :style="`${$device.isDesktop ? 'background :#00923f!important; color: #fff; font-size: 14px;margin-left: -.2rem;' : 'background :#00923f!important; color: #fff; font-size: 14px; margin-left: -.5rem;'}`" :class="`btn btn-block ${$device.isDesktop ? 'btn-md btn-block' : 'btn-sm'} rounded`">
+            pesan kapusdokkes
+          </b-button> -->
+          <h4 class="papper__fold" :style="`${$device.isMobile ? 'margin-top: 5rem;' : ''}`">
+            pesan kapusdokkes
+          </h4>
+        </div>
+
+        <div class="trand-right-single"  :style="`${$device.isDesktop ? 'margin-top: -1rem;' : 'margin-top: -2rem;'}`">
+          <iframe :width="`${$device.isDesktop ? '337' : '300'}`" height="250" src="https://www.youtube.com/embed/Pw_HBvCESdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="trand-right-single mt-3">
+          <h4 class="papper__fold">
+            pusdokkes feed
+          </h4>
+        </div>
+        
+        <div  :class="`trand-right-single d-flex ${$device.isDesktop ? 'mt-2' : ''}`">
+          <div class="trand-right-img" :style="`${$device.isMobile ? 'margin-left: -.3rem; margin-top:2rem;' : ''}`">
+            <div v-if="loading" class="row instagram__feed">
+              <div v-for="n in feeds.length" class="col-md-4 col-sm-4 mb-3 col-feed">
+                <b-skeleton-img></b-skeleton-img>
+              </div>
+            </div>
+            <div v-else class="row instagram__feed">
+              <div v-if="feedIndex <= feeds.length" v-for="feedIndex in feedToShow" class="col-md-4 col-sm-12 mb-3 col-feed">
+                <img v-if="feeds[feedIndex-1].type === 'image'" :src="feeds[feedIndex-1].images" />
+                <video v-else :src="feeds[feedIndex-1].images"></video>
+                <div class="middle">
+                    <!-- <mdb-popover trigger="click" :options="{placement: 'left'}">
+                      <span slot="header">@pusdokkespolri</span>
+                      <span slot="body" v-html="feeds[feedIndex-1].desc"></span>
+                      <mdb-btn size="sm" slot="reference">
+                        View Feed
+                      </mdb-btn>
+                    </mdb-popover> -->
+                    <a :href="feeds[feedIndex-1].link" target="_blank" class="button btn btn-sm shadow-none">
+                      <i v-if="feeds[feedIndex-1].type === 'image'" class="fas fa-clone fa-fw fa-lg text-white"></i>
+                      <i v-else class="fas fa-play fa-fw fa-lg text-white"></i>
+                    </a>
+                  </div>
+                </div>
+                <div v-if="feeds.length > feedToShow" class="col-md-12 col-sm-12 mt-2">
+                  <center>
+                    <b-button @click="feedToShow += 3" style="background :#00923f!important; color: #fff; font-size: 14px;" class="btn rounded btn-sm">
+                      Load more...
+                    </b-button>
+                  </center>
+                </div>
+                <div class="col-sm-12 col-md-12 mt-2">
+                  <center>
+                    <a :style="`${$device.isDesktop ? 'background :#00923f!important; color: #fff; font-size: 12px;' : 'background :#00923f!important; color: #fff; font-size: 14px;'}`" class="btn rounded" href="https://www.instagram.com/pusdokkespolri/?hl=id" target="_blank">
+                      <i class="fab fa-instagram fa-lg fa-fw"></i> Follow On Instagram
+                    </a>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 
 <script>
-  export default {
-    props: ["lists", "loading", "error", "end"],
-    data() {
-      return {
-        currentPage: 1,
+  import {feeds} from '@/helpers'
 
-        berita__list_style:
-        this.$router.path == "berita" && this.$device.isDesktop
-        ? "margin-top: 7rem;"
-        : "margin-top: 5rem;",
-      };
+  export default {
+    data(){
+      return {
+        loading: null,
+        news: [],
+        feeds: [],
+        feedIndex: null,
+        feedToShow: 21,
+        placement: 'topright'
+      }
     },
 
-    mounted() {
-      this.getNextBerita()
+    head(){
+      return {
+        script: [
+        {src: '//www.instagram.com/embed.js'}
+        ]
+      }
+    },
+
+    mounted(){
+      this.beritaLists(),
+      this.feedContents()
     },
 
     methods: {
-      LoadBerita() {
-        this.$emit("load-more-berita")
+      beritaLists(){
+        this.loading = true
+        const base_url = process.env.NUXT_ENV_API_URL
+        this.$axios.get(`${base_url}/web/berita/page?start=0`)
+        .then(({data}) => {
+          this.news = data.list_data
+        })
+        .catch(err => console.error(err.response))
+        .finally(() => {
+          setTimeout(() => {
+            this.loading = false
+          }, 1500)
+        })
       },
 
-      getNextBerita() {
-        window.onscroll = () => {
-          if (!this.loading && !this.end && !this.error) {
-            if (this.$refs.berita_square.getBoundingClientRect().bottom <= 450) {
-              this.$emit("load-more-berita");
-            }else{
-              console.log("out")
-            }
-          }
-        }
-      }
+      feedContents(){
+        this.loading = true
+        setTimeout(() => {
+          this.loading = false
+        }, 1500)
 
+        this.feeds = feeds.reverse()
+      }
     }
   }
 </script>

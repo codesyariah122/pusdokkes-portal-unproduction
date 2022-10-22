@@ -298,11 +298,15 @@
     text-align: left;
   }
   .effect .effect-text h2{
-    height: 35%;
+    height: 15%;
     color: #ffffff;
     font-size: 18px;
     margin: 0;
-    margin-bottom: 22%;
+    margin-bottom: 2%;
+  }
+
+  .effect .effect-text h2:hover{
+    color: #0078FF;
   }
 
   .effect .effect-text p{
@@ -321,7 +325,6 @@
     padding: 7px 15px;
     color: #333333;
     background: #ffffff;
-    margin-top: 3rem;
   }
 }
 @media (min-width:1200px){
@@ -369,13 +372,20 @@
                     </div>
                     <div class="effect-text">
                       <div class="inner">
-                        <h2>{{ item.judul }}</h2>
+                        <nuxt-link :to="{
+                            name: `detail-berita-id-slug`,
+                            params: {
+                              id: item.id,
+                              slug: $slug(item.judul)
+                            }
+                          }">
+                          <h2>{{ item.judul }}</h2>
+                        </nuxt-link>
                         <span class="mt-3">Oleh Pusdokkes | {{ $moment(item.created_at).format("LL") }}</span>
                         <p  class="mt-3 truncate2">
                           {{item.konten}}
                         </p>
-                        <div class="effect-btn">
-                          <!-- <a href="#" class="btn"><i class="fa fa-eye"></i> Read More</a> -->
+                        <!-- <div class="effect-btn">
                           <nuxt-link
                           :to="{
                             name: `detail-berita-id-slug`,
@@ -386,7 +396,7 @@
                           }"
                           class="mb-2 btn"
                           >Baca Selengkapnya <i class="fa fa-eye"></i></nuxt-link>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                   </div>
