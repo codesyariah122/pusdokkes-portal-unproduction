@@ -298,11 +298,11 @@
     text-align: left;
   }
   .effect .effect-text h2{
-    height: calc(50% / 15px);
+    height: calc(50% / 15%);
     color: #ffffff;
     font-size: 18px;
     margin: 0;
-    margin-bottom: calc(50% - 75px);
+    margin-bottom: calc(50% - 28%);
   }
 
   .effect .effect-text p{
