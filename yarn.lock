@@ -3421,6 +3421,11 @@ core-js@^3.1.2, core-js@^3.19.3:
   resolved "https://registry.npmjs.org/core-js/-/core-js-3.20.3.tgz"
   integrity sha512-vVl8j8ph6tRS3B8qir40H7yw7voy17xL0piAjlbBUsH7WIfzoedL/ZOr1OV9FyZQLWXsayOJyV4tnRyXR85/ag==
 
+core-js@^3.14.0:
+  version "3.25.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.25.5.tgz#e86f651a2ca8a0237a5f064c2fe56cef89646e27"
+  integrity sha512-nbm6eZSjm+ZuBQxCUPQKQCoUEfFOXjUZ8dTTyikyKaWrTYmAVbykQfwsKE5dBK88u3QCkCrzsx/PPlKfhsvgpw==
+
 core-util-is@~1.0.0:
   version "1.0.3"
   resolved "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.3.tgz"
@@ -6342,6 +6347,11 @@ levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
+
+libphonenumber-js@^1.10.12:
+  version "1.10.14"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.10.14.tgz#e29da7f539751f724ac54017a098e3c7ca23de94"
+  integrity sha512-McGS7GV/WjJ2KjfOGhJU1oJn29RYeo7Q+RpANRbUNMQ9gj5XArpbjurSuyYPTejFwbaUojstQ4XyWCrAzGOUXw==
 
 load-json-file@^1.0.0:
   version "1.1.0"
@@ -10557,6 +10567,14 @@ vue-sweetalert2@^5.0.2:
   integrity sha512-28pcpmvaFxwoXIUkOWwhZhmsV749jXxha8JicwPoSKyFKR5FhIaZU6UHO5WlUCLIVUI6sAWY6WngK2x/iXYwZg==
   dependencies:
     sweetalert2 "11.x"
+
+vue-tel-input@^5.12.0:
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/vue-tel-input/-/vue-tel-input-5.12.0.tgz#da81a79f42bd27a10a32bb3f77b225f988c1915b"
+  integrity sha512-4B+8DIHOWuYbk+eTt5T7e6NNVLf98Xp4NoNzKcGH8MvnHFTGIyU1tQZ1thWWBxyOYPcB8iMnkvnzGm/HQz4yeg==
+  dependencies:
+    core-js "^3.14.0"
+    libphonenumber-js "^1.10.12"
 
 vue-template-compiler@^2.6.12, vue-template-compiler@^2.6.14:
   version "2.6.14"

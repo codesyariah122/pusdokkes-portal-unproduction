@@ -48,13 +48,18 @@
 						label-for="input-1"
 						description="Harap isi dengan no telephone yang aktif Anda gunakan."
 						>
-						<b-form-input
+						<!-- <b-form-input
 						id="input-1"
 						v-model="form.no_telepon"
 						type="number"
 						placeholder="Inputkan No Telephone Anda"
 						required autocomplete="off"
-						></b-form-input>
+						></b-form-input> -->
+						<client-only>
+							<vue-tel-input
+							v-model="form.no_telepon"
+							></vue-tel-input>
+						</client-only>
 					</b-form-group>
 
 					<b-form-group id="input-group-3" label="Pengaduan :" label-for="input-3">
@@ -124,7 +129,7 @@
 			},
 
 			onSubmit(event) {
-				if(this.form.no_ktp.length === 16){
+				if(this.form.no_ktp.length === 16 && this.form.no_telepon === 13){
 					this.pengaduan = JSON.stringify(this.form)
 					this.loading = true 
 					this.$axios
@@ -163,7 +168,7 @@
 					this.$swal({
 						icon: 'error',
 						title: 'Oops...',
-						text: 'No KTP Salah !'
+						text: 'Digit No Telephone / No KTP kurang atau tidak sesuai !'
 					})
 				}
 			},
