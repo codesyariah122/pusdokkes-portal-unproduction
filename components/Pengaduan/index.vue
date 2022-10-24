@@ -31,40 +31,40 @@
 						id="input-group-1"
 						label="No KTP :"
 						label-for="input-1"
-						description="Harap isi dengan no kartu tanda penduduk Anda."
+						description="Harap isi dengan no kartu tanda penduduk Anda." 
 						>
 						<b-form-input
 						id="input-1"
 						v-model="form.no_ktp"
 						type="number"
 						placeholder="Inputkan No KTP Anda"
-						required autocomplete="off"
+						required autocomplete="off" :formatter="formatKTPLength"
 						></b-form-input>
 					</b-form-group>
 
-						<b-form-group
-						id="input-group-1"
-						label="No Telephone :"
-						label-for="input-1"
-						description="Harap isi dengan no telephone yang aktif Anda gunakan."
-						>
-						<!-- <b-form-input
-						id="input-1"
-						v-model="form.no_telepon"
-						type="number"
-						placeholder="Inputkan No Telephone Anda"
-						required autocomplete="off"
-						></b-form-input> -->
-						<client-only>
+					<b-form-group
+					id="input-group-1"
+					label="No Telephone :"
+					label-for="input-1"
+					description="Harap isi dengan no telephone yang aktif Anda gunakan."
+					>
+					<b-form-input
+					id="input-1"
+					v-model="form.no_telepon"
+					type="number"
+					placeholder="Inputkan No Telephone Anda"
+					required autocomplete="off" :formatter="formatPhoneLength"
+					></b-form-input>
+						<!-- <client-only>
 							<vue-tel-input
-							v-model="form.no_telepon"
+							v-model="form.no_telepon" :formatter="formatPhoneLength"
 							></vue-tel-input>
-						</client-only>
+						</client-only> -->
 					</b-form-group>
 
 					<b-form-group id="input-group-3" label="Pengaduan :" label-for="input-3">
 						<b-form-textarea
-						id="textarea"
+						id="textarea" required
 						v-model="form.pengaduan"
 						placeholder="Inputkan pengaduan Anda ..."
 						rows="6"
@@ -123,54 +123,52 @@
 		},
 
 		methods: {
+			formatKTPLength(e){
+				return String(e).substring(0,16)
+			},
+			formatPhoneLength(e){
+				return String(e).substring(0,13)
+			},
 			ConfigApiUrl() {
 				const api_url = process.env.NUXT_ENV_API_URL;
 				this.$store.dispatch("config/storeConfigApiUrl", api_url);
 			},
 
 			onSubmit(event) {
-				if(this.form.no_ktp.length === 16 && this.form.no_telepon === 13){
-					this.pengaduan = JSON.stringify(this.form)
-					this.loading = true 
-					this.$axios
-					.post(`${this.api_url}/web/pengaduan`, {
-						"nama": this.form.nama,
-						"no_telepon": this.form.no_telepon,
-						"pengaduan": this.form.pengaduan
-					}, {
-						"headers": {
-							"content-type": "application/json",
-						}
-					})
-					.then(({data}) => {
-						this.$swal({
-							position: 'top-end',
-							icon: 'success',
-							title: `Terima kasih, Pengaduan Anda Segera Di Proses`,
-							showConfirmButton: false,
-							timer: 1500
-						})
-						setTimeout(() => {
-							this.pengaduan = data.pengaduan
-							this.form.no_telepon = ''
-							this.form.no_ktp = ''
-							this.form.nama = ''
-							this.form.pengaduan = null
-						}, 1500)
-					})
-					.catch(err => console.error(err))
-					.finally(() => {
-						setTimeout(() => {
-							this.loading = false
-						}, 1500)
-					})
-				}else{
+				this.pengaduan = JSON.stringify(this.form)
+				this.loading = true 
+				this.$axios
+				.post(`${this.api_url}/web/pengaduan`, {
+					"nama": this.form.nama,
+					"no_telepon": this.form.no_telepon,
+					"pengaduan": this.form.pengaduan
+				}, {
+					"headers": {
+						"content-type": "application/json",
+					}
+				})
+				.then(({data}) => {
 					this.$swal({
-						icon: 'error',
-						title: 'Oops...',
-						text: 'Digit No Telephone / No KTP kurang atau tidak sesuai !'
+						position: 'top-end',
+						icon: 'success',
+						title: `Terima kasih, Pengaduan Anda Segera Di Proses`,
+						showConfirmButton: false,
+						timer: 1500
 					})
-				}
+					setTimeout(() => {
+						this.pengaduan = data.pengaduan
+						this.form.no_telepon = ''
+						this.form.no_ktp = ''
+						this.form.nama = ''
+						this.form.pengaduan = null
+					}, 1500)
+				})
+				.catch(err => console.error(err))
+				.finally(() => {
+					setTimeout(() => {
+						this.loading = false
+					}, 1500)
+				})
 			},
 			onReset(event) {
 				this.pengaduan = null
