@@ -1,30 +1,13 @@
 <template>
   <div class="berita__detail-content" :style="berita__list_style">
     <mdb-container>
-      <!-- header -->
       <mdb-row class="row justify-content-left">
         <mdb-col lg="12" xs="12" sm="12" class="col__berita-1">
-          <h2 :style="`${$device.isDesktop ? 'line-height: 45px;' : 'line-height: 40px;'}`" class="text-capitalize">{{ lists.berita.judul }}</h2>
+          <h2 :style="`${$device.isDesktop ? 'line-height: 45px;' : 'line-height: 40px;'}`" class="text-capitalize font-weight-bold">{{ lists.berita.judul }}</h2>
           <p>{{ $moment(lists.berita.created_at).format("LLL") }}</p>
-          <!-- Image content -->
           <div class="d-flex justify-content-left">
             <img  :src="lists.berita.foto_url" class="image" />
           </div>
-
-        <!--   <div id="slideshow">
-            <img
-            class="image"
-            v-for="(image, i) in lists.list_image"
-            :src="image"
-            :key="i"
-            @click="index = i"
-            />
-            <vue-gallery-slideshow
-            :images="lists.list_image"
-            :index="index"
-            @close="index = null"
-            ></vue-gallery-slideshow>
-          </div> -->
         </mdb-col>
 
         <mdb-col
@@ -42,8 +25,8 @@
       </mdb-col>
     </mdb-row>
 
-    <!-- Content second -->
-    <!-- <GlobalsOptionSlug :next="next" /> -->
+    <BeritapageBeritaLainnya :others="others"/>
+
   </mdb-container>
 </div>
 </template>
@@ -77,13 +60,11 @@
 
     async asyncData({ $axios, params }) {
       const lists = await $axios.$get(`/web/berita/${params.id}`);
-      console.log(lists);
-      const next_id = parseInt(params.id) + 1;
-      const next = await $axios.$get(`/web/berita/${next_id}`);
-      console.log(next);
+      const others = await $axios.get(`/web/berita/lainnya/${params.id}`)
+      console.log(others.data)
       return {
         lists,
-        next,
+        others
       };
     },
 
@@ -102,11 +83,20 @@
       },
     },
 
+    head(){
+      return {
+        title: `Pusdokkes Berita - ${this.title}`
+      }
+    },
+
     computed: {
       api_url() {
         return this.$store.getters["config/ConfigApiUrl"];
       },
-    },
+      title(){
+        return this.lists.berita.judul
+      }
+    }
   };
 </script>
 
@@ -123,11 +113,10 @@
 }
 
 .content-desc{
-  width: 95%;
-  margin-left: 1rem;
+  width: 100%;
 }
 .content-desc >>> img{
-  width: 350px;
+  width: 100%;
   border-radius: 5px;
 }
 .content-desc >>> p {
@@ -140,9 +129,7 @@
   .image {
     width: 100%;
     height: auto;
-    background-size: cover;
     cursor: pointer;
-    margin: 5px;
     border-radius: 3px;
     border: 1px solid lightgray;
     object-fit: contain;
@@ -150,11 +137,10 @@
 
   .content-desc{
     width: 100%;
-    margin-left: 1rem;
   }
 
   .content-desc >>> img{
-    width: 800px;
+    width: 100%;
     border-radius: 5px;
   }
 

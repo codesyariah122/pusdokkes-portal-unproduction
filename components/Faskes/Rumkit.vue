@@ -20,8 +20,9 @@
 				<div class="accordion" id="accordionPolda">
 					<div id="headpolda1" class="my-3 border-bottom">
 						<div class="row justify-content-start">
+							
 							<div class="col-lg-2 col-md-2 col-sm-2">
-								<img v-if="item.photo_url_original !== null"
+								<img v-if="isLoaded" @load="loadImage"
 								class="pb-2"
 								:src="item.photo"
 								alt=""
@@ -73,8 +74,14 @@
 
 <script>
 	export default {
+		head(){
+			return {
+				title: 'Pusdokkes Polri - Rumkit Bhayangkara'
+			}
+		},
 		data() {
 			return {
+				isLoaded: false,
 				lists: [],
 				configLoading: {
 					first: null,
@@ -100,6 +107,9 @@
 		},
 
 		methods: {
+			loadImage(){
+				this.isLoaded = true
+			},
 			ConfigApiUrl() {
 				const api_url = process.env.NUXT_ENV_API_URL;
 				this.$store.dispatch("config/storeConfigApiUrl", api_url);

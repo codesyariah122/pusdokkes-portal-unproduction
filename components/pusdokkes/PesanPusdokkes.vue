@@ -47,6 +47,11 @@
 
 <script>
   export default {
+    head(){
+      return {
+        title: 'Pusdokkes Polri - Pesan Kapusdokkes'
+      }
+    },
     data() {
       return {
         loading: null,

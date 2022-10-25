@@ -6,6 +6,7 @@
       :loading="loading"
       :error="error"
       :end="end"
+      :loadingCard="loadingCard"
       @load-more-berita="ListBerita"
     />
   </div>
@@ -19,6 +20,7 @@ export default {
   data() {
     return {
       loading: null,
+      loadingCard: null,
       error: false,
       end: false,
       lists: [],
@@ -37,8 +39,9 @@ export default {
   },
 
   methods: {
-    async ListBerita() {
-      this.loading = true;
+    async ListBerita(more=false) {
+      this.loadingCard = !more ? true : false;
+      this.loading = more ? true : false
       this.error = false;
       const url = `${this.api_url}/web/berita/page?start=${this.lists.length}`;
       this.$axios
@@ -56,7 +59,8 @@ export default {
         })
         .finally(() => {
           setTimeout(() => {
-            this.loading = false;
+            this.loadingCard = false;
+            this.loading = false
           }, 1000);
         });
     },

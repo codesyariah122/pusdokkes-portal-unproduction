@@ -238,7 +238,7 @@
     .col-feed{
       position:relative;
       img{
-        height: 100px;
+        height: auto;
         width: 100%;
         cursor: pointer;
         opacity: 1;
@@ -354,7 +354,7 @@
                     },
                   }">{{item.judul}}</nuxt-link></h4>
                   <p>
-                    {{$moment(item.created_at).format("LL")}}
+                    Oleh Pusdokkes | {{$moment(item.created_at).format("LL")}}
                   </p>
                 </div>
               </div>
@@ -376,14 +376,14 @@
                         slug: $slug(item.judul),
                       },
                     }"> {{item.judul}} </nuxt-link></h4>
-                    <p style="color: #4B5563!important;font-weight: 400;">{{$moment(item.created_at).format("LL")}}</p>
+                    <p style="color: #4B5563!important;font-weight: 400;">Oleh Pusdokkes | {{$moment(item.created_at).format("LL")}}</p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row justify-content-start mb-5" :style="`${$device.isMobile ? 'margin-top: 1rem; margin-bottom: 2rem;' : 'margin-top: 2rem;'}`">
               <div class="col-lg-12 col-sm-12">
-                <nuxt-link to="/pusdokkes/berita" style="font-size: 18px;">Lihat Semua Berita...</nuxt-link>
+                <nuxt-link to="/pusdokkes/berita" class="fade-in-link" style="font-size: 18px;">Lihat Semua Berita...</nuxt-link>
               </div>
             </div>
           </div>

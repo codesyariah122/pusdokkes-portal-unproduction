@@ -73,6 +73,11 @@
 
 <script>
 	export default {
+		head(){
+			return {
+				title: 'Pusdokkes Polri - FKTP Polri'
+			}
+		},
 		data() {
 			return {
 				lists: [],

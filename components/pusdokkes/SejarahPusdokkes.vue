@@ -51,6 +51,11 @@
 <script>
   export default {
     props: ["path"],
+    head(){
+      return {
+        title: 'Pusdokkes Polri - Sejarah Dokkes'
+      }
+    },
     data() {
       return {
         berita__list_style: this.$device.isDesktop

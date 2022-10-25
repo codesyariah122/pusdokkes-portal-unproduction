@@ -54,6 +54,11 @@
 
 <script>
   export default {
+    head(){
+      return {
+        title: 'Pusdokkes Polri - Visi & Misi'
+      }
+    },
     data() {
       return {
         berita__list_style: this.$device.isDesktop

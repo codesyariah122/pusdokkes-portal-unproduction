@@ -74,6 +74,11 @@
 <script>
 export default {
   props: ["lists", "loading", "error", "end"],
+  head(){
+    return {
+      title: 'Pusdokkes Polri - Mitra Dokkes'
+    }
+  },
   data() {
     return {
       currentPage: 1,

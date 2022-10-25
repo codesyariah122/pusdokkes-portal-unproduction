@@ -11,11 +11,8 @@
 					</p>
 				</mdb-col>
 			</mdb-row>
-			<!-- delay looping data with loader spinner -->
 
-			<!-- show card berita -->
 			<mdb-row class="row justify-content-center mt-3 mb-5 form__content">
-				<!-- List berita inside global-components -->
 				<mdb-col lg="8" xs="8" sm="12">
 					<b-form @submit.prevent="onSubmit" @reset="onReset" v-if="show">
 						<b-form-group id="input-group-2" label="Nama :" label-for="input-2">
@@ -31,7 +28,7 @@
 						id="input-group-1"
 						label="No KTP :"
 						label-for="input-1"
-						description="Harap isi dengan no kartu tanda penduduk Anda." 
+						description="Harap isi dengan no kartu tanda penduduk Anda / Maximal 16" 
 						>
 						<b-form-input
 						id="input-1"
@@ -46,7 +43,7 @@
 					id="input-group-1"
 					label="No Telephone :"
 					label-for="input-1"
-					description="Harap isi dengan no telephone yang aktif Anda gunakan."
+					description="Harap isi dengan no telephone yang aktif Anda gunakan / Maximal 11-12."
 					>
 					<b-form-input
 					id="input-1"
@@ -79,7 +76,7 @@
 						</span>
 						<span v-else>Submit</span>
 					</b-button>
-					<b-button class="mt-3" type="reset" variant="danger" @click="onReset">Cancel</b-button>
+					<b-button class="mt-3" type="reset" variant="danger" @click="$router.go(-1)">Cancel</b-button>
 				</b-form>
 				<b-alert class="mt-5" v-if="pengaduan !== null" show variant="success">
 					<h4 class="alert-heading">Terima kasih</h4>
@@ -97,6 +94,11 @@
 
 <script>
 	export default {
+		head(){
+			return {
+				title: 'Pusdokkes Polri - Pengaduan Pusdokkes'
+			}
+		},
 		data() {
 			return {
 				loading: null,
@@ -127,7 +129,7 @@
 				return String(e).substring(0,16)
 			},
 			formatPhoneLength(e){
-				return String(e).substring(0,13)
+				return String(e).substring(0,12)
 			},
 			ConfigApiUrl() {
 				const api_url = process.env.NUXT_ENV_API_URL;

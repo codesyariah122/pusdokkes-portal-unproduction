@@ -56,7 +56,11 @@
 		components: {
 			VueGallerySlideshow
 		},
-
+		head(){
+			return {
+				title: 'Pusdokkes Polri - Gallery Pusdokkes'
+			}
+		},
 		data(){
 			return {
 				berita__list_style: this.$device.isDesktop
@@ -84,8 +88,9 @@
 				const api_url = process.env.NUXT_ENV_API_URL;
 				this.$store.dispatch("config/storeConfigApiUrl", api_url);
 			},
-			galleryContent(){
-				this.loading = true
+			galleryContent(more=false){
+				this.loading = !more ? true : false
+				this.loadingMore = more ? true : false
 				this.$axios.get(`${this.api_url}/web/galeri?start=${this.galleries.length}`)
 				.then(({data}) => {
 					if(data.list_data.length > 0){
@@ -111,7 +116,7 @@
 				window.onscroll = () => {
 					if (!this.loading && !this.end && !this.error) {
 						if (this.$refs.gallery_content.getBoundingClientRect().bottom <= 450) {
-							this.galleryContent()
+							this.galleryContent(true)
 						}else{
 							console.log("out")
 							setTimeout(() => {

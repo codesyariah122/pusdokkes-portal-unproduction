@@ -5,7 +5,6 @@
       <mdb-row
         :class="`${$device.isMobile ? 'd-flex justify-content-center' : ''}`"
       >
-        <!-- footer branding content -->
         <mdb-col col="12" sm="12" md="3" lg="3" class="mt-5 col-1">
           <img
             :src="brand"
@@ -157,13 +156,6 @@
         </mdb-col>
       </mdb-row>
 
-      <!-- Bonus Map -->
-      <!-- <mdb-row>
-        <mdb-col col="12" lg="12" class="col-3">
-          <LayoutsMap />
-        </mdb-col>
-      </mdb-row> -->
-      <!-- end map -->
     </mdb-container>
     <div class="footer-copyright text-center py-3">
       <mdb-container fluid>
@@ -173,7 +165,6 @@
       </mdb-container>
     </div>
   </mdb-footer>
-  <!-- Footer -->
 </template>
 
 <script>

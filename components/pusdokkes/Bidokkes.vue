@@ -73,6 +73,11 @@
 <script>
 export default {
   props: ["lists", "loading", "error", "end"],
+  head(){
+    return {
+      title: 'Pusdokkes Polri - Bidokkes'
+    }
+  },
   data() {
     return {
       currentPage: 1,

@@ -45,6 +45,11 @@
 
 <script>
   export default {
+    head(){
+      return {
+        title: 'Pusdokkes Polri - Program Prioritas'
+      }
+    },
     data() {
       return {
         result: {},
