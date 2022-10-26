@@ -1,7 +1,7 @@
 <template>
 	<div>		
 		<mdb-row class="justify-content-start">
-			<mdb-col lg="12" xs="12" sm="12" style="margin-top: 32px">
+			<mdb-col lg="12" xs="12" sm="12" style="margin-top: 15px">
 				<h2 style="font-weight: 700">Berita Lainnya</h2>
 			</mdb-col>
 		</mdb-row>
