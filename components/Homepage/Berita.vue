@@ -340,7 +340,7 @@
           </div>
         </div>
         <div v-else class="col-lg-8 col-sm-12">
-          <div v-for="(item, index) in news">
+          <div v-for="(item, index) in news.reverse()">
             <!-- Trending Top -->
             <div v-if="index == news.length - 1" class="trending-top mb-3">
               <div class="trend-top-img">
@@ -363,7 +363,7 @@
           <!-- Trending Bottom -->
           <div class="trending-bottom">
             <div class="row">
-              <div v-for="(item, index) in news.slice(0, 10)" v-if="index !== news.length - 1" :class="`col-lg-12 col-sm-12 ${$device.isDesktop ? 'mb-4' : 'mb-2'}`">
+              <div v-for="(item, index) in news.slice(0, 10).reverse()" v-if="index !== news.length - 1" :class="`col-lg-12 col-sm-12 ${$device.isDesktop ? 'mb-4' : 'mb-2'}`">
                 <div class="row single-bottom">
                   <div class="col-md-4 col-sm-12 trend-bottom-img">
                     <img :src="item.foto_url" :alt="item.title" class="img-fluid"/>
