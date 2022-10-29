@@ -1,7 +1,7 @@
 <template>
 	<div>		
 		<mdb-row :class="`${$device.isDesktop ? 'justify-content-start' : 'justify-content-center' }`">
-			<mdb-col lg="4" xs="4" sm="12" :style="`margin-top: 15px;${$device.isDesktop ? 'margin-left: -2rem;' : 'margin-left: -1.5rem;'}`">
+			<mdb-col lg="4" xs="4" sm="12" :style="`margin-top: 1.5rem;${$device.isDesktop ? 'margin-left: -2rem;' : 'margin-left: -1.5rem;'}`">
 				<h4 class="papper__fold" style="font-weight: 700">Berita Lainnya</h4>
 			</mdb-col>
 		</mdb-row>
