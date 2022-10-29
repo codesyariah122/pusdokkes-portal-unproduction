@@ -20,14 +20,26 @@
 						<img :src="item.alamat" class="img-fluid" alt="">
 					</div>
 					<div class="portfolio-info">
-						<mdb-btn @click="index = idx"  class="portfolio-lightbox preview-link" >
+						<mdb-btn @click="showGalleryItems(item.list_image, item.id); index = idx"  class="portfolio-lightbox preview-link" >
 							<i class="fas fa-clone fa-fw fa-lg"></i>
 						</mdb-btn>
-						<vue-gallery-slideshow
-						:images="images"
-						:index="index"
-						@close="index = null"
-						></vue-gallery-slideshow>
+						<b-modal :id="`gallery-image-${item.id}`" hide-footer hide-header>
+							<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+								<div class="carousel-inner">
+									<div v-for="(item, index) in items.images" :class="`carousel-item ${index === 0 ? 'active' : ''}`">
+										<img :src="item" class="d-block w-100 image-size" alt="laptop satu">
+									</div>
+								</div>
+								<button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</button>
+								<button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</button>
+							</div>
+						</b-modal>
 					</div>
 				</div>
 			</mdb-row>
@@ -49,6 +61,32 @@
 </div>
 </template>
 
+<style lang="css" scoped>
+.img-size{
+	height: 450px;
+	width: 700px;
+	background-size: cover;
+	overflow: hidden;
+}
+.modal-content {
+	width: 700px;
+	border:none;
+}
+.modal-body {
+	padding: 0;
+}
+
+.carousel-control-prev-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009be1' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+	width: 30px;
+	height: 48px;
+}
+.carousel-control-next-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23009be1' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+	width: 30px;
+	height: 48px;
+}
+</style>
 <script>
 	import VueGallerySlideshow from "vue-gallery-slideshow"
 
@@ -71,7 +109,7 @@
 				error: false,
 				end: false,
 				galleries: [],
-				images: [],
+				items: [],
 				repeat: 0,
 				index: null
 			}
@@ -125,7 +163,24 @@
 						}
 					}
 				}
-			}
+			},
+
+			showGalleryItems(items, id){
+
+				this.$bvModal.show(`gallery-image-${id}`)
+				this.show = true
+
+				const filter = this.galleries.filter(d => d.id === id)
+
+				const stagedImage = {
+					id: id,
+					images: filter[0].list_image.map(d => d),
+					alt: "Images - "+id
+				}
+
+				this.items=stagedImage
+
+			},
 		},
 
 		computed: {
