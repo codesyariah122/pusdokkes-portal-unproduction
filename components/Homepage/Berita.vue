@@ -612,6 +612,7 @@
         this.$axios
         .get(`${process.env.NUXT_ENV_API_URL}/web/kontak`)
         .then(({data}) => {
+          console.log(feedContents)
           if (data.result.foto_url === null) {
             this.feeds.push(feedContents[0])
           } else {

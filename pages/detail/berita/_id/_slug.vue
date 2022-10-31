@@ -20,7 +20,7 @@
         <div class="content-desc" v-html="lists.berita.html"></div>
       </mdb-col>
 
-      <mdb-col lg="12" xs="12" sm="12" style="margin-top: -.5rem;">
+      <mdb-col lg="12" xs="12" sm="12" style="margin-top: -2rem;">
         <b-dropdown-divider class="line"></b-dropdown-divider>
       </mdb-col>
     </mdb-row>

@@ -1,4 +1,4 @@
-<style lang="scss">
+<style lang="scss" scoped>
 .underline__title--full{
   display: inline-block;
   position: relative;
